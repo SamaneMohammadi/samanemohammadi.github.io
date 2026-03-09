@@ -9,18 +9,18 @@
   --radius-md: 18px;
   --radius-lg: 24px;
 
-  --bg: #1b2230;
-  --bg-soft: #242c3b;
-  --panel: #2b3445;
-  --panel-strong: #344055;
-  --panel-hover: #3d4b63;
-  --text: #eef4fb;
-  --muted: #b8c4d4;
-  --accent: #9ecbff;
-  --accent-strong: #d9ecff;
-  --line: #78aee8;
-  --border: #46556e;
-  --shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  --bg: #26282c;
+  --bg-soft: #2f3237;
+  --panel: #383c42;
+  --panel-strong: #444952;
+  --panel-hover: #505764;
+  --text: #f5f7fa;
+  --muted: #c7ccd4;
+  --accent: #dde3ea;
+  --accent-strong: #ffffff;
+  --line: #a9b2bf;
+  --border: #5a6270;
+  --shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
 }
 
 *,
