@@ -1,10 +1,9 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#f7f9fc" />
+    <meta name="theme-color" content="#f9fbff" />
     <title>Samaneh Mohammadi | Trustworthy Federated Learning</title>
     <meta
       name="description"
@@ -15,22 +14,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
     />
-
-    <script>
-      (function () {
-        var root = document.documentElement;
-        var key = "samaneh-theme";
-        var theme = "light";
-        try {
-          var saved = localStorage.getItem(key);
-          if (saved === "light" || saved === "dark") theme = saved;
-        } catch (error) {}
-        root.setAttribute("data-theme", theme);
-      })();
-    </script>
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -53,30 +39,9 @@
           </figure>
 
           <div class="masthead-copy">
-            <div class="title-row">
-              <div>
-                <div class="eyebrow">University of Edinburgh · School of Informatics</div>
-                <h1>Samaneh Mohammadi</h1>
-                <p class="role">PhD Candidate in Cyber Security, Privacy, and Trust</p>
-              </div>
-
-              <button
-                id="theme-toggle"
-                class="theme-toggle"
-                type="button"
-                aria-pressed="false"
-                aria-label="Switch to dark mode"
-              >
-                <span class="theme-icon" aria-hidden="true">☾</span>
-                <span class="theme-text">Dark mode</span>
-              </button>
-            </div>
-
-            <p class="lede">
-              I study <strong>Trustworthy Federated Learning</strong>, with research
-              interests in privacy, fairness, and security in federated learning
-              systems (PhD advisor:
-              <a href="https://mjuarezm.github.io/">Dr. Marc Juarez</a>).
+            <h1>Samaneh Mohammadi</h1>
+            <p class="role">
+              PhD Candidate, School of Informatics, University of Edinburgh
             </p>
 
             <div class="contact-icons" aria-label="Contact links">
@@ -150,6 +115,12 @@
               </a>
             </div>
 
+            <p class="lede">
+              I study <strong>Trustworthy Federated Learning</strong>, with research
+              interests in privacy, fairness, and security in federated learning systems
+              (PhD advisor: <a href="https://mjuarezm.github.io/">Dr. Marc Juarez</a>).
+            </p>
+
             <ul class="research-tags" aria-label="Research topics">
               <li>AI Privacy</li>
               <li>Federated Learning</li>
@@ -212,44 +183,35 @@
         <h2 id="publications-title">Selected Publications</h2>
         <div class="pub-list">
           <article class="pub-item">
-            <div class="pub-year">2025</div>
-            <div class="pub-main">
-              <div class="pub-title">
-                <a href="https://dl.acm.org/doi/abs/10.1145/3746252.3761091">
-                  EFU: Enforcing Federated Unlearning via Functional Encryption
-                </a>
-              </div>
-              <div class="pub-venue">
-                CIKM 2025: Proceedings of the 34th ACM International Conference on Information and Knowledge Management.
-              </div>
+            <div class="pub-title">
+              <a href="https://dl.acm.org/doi/abs/10.1145/3746252.3761091">
+                EFU: Enforcing Federated Unlearning via Functional Encryption
+              </a>
+            </div>
+            <div class="pub-venue">
+              CIKM 2025: Proceedings of the 34th ACM International Conference on Information and Knowledge Management.
             </div>
           </article>
 
           <article class="pub-item">
-            <div class="pub-year">2025</div>
-            <div class="pub-main">
-              <div class="pub-title">
-                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11228075">
-                  Empirical Analysis of Asynchronous Federated Learning on Heterogeneous Devices: Efficiency, Fairness, and Privacy Trade-offs
-                </a>
-              </div>
-              <div class="pub-venue">
-                2025 International Joint Conference on Neural Networks (IJCNN).
-              </div>
+            <div class="pub-title">
+              <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11228075">
+                Empirical Analysis of Asynchronous Federated Learning on Heterogeneous Devices: Efficiency, Fairness, and Privacy Trade-offs
+              </a>
+            </div>
+            <div class="pub-venue">
+              2025 International Joint Conference on Neural Networks (IJCNN).
             </div>
           </article>
 
           <article class="pub-item">
-            <div class="pub-year">2025</div>
-            <div class="pub-main">
-              <div class="pub-title">
-                <a href="https://www.sciencedirect.com/science/article/pii/S1574119225000100">
-                  EncCluster: Scalable Functional Encryption in Federated Learning Through Weight Clustering and Probabilistic Filters
-                </a>
-              </div>
-              <div class="pub-venue">
-                Pervasive and Mobile Computing, 2025.
-              </div>
+            <div class="pub-title">
+              <a href="https://www.sciencedirect.com/science/article/pii/S1574119225000100">
+                EncCluster: Scalable Functional Encryption in Federated Learning Through Weight Clustering and Probabilistic Filters
+              </a>
+            </div>
+            <div class="pub-venue">
+              Pervasive and Mobile Computing, 2025.
             </div>
           </article>
         </div>
@@ -265,39 +227,9 @@
     <script>
       (function () {
         var yearEl = document.getElementById("year");
-        if (yearEl) yearEl.textContent = String(new Date().getFullYear());
-
-        var root = document.documentElement;
-        var toggle = document.getElementById("theme-toggle");
-        var metaTheme = document.querySelector('meta[name="theme-color"]');
-        var key = "samaneh-theme";
-
-        if (!toggle) return;
-
-        var iconEl = toggle.querySelector(".theme-icon");
-        var textEl = toggle.querySelector(".theme-text");
-
-        function applyTheme(theme) {
-          var isDark = theme === "dark";
-          root.setAttribute("data-theme", isDark ? "dark" : "light");
-          toggle.setAttribute("aria-pressed", isDark ? "true" : "false");
-          toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
-          if (iconEl) iconEl.textContent = isDark ? "☀" : "☾";
-          if (textEl) textEl.textContent = isDark ? "Light mode" : "Dark mode";
-          if (metaTheme) metaTheme.setAttribute("content", isDark ? "#0f172a" : "#f7f9fc");
+        if (yearEl) {
+          yearEl.textContent = String(new Date().getFullYear());
         }
-
-        var current = root.getAttribute("data-theme");
-        if (current !== "dark") current = "light";
-        applyTheme(current);
-
-        toggle.addEventListener("click", function () {
-          current = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-          applyTheme(current);
-          try {
-            localStorage.setItem(key, current);
-          } catch (error) {}
-        });
       })();
     </script>
   </body>
