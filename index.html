@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#f5f5f7" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0f1720" />
     <title>Samaneh Mohammadi | Trustworthy Federated Learning</title>
     <meta
       name="description"
@@ -17,22 +17,6 @@
       href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Pixelify+Sans:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script>
-      (function () {
-        var root = document.documentElement;
-        var key = "kaiyao-theme";
-        var theme = "light";
-        try {
-          var saved = localStorage.getItem(key);
-          if (saved === "light" || saved === "dark") {
-            theme = saved;
-          }
-        } catch (error) {
-          theme = "light";
-        }
-        root.setAttribute("data-theme", theme);
-      })();
-    </script>
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -56,16 +40,6 @@
           <div class="masthead-copy">
             <div class="title-row">
               <h1>Samaneh Mohammadi</h1>
-              <button
-                id="theme-toggle"
-                class="theme-toggle"
-                type="button"
-                aria-pressed="false"
-                aria-label="Switch to dark mode"
-              >
-                <span class="theme-icon" aria-hidden="true">☾</span>
-                <span class="theme-text">Dark mode</span>
-              </button>
             </div>
 
             <p class="role">
@@ -327,43 +301,6 @@
         if (yearEl) {
           yearEl.textContent = String(new Date().getFullYear());
         }
-
-        var root = document.documentElement;
-        var toggle = document.getElementById("theme-toggle");
-        var metaTheme = document.querySelector('meta[name="theme-color"]');
-        var key = "kaiyao-theme";
-
-        if (!toggle) return;
-
-        var iconEl = toggle.querySelector(".theme-icon");
-        var textEl = toggle.querySelector(".theme-text");
-
-        var applyTheme = function (theme) {
-          var isDark = theme === "dark";
-          root.setAttribute("data-theme", isDark ? "dark" : "light");
-          toggle.setAttribute("aria-pressed", isDark ? "true" : "false");
-          toggle.setAttribute(
-            "aria-label",
-            isDark ? "Switch to light mode" : "Switch to dark mode"
-          );
-          if (iconEl) iconEl.textContent = isDark ? "☀" : "☾";
-          if (textEl) textEl.textContent = isDark ? "Light mode" : "Dark mode";
-          if (metaTheme) {
-            metaTheme.setAttribute("content", isDark ? "#000000" : "#f5f5f7");
-          }
-        };
-
-        var current = root.getAttribute("data-theme");
-        if (current !== "dark") current = "light";
-        applyTheme(current);
-
-        toggle.addEventListener("click", function () {
-          current = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-          applyTheme(current);
-          try {
-            localStorage.setItem(key, current);
-          } catch (error) {}
-        });
       })();
     </script>
   </body>
