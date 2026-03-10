@@ -281,7 +281,7 @@ main {
   display: grid;
   gap: 12px;
 }
-
+/* 
 .definition-row {
   display: grid;
   grid-template-columns: minmax(220px, 260px) 1fr;
@@ -292,12 +292,30 @@ main {
   background: rgba(255, 255, 255, 0.05);
   box-shadow: none;
   transition: background 160ms ease, border-color 160ms ease;
+} */
+.definition-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 260px) 1fr;
+  gap: 20px;
+  padding: 18px 20px;
+  border: 1px solid rgba(203, 213, 225, 0.45);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: 0 4px 14px rgba(30, 40, 50, 0.03);
+  transition: background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
 }
 
 .definition-row:hover {
+  border-color: rgba(190, 200, 214, 0.55);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 8px 18px rgba(30, 40, 50, 0.05);
+}
+
+/* 
+.definition-row:hover {
   border-color: rgba(255, 255, 255, 0.20);
   background: rgba(255, 255, 255, 0.08);
-}
+} */
 
 .definition-row dt {
   margin: 0;
@@ -318,7 +336,7 @@ main {
   gap: 12px;
 }
 
-.news-item {
+/* .news-item {
   display: grid;
   grid-template-columns: 120px 1fr;
   gap: 16px;
@@ -333,6 +351,24 @@ main {
 .news-item:hover {
   border-color: rgba(255, 255, 255, 0.20);
   background: rgba(255, 255, 255, 0.08);
+} */
+
+.news-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  padding: 18px 20px;
+  border: 1px solid rgba(203, 213, 225, 0.45);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: 0 4px 14px rgba(30, 40, 50, 0.03);
+  transition: background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.news-item:hover {
+  border-color: rgba(190, 200, 214, 0.55);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 8px 18px rgba(30, 40, 50, 0.05);
 }
 
 .news-date {
@@ -349,7 +385,7 @@ main {
 .pub-list li + li {
   margin-top: 12px;
 }
-
+/* 
 .pub-item {
   padding: 18px 20px;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -362,6 +398,21 @@ main {
 .pub-item:hover {
   border-color: rgba(255, 255, 255, 0.20);
   background: rgba(255, 255, 255, 0.08);
+} */
+
+.pub-item {
+  padding: 18px 20px;
+  border: 1px solid rgba(203, 213, 225, 0.45);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: 0 4px 14px rgba(30, 40, 50, 0.03);
+  transition: background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.pub-item:hover {
+  border-color: rgba(190, 200, 214, 0.55);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 8px 18px rgba(30, 40, 50, 0.05);
 }
 
 .pub-title {
