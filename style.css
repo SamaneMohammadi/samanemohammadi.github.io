@@ -1,5 +1,6 @@
 :root {
-  color-scheme: dark;
+  color-scheme: light;
+
   --font-display: "Chakra Petch", sans-serif;
   --font-body: "Chakra Petch", "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
@@ -9,19 +10,23 @@
   --radius-md: 14px;
   --radius-lg: 18px;
 
-  /* lighter, cooler palette */
-  --bg: #313743;
-  --bg-soft: #3a4250;
-  --panel: #454f5f;
-  --panel-strong: #4f5a6b;
-  --panel-hover: #5b6678;
-  --text: #f7f9fc;
-  --muted: #d4dbe4;
-  --accent: #eef4fb;
-  --accent-strong: #ffffff;
-  --line: #b8c3d1;
-  --border: #697587;
-  --shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  /* professional light gray palette */
+  --bg: #f4f6f8;
+  --bg-soft: #eceff3;
+  --panel: #ffffff;
+  --panel-strong: #f8fafc;
+  --panel-hover: #f1f4f8;
+
+  --text: #2b2f33;
+  --muted: #6b737b;
+
+  --accent: #4a5f78;
+  --accent-strong: #32465e;
+
+  --line: #9aa5b1;
+  --border: #dbe2ea;
+
+  --shadow: 0 8px 20px rgba(30, 40, 50, 0.05);
 }
 
 *,
