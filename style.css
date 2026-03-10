@@ -287,17 +287,17 @@ main {
   grid-template-columns: minmax(220px, 260px) 1fr;
   gap: 20px;
   padding: 18px 20px;
-  border: 1px solid rgba(203, 213, 225, 0.45);
+  border: 1px solid rgba(200, 210, 222, 0.85);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.62);
-  box-shadow: 0 4px 14px rgba(30, 40, 50, 0.03);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(30, 40, 50, 0.04);
   transition: background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
 }
 
 .definition-row:hover {
-  border-color: rgba(190, 200, 214, 0.55);
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 8px 18px rgba(30, 40, 50, 0.05);
+  border-color: rgba(185, 195, 208, 1);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 8px 18px rgba(30, 40, 50, 0.06);
 }
 
 .definition-row dt {
@@ -324,17 +324,17 @@ main {
   grid-template-columns: 120px 1fr;
   gap: 16px;
   padding: 18px 20px;
-  border: 1px solid rgba(203, 213, 225, 0.45);
+  border: 1px solid rgba(200, 210, 222, 0.85);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.62);
-  box-shadow: 0 4px 14px rgba(30, 40, 50, 0.03);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(30, 40, 50, 0.04);
   transition: background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
 }
 
 .news-item:hover {
-  border-color: rgba(190, 200, 214, 0.55);
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 8px 18px rgba(30, 40, 50, 0.05);
+  border-color: rgba(185, 195, 208, 1);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 8px 18px rgba(30, 40, 50, 0.06);
 }
 
 .news-date {
@@ -354,17 +354,17 @@ main {
 
 .pub-item {
   padding: 18px 20px;
-  border: 1px solid rgba(203, 213, 225, 0.45);
+  border: 1px solid rgba(200, 210, 222, 0.85);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.62);
-  box-shadow: 0 4px 14px rgba(30, 40, 50, 0.03);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(30, 40, 50, 0.04);
   transition: background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
 }
 
 .pub-item:hover {
-  border-color: rgba(190, 200, 214, 0.55);
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 8px 18px rgba(30, 40, 50, 0.05);
+  border-color: rgba(185, 195, 208, 1);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 8px 18px rgba(30, 40, 50, 0.06);
 }
 
 .pub-title {
