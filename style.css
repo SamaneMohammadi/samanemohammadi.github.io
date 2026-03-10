@@ -101,7 +101,8 @@ summary:focus-visible {
 }
 
 .portrait {
-  margin: 0;
+  margin: 10px 0 0 0;
+  /* margin: 0; */
   width: 180px;
   border-radius: var(--radius-lg);
   overflow: hidden;
