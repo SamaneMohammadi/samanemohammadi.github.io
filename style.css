@@ -442,7 +442,7 @@ main {
   }
 
   .definition-row,
-  .news-item 
+  .news-item,
   .teaching-item{
     grid-template-columns: 1fr;
   }
