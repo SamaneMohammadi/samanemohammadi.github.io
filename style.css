@@ -119,14 +119,9 @@ summary:focus-visible {
 .portrait-contact {
   margin-top: 16px;
   font-style: normal;
-  font-size: 0.82rem;
-  line-height: 1.6;
+  font-size: 0.8rem;
+  line-height: 1.65;
   color: var(--muted);
-}
-
-.contact-email {
-  display: inline-block;
-  margin-top: 4px;
 }
 
 .portrait-contact a {
