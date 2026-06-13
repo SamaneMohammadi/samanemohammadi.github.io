@@ -117,11 +117,16 @@ summary:focus-visible {
 }
 
 .portrait-contact {
-  margin-top: 16px;
+  margin-top: 14px;
   font-style: normal;
-  font-size: 0.8rem;
-  line-height: 1.65;
+  font-size: 0.72rem;
+  line-height: 1.5;
   color: var(--muted);
+}
+
+.contact-org {
+  color: var(--text);
+  font-weight: 700;
 }
 
 .portrait-contact a {
