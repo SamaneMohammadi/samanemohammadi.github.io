@@ -329,32 +329,6 @@ main {
   margin-top: 6px;
 }
 
-/* ---------- technical skills ---------- */
-
-.skills-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 16px;
-}
-
-.skill-row {
-  display: grid;
-  grid-template-columns: 250px 1fr;
-  gap: var(--col-gap);
-  align-items: start;
-}
-
-.skill-cat {
-  font-weight: 700;
-  color: var(--text);
-}
-
-.skill-items {
-  color: var(--muted);
-}
-
 /* ---------- publications (grouped, no boxes) ---------- */
 
 .pub-group + .pub-group {
@@ -488,8 +462,7 @@ main {
   }
 
   .entry,
-  .teaching-item,
-  .skill-row {
+  .teaching-item {
     grid-template-columns: 1fr;
     gap: 4px;
   }
