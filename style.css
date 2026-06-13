@@ -314,7 +314,7 @@ main {
 /* ---------- publications (grouped, no boxes) ---------- */
 
 .pub-group + .pub-group {
-  margin-top: 30px;
+  margin-top: 36px;
 }
 
 .pub-group-head {
@@ -323,14 +323,9 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--accent);
-  margin: 0 0 4px;
-}
-
-.pub-group-note {
   margin: 0 0 16px;
-  color: var(--muted);
-  font-size: 0.95rem;
-  max-width: 760px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
 }
 
 .pub-list {
