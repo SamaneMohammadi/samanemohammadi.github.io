@@ -116,6 +116,18 @@ summary:focus-visible {
   box-shadow: var(--shadow);
 }
 
+.portrait-contact {
+  margin-top: 16px;
+  font-style: normal;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.portrait-contact a {
+  word-break: break-word;
+}
+
 .portrait img {
   display: block;
   width: 100%;
@@ -350,6 +362,14 @@ main {
   font-weight: 600;
   margin-bottom: 3px;
   line-height: 1.45;
+}
+
+.pub-title a {
+  color: var(--text);
+}
+
+.pub-title a:hover {
+  color: var(--accent);
 }
 
 .pub-venue {
