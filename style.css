@@ -23,6 +23,10 @@
   --accent: #4a5f78;
   --accent-strong: #32465e;
 
+  /* clearer, more visible link blue */
+  --link: #1f5fae;
+  --link-strong: #16467f;
+
   --line: #9aa5b1;
   --border: #dbe2ea;
 
@@ -31,6 +35,11 @@
   /* shared two-column rhythm: meta | content */
   --meta-col: 170px;
   --col-gap: 28px;
+
+  /* shared type scale */
+  --fs-body: 1rem;       /* primary content in every section */
+  --fs-meta: 0.9rem;     /* dates, venues, places, captions */
+  --fs-eyebrow: 0.8rem;  /* uppercase group labels */
 }
 
 *,
@@ -50,20 +59,20 @@ body {
   background: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
   color: var(--text);
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: var(--fs-body);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 a {
-  color: var(--accent);
+  color: var(--link);
   text-decoration: none;
   transition: color 140ms ease;
 }
 
 a:hover {
-  color: var(--accent-strong);
+  color: var(--link-strong);
   text-decoration: underline;
 }
 
@@ -124,8 +133,8 @@ summary:focus-visible {
 .portrait-contact {
   margin-top: 14px;
   font-style: normal;
-  font-size: 0.8rem;
-  line-height: 1.55;
+  font-size: 0.74rem;
+  line-height: 1.5;
   color: var(--muted);
 }
 
@@ -191,7 +200,7 @@ summary:focus-visible {
   transform: translateY(-1px);
   background: var(--panel-hover);
   border-color: var(--line);
-  color: var(--accent-strong);
+  color: var(--link);
   text-decoration: none;
 }
 
@@ -229,7 +238,7 @@ summary:focus-visible {
 .lede {
   margin: 0;
   max-width: 780px;
-  font-size: 1.04rem;
+  font-size: var(--fs-body);
 }
 
 .lede + .lede {
@@ -274,13 +283,14 @@ main {
 .entry-meta {
   font-family: var(--font-mono);
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: var(--fs-meta);
   letter-spacing: 0.01em;
   padding-top: 2px;
 }
 
 .entry-body {
   margin: 0;
+  font-size: var(--fs-body);
 }
 
 .entry-title {
@@ -290,13 +300,7 @@ main {
 
 .entry-sub {
   color: var(--muted);
-  font-size: 0.96rem;
-}
-
-/* ---------- education ---------- */
-
-.edu-degree {
-  color: var(--muted);
+  font-size: var(--fs-meta);
 }
 
 /* ---------- experience ---------- */
@@ -314,19 +318,20 @@ main {
   color: var(--text);
 }
 
-.xp-org {
-  color: var(--accent);
+.xp-org a {
+  color: var(--link);
 }
 
 .xp-place {
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: var(--fs-meta);
 }
 
 .xp-points {
   margin: 8px 0 0;
   padding-left: 1.1rem;
   color: var(--muted);
+  font-size: var(--fs-body);
 }
 
 .xp-points li + li {
@@ -341,7 +346,7 @@ main {
 
 .pub-group-head {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: var(--fs-eyebrow);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--muted);
@@ -366,26 +371,27 @@ main {
 }
 
 .pub-item:hover {
-  border-left-color: var(--accent);
+  border-left-color: var(--link);
 }
 
 .pub-title {
   font-weight: 600;
+  font-size: var(--fs-body);
   margin-bottom: 3px;
   line-height: 1.45;
 }
 
 .pub-title a {
-  color: var(--text);
+  color: var(--link);
 }
 
 .pub-title a:hover {
-  color: var(--accent);
+  color: var(--link-strong);
 }
 
 .pub-venue {
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: var(--fs-meta);
 }
 
 .pub-award {
@@ -407,34 +413,15 @@ main {
   grid-template-columns: var(--meta-col) 1fr;
   gap: var(--col-gap);
   align-items: start;
+  font-size: var(--fs-body);
 }
 
 .teaching-label {
   font-family: var(--font-mono);
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: var(--fs-meta);
   letter-spacing: 0.01em;
   padding-top: 2px;
-}
-
-/* ---------- archive disclosure ---------- */
-
-.archive-block {
-  margin-top: 18px;
-}
-
-.archive-block summary {
-  cursor: pointer;
-  color: var(--accent);
-  font-size: 0.95rem;
-}
-
-.archive-block summary:hover {
-  color: var(--accent-strong);
-}
-
-.archive-block .pub-list {
-  margin-top: 16px;
 }
 
 /* ---------- footer ---------- */
@@ -446,7 +433,7 @@ main {
 
 .footer-grid {
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: var(--fs-meta);
 }
 
 /* ---------- responsive ---------- */
