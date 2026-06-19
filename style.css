@@ -251,11 +251,12 @@ main {
   padding: 20px 0 56px;
 }
 
-
 .section {
-  border-top: none;
+  padding: 0 0 30px;
   padding-top: 31px;
+  border-top: none;
   position: relative;
+  scroll-margin-top: 24px;
 }
 
 .section::before {
