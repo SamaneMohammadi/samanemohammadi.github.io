@@ -351,7 +351,7 @@ main {
 /* ---------- publications (grouped, no boxes) ---------- */
 
 .pub-group + .pub-group {
-  margin-top: 36px;
+  margin-top: 44px;
 }
 
 .pub-group-head {
@@ -363,7 +363,7 @@ main {
   font-weight: 500;
   margin: 0 0 16px;
   padding-bottom: 10px;
-  border-bottom: 1.5px solid #b0bcc9;
+  border-bottom: none;
 }
 
 .pub-list {
