@@ -10,6 +10,7 @@
       name="description"
       content="Homepage of Samaneh Mohammadi, PhD candidate at the University of Edinburgh. Research in efficient and trustworthy federated learning."
     />
+    <link rel="icon" type="image/jpeg" href="favicon.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -101,7 +102,7 @@
       .topbar-inner {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         gap: 16px;
         height: 56px;
       }
@@ -126,6 +127,11 @@
         padding: 6px 12px;
         border-radius: var(--radius-sm);
         transition: color 140ms ease, background 140ms ease;
+      }
+      .navlink.active {
+        color: var(--accent-strong);
+        background: var(--panel-hover);
+        font-weight: 600;
       }
       .navlink:hover {
         color: var(--accent-strong);
@@ -445,6 +451,8 @@
           <a class="navlink" href="#about">About</a>
           <a class="navlink" href="#research">Research</a>
           <a class="navlink" href="#experience">Experience</a>
+          <a class="navlink" href="#education">Education</a>
+          <a class="navlink" href="#teaching">Talks &amp; Teaching</a>
           <a class="navlink" href="CV_2025.pdf">CV</a>
         </nav>
       </div>
@@ -466,6 +474,7 @@
         </div>
 
         <ul class="contact">
+          <li>
             <svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M3 6h18v12H3z" />
               <path d="m3 8 9 6 9-6" />
@@ -750,6 +759,43 @@
 
     <script>
       document.getElementById("year").textContent = String(new Date().getFullYear());
+
+      // Highlight the nav link for the section currently in view.
+      (function () {
+        var links = Array.prototype.slice.call(
+          document.querySelectorAll('.nav a.navlink[href^="#"]')
+        );
+        var byId = {};
+        var targets = [];
+        links.forEach(function (link) {
+          var id = link.getAttribute("href").slice(1);
+          var section = document.getElementById(id);
+          if (section) {
+            byId[id] = link;
+            targets.push(section);
+          }
+        });
+        if (!("IntersectionObserver" in window) || targets.length === 0) return;
+
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                links.forEach(function (l) {
+                  l.classList.remove("active");
+                });
+                if (byId[entry.target.id]) {
+                  byId[entry.target.id].classList.add("active");
+                }
+              }
+            });
+          },
+          { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+        );
+        targets.forEach(function (section) {
+          observer.observe(section);
+        });
+      })();
     </script>
   </body>
 </html>
