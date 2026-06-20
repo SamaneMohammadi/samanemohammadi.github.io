@@ -262,7 +262,7 @@ strong {
 #about {
   /* extra space so the divider after About lines up with the sidebar divider;
      raise this number to push the line lower, lower it to raise the line */
-  padding-bottom: 80px;
+  padding-bottom: 60px;
 }
 #about h2 {
   margin-bottom: 14px;
