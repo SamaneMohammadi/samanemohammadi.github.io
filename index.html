@@ -103,8 +103,11 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        flex-wrap: wrap;
         gap: 16px;
-        height: 56px;
+        min-height: 56px;
+        padding: 8px 0;
+        padding-left: calc(var(--sidebar-w) + var(--gap));
       }
       .brand {
         font-weight: 700;
@@ -428,7 +431,7 @@
         .sidebar address {
           grid-column: 1 / -1;
         }
-        .nav {
+        .topbar {
           display: none;
         }
         .entry,
