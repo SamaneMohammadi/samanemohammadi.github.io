@@ -283,7 +283,10 @@ button.chip[aria-expanded="true"] {
   padding: 2px 0;
   text-decoration: none;
 }
-.chip-pub-link:hover { color: var(--link); text-decoration: underline; }
+.chip-pub-link:hover .pub-title { text-decoration: underline; }
+.pub-title {
+  color: var(--link);
+}
 .pub-venue {
   color: var(--muted);
   font-style: italic;
