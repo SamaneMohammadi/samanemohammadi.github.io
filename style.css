@@ -278,11 +278,16 @@ button.chip[aria-expanded="true"] {
   list-style: disc;
   margin-left: 1.1rem;
   font-size: 0.82rem;
-  color: var(--link);
+  color: var(--text);
   line-height: 1.5;
   padding: 2px 0;
+  text-decoration: none;
 }
-.chip-pub-link:hover { color: var(--link-strong); text-decoration: underline; }
+.chip-pub-link:hover { color: var(--link); text-decoration: underline; }
+.pub-venue {
+  color: var(--muted);
+  font-style: italic;
+}
 
 /* ---------- responsive ---------- */
 @media (max-width: 820px) {
