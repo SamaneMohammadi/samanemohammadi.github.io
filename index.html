@@ -138,8 +138,8 @@
                 </div>
                 <div class="tl-chips">
                   <div class="chip-row">
-                    <button class="chip" aria-expanded="false" data-target="ed-1">Group-Aware FL</button>
-                    <button class="chip" aria-expanded="false" data-target="ed-2">LLM Fine-tuning</button>
+                    <button class="chip" aria-expanded="false" data-target="ed-1">Group-Aware FL ▾</button>
+                    <button class="chip" aria-expanded="false" data-target="ed-2">LLM Fine-tuning ▾</button>
                   </div>
                   <div class="chip-panel" id="ed-1" hidden>
                     <p class="chip-detail">Designed a group-aware architecture for fair and private cross-silo federated learning, ensuring demographic groups are treated equitably across clients.</p>
@@ -162,9 +162,9 @@
                 <p class="tl-sub">Research across two EU projects — <a href="https://dais-project.eu/">DAIS</a> and <a href="https://dadap-project.eu/">DADAP</a> — with academic, industrial, and clinical partners.</p>
                 <div class="tl-chips">
                   <div class="chip-row">
-                    <button class="chip" aria-expanded="false" data-target="rise-1">Federated Testbed</button>
-                    <button class="chip" aria-expanded="false" data-target="rise-2">Encryption</button>
-                    <button class="chip" aria-expanded="false" data-target="rise-3">Clinical AI</button>
+                    <button class="chip" aria-expanded="false" data-target="rise-1">Federated Testbed ▾</button>
+                    <button class="chip" aria-expanded="false" data-target="rise-2">Encryption ▾</button>
+                    <button class="chip" aria-expanded="false" data-target="rise-3">Clinical AI ▾</button>
                   </div>
                   <div class="chip-panel" id="rise-1" hidden>
                     <p class="chip-detail">Built a physical federated learning testbed on heterogeneous edge devices and deployed federated Speech Emotion Recognition, evaluating efficiency, fairness, and privacy across hardware tiers.</p>
@@ -199,7 +199,18 @@
                   <span class="xp-role">Technology Engineer / Developer</span>
                   <span class="xp-place"><a href="https://www.open-inside.com/">Openinside Co. W.L.L.</a> · Manama, Bahrain</span>
                 </div>
-                <p class="tl-body">Built new modules on the <strong>Odoo ERP</strong> platform, integrated with existing finance and supply-chain modules.</p>
+                <div class="tl-chips">
+                  <div class="chip-row">
+                    <button class="chip" aria-expanded="false" data-target="oi-1">ERP Development ▾</button>
+                    <button class="chip" aria-expanded="false" data-target="oi-2">System Integration ▾</button>
+                  </div>
+                  <div class="chip-panel" id="oi-1" hidden>
+                    <p class="chip-detail">Built new modules on the Odoo ERP platform, extending core functionality for finance and supply-chain operations.</p>
+                  </div>
+                  <div class="chip-panel" id="oi-2" hidden>
+                    <p class="chip-detail">Integrated newly developed modules with existing finance and supply-chain systems, ensuring consistent data flow across the platform.</p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -211,12 +222,18 @@
                   <span class="xp-role">Research Assistant (M.Sc. Thesis)</span>
                   <span class="xp-place"><a href="https://coinlab.ut.ac.ir/">CoinLab, University of Tehran</a> · Tehran, Iran</span>
                 </div>
-                <p class="tl-body">Developed a <strong>graph inductive-learning approach for anomaly detection</strong> on dynamic information networks.</p>
-              </div>
-            </div>
-
-          </div>
-                <p class="tl-body">Developed a <strong>graph inductive-learning approach for anomaly detection</strong> on dynamic information networks.</p>
+                <div class="tl-chips">
+                  <div class="chip-row">
+                    <button class="chip" aria-expanded="false" data-target="cl-1">Anomaly Detection ▾</button>
+                    <button class="chip" aria-expanded="false" data-target="cl-2">Graph Learning ▾</button>
+                  </div>
+                  <div class="chip-panel" id="cl-1" hidden>
+                    <p class="chip-detail">Developed an anomaly detection system for dynamic information networks, identifying unusual patterns as the graph structure evolves over time.</p>
+                  </div>
+                  <div class="chip-panel" id="cl-2" hidden>
+                    <p class="chip-detail">Applied graph inductive learning to handle dynamic, unseen nodes — enabling the model to generalise to new network structures without retraining from scratch.</p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -285,18 +302,20 @@
           btn.addEventListener('click', function () {
             var panel = document.getElementById(btn.getAttribute('data-target'));
             var expanded = btn.getAttribute('aria-expanded') === 'true';
-            // close all chips in the same row first
+            // close all chips in the same row
             var row = btn.closest('.chip-row');
             if (row) {
               row.querySelectorAll('button.chip').forEach(function (b) {
                 if (b !== btn) {
                   b.setAttribute('aria-expanded', 'false');
+                  b.textContent = b.textContent.replace('▴', '▾');
                   var p = document.getElementById(b.getAttribute('data-target'));
                   if (p) p.hidden = true;
                 }
               });
             }
             btn.setAttribute('aria-expanded', String(!expanded));
+            btn.textContent = btn.textContent.replace(expanded ? '▴' : '▾', expanded ? '▾' : '▴');
             panel.hidden = expanded;
           });
         });
