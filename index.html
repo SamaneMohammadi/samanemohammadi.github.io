@@ -133,17 +133,19 @@
               <div class="tl-date">Mar 2026 – Present</div>
               <div class="tl-content">
                 <div class="xp-head">
-                  <span class="xp-role">PhD Researcher</span>
+                  <span class="xp-role">PhD Researcher &amp; Developer</span>
                   <span class="xp-place"><a href="https://www.ed.ac.uk/">University of Edinburgh</a> · Edinburgh, UK</span>
                 </div>
                 <div class="tl-chips">
-                  <div class="tl-chip-row">
-                    <span class="chip">Group-Aware FL</span>
-                    <span class="chip-text">Designed a group-aware architecture for fair and private federated learning.</span>
+                  <div class="chip-row">
+                    <button class="chip" aria-expanded="false" data-target="ed-1">Group-Aware FL</button>
+                    <button class="chip" aria-expanded="false" data-target="ed-2">LLM Fine-tuning</button>
                   </div>
-                  <div class="tl-chip-row">
-                    <span class="chip">LLM Fine-tuning</span>
-                    <span class="chip-text">Developing group fair LLM fine-tuning with LoRA (ongoing).</span>
+                  <div class="chip-panel" id="ed-1" hidden>
+                    <p class="chip-detail">Designed a group-aware architecture for fair and private cross-silo federated learning, ensuring demographic groups are treated equitably across clients.</p>
+                  </div>
+                  <div class="chip-panel" id="ed-2" hidden>
+                    <p class="chip-detail">Developing group fair LLM fine-tuning with LoRA — investigating how low-rank adaptation can be made efficient and fair across demographic groups in federated settings (ongoing).</p>
                   </div>
                 </div>
               </div>
@@ -154,22 +156,36 @@
               <div class="tl-date">Sep 2021 – Feb 2026</div>
               <div class="tl-content">
                 <div class="xp-head">
-                  <span class="xp-role">Industrial PhD Researcher</span>
+                  <span class="xp-role">Industrial PhD Researcher &amp; Developer</span>
                   <span class="xp-place"><a href="https://www.ri.se/en">RISE Research Institutes of Sweden</a> · Västerås, Sweden</span>
                 </div>
                 <p class="tl-sub">Research across two EU projects — <a href="https://dais-project.eu/">DAIS</a> and <a href="https://dadap-project.eu/">DADAP</a> — with academic, industrial, and clinical partners.</p>
                 <div class="tl-chips">
-                  <div class="tl-chip-row">
-                    <span class="chip">Federated Testbed</span>
-                    <span class="chip-text">Built a physical federated learning testbed on heterogeneous edge devices and deployed federated Speech Emotion Recognition, evaluating efficiency, fairness, and privacy.</span>
+                  <div class="chip-row">
+                    <button class="chip" aria-expanded="false" data-target="rise-1">Federated Testbed</button>
+                    <button class="chip" aria-expanded="false" data-target="rise-2">Encryption</button>
+                    <button class="chip" aria-expanded="false" data-target="rise-3">Clinical AI</button>
                   </div>
-                  <div class="tl-chip-row">
-                    <span class="chip">Encryption</span>
-                    <span class="chip-text">Developed efficient and scalable encryption methods for FL, making it deployable on resource-constrained devices.</span>
+                  <div class="chip-panel" id="rise-1" hidden>
+                    <p class="chip-detail">Built a physical federated learning testbed on heterogeneous edge devices and deployed federated Speech Emotion Recognition, evaluating efficiency, fairness, and privacy across hardware tiers.</p>
+                    <div class="chip-pubs">
+                      <span class="chip-pubs-label">Related publications</span>
+                      <a class="chip-pub-link" href="https://www.research.unipd.it/bitstream/11577/3506537/2/444.pdf">Balancing Privacy and Accuracy in FL for Speech Emotion Recognition <span class="pub-award">Best Paper Award</span></a>
+                      <a class="chip-pub-link" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11228075">Empirical Analysis of Asynchronous FL on Heterogeneous Devices</a>
+                    </div>
                   </div>
-                  <div class="tl-chip-row">
-                    <span class="chip">Clinical AI</span>
-                    <span class="chip-text">Benchmarked transformer models on clinical mental-health data, improving predictive performance and fairness for deployment in Swedish hospitals.</span>
+                  <div class="chip-panel" id="rise-2" hidden>
+                    <p class="chip-detail">Developed efficient and scalable encryption methods — including functional encryption and homomorphic encryption — for FL, making it deployable on resource-constrained devices.</p>
+                    <div class="chip-pubs">
+                      <span class="chip-pubs-label">Related publications</span>
+                      <a class="chip-pub-link" href="https://dl.acm.org/doi/abs/10.1145/3746252.3761091">EFU: Enforcing Federated Unlearning via Functional Encryption</a>
+                      <a class="chip-pub-link" href="https://www.sciencedirect.com/science/article/pii/S1574119225000100">EncCluster: Scalable Functional Encryption in FL</a>
+                      <a class="chip-pub-link" href="https://openreview.net/pdf?id=7bgJ7t5kkW">Bringing Functional Encryption to Federated Foundation Models</a>
+                      <a class="chip-pub-link" href="https://link.springer.com/chapter/10.1007/978-981-99-7032-2_1">Secure and Efficient FL with Homomorphic Encryption and Gradient Pruning</a>
+                    </div>
+                  </div>
+                  <div class="chip-panel" id="rise-3" hidden>
+                    <p class="chip-detail">Benchmarked transformer models on clinical mental-health tabular data, improving predictive performance and fairness for deployment in Swedish hospitals.</p>
                   </div>
                 </div>
               </div>
@@ -195,6 +211,11 @@
                   <span class="xp-role">Research Assistant (M.Sc. Thesis)</span>
                   <span class="xp-place"><a href="https://coinlab.ut.ac.ir/">CoinLab, University of Tehran</a> · Tehran, Iran</span>
                 </div>
+                <p class="tl-body">Developed a <strong>graph inductive-learning approach for anomaly detection</strong> on dynamic information networks.</p>
+              </div>
+            </div>
+
+          </div>
                 <p class="tl-body">Developed a <strong>graph inductive-learning approach for anomaly detection</strong> on dynamic information networks.</p>
               </div>
             </div>
@@ -258,7 +279,28 @@
     <script>
       document.getElementById("year").textContent = String(new Date().getFullYear());
 
-      // Fade-in timeline items as they scroll into view
+      // Chip expand/collapse
+      (function () {
+        document.querySelectorAll('button.chip[data-target]').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var panel = document.getElementById(btn.getAttribute('data-target'));
+            var expanded = btn.getAttribute('aria-expanded') === 'true';
+            // close all chips in the same row first
+            var row = btn.closest('.chip-row');
+            if (row) {
+              row.querySelectorAll('button.chip').forEach(function (b) {
+                if (b !== btn) {
+                  b.setAttribute('aria-expanded', 'false');
+                  var p = document.getElementById(b.getAttribute('data-target'));
+                  if (p) p.hidden = true;
+                }
+              });
+            }
+            btn.setAttribute('aria-expanded', String(!expanded));
+            panel.hidden = expanded;
+          });
+        });
+      })();
       (function () {
         var items = document.querySelectorAll('.tl-item');
         if (!items.length || !('IntersectionObserver' in window)) {
