@@ -7,9 +7,10 @@
   --radius-sm: 10px;
   --radius-md: 14px;
   --radius-lg: 18px;
-  /* professional light gray palette — unchanged */
-  --bg: #f4f6f8;
-  --bg-soft: #eceff3;
+  --bg: #fbfcfd;
+  --bg-soft: #f2f5f9;
+  /* --bg: #f4f6f8;
+  --bg-soft: #eceff3; */
   --panel: #ffffff;
   --panel-strong: #f8fafc;
   --panel-hover: #f1f4f8;
