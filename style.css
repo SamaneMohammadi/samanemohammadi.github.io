@@ -116,12 +116,12 @@ strong { color: var(--text); }
 .entry-meta { font-family: var(--font-mono); color: var(--muted); font-size: var(--fs-meta); padding-top: 2px; }
 .entry-body { margin: 0; }
 .entry-title { font-weight: 700; color: var(--text); }
-.entry-sub { color: var(--muted); font-size: var(--fs-meta); }
+.entry-sub { color: var(--muted);}
 
 /* shared xp role/place */
 .xp-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin-bottom: 6px; }
 .xp-role { font-weight: 700; color: var(--text); }
-.xp-place { color: var(--muted); }
+.xp-place { color: var(--muted);}
 
 /* publications */
 .pub-group + .pub-group { margin-top: 36px; }
