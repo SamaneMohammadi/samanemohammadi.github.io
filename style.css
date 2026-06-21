@@ -147,7 +147,7 @@ strong { color: var(--text); }
 .tt-group-head { margin-bottom: 12px; }
 .tt-group-head .pub-group-head { margin: 0; }
 .tt-card {
-  background: var(--panel-strong);
+  background: var(--panel-hover);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
