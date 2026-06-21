@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
   </head>
   <body>
     <div class="topbar">
@@ -272,74 +273,11 @@
         <section class="section" id="teaching" aria-labelledby="teaching-title">
           <h2 id="teaching-title">Talks &amp; Teaching</h2>
 
-          <!-- WORLD MAP -->
-          <div class="talk-map-wrap">
-            <svg class="talk-map" viewBox="0 0 900 440" xmlns="http://www.w3.org/2000/svg" aria-label="World map showing talk locations">
-              <path class="map-land" d="M60,80 L100,70 L155,75 L180,90 L195,110 L210,130 L200,160 L185,180 L170,200 L155,210 L140,215 L130,205 L120,190 L110,175 L95,165 L85,150 L70,135 L60,120 Z"/>
-              <path class="map-land" d="M195,40 L225,35 L245,45 L240,65 L220,70 L200,62 Z"/>
-              <path class="map-land" d="M155,220 L175,215 L195,225 L205,250 L210,280 L205,310 L195,335 L180,350 L165,345 L155,325 L148,300 L145,270 L148,245 Z"/>
-              <path class="map-land" d="M390,75 L420,70 L445,75 L455,90 L450,105 L435,112 L420,115 L405,110 L392,100 L385,88 Z"/>
-              <path class="map-land" d="M415,58 L430,52 L440,60 L435,72 L420,74 L410,68 Z"/>
-              <path class="map-land" d="M375,75 L385,70 L390,80 L382,88 L372,84 Z"/>
-              <path class="map-land" d="M400,125 L435,120 L460,130 L468,155 L465,185 L455,215 L440,240 L420,255 L400,250 L385,235 L378,210 L378,185 L382,160 L388,140 Z"/>
-              <path class="map-land" d="M455,70 L530,60 L600,65 L650,75 L680,90 L700,110 L695,130 L670,140 L640,138 L610,130 L580,125 L555,130 L535,125 L515,115 L495,108 L475,100 L458,90 Z"/>
-              <path class="map-land" d="M565,130 L585,128 L595,145 L590,165 L575,175 L560,165 L555,148 Z"/>
-              <path class="map-land" d="M640,138 L665,135 L675,148 L665,158 L648,155 L638,148 Z"/>
-              <path class="map-land" d="M700,100 L710,95 L718,105 L712,115 L702,112 Z"/>
-              <path class="map-land" d="M660,240 L705,232 L730,238 L740,255 L738,278 L720,292 L695,296 L670,285 L655,268 L652,250 Z"/>
-              <path class="map-land" d="M120,410 L300,402 L480,398 L660,402 L780,410 L660,425 L300,428 Z" opacity="0.3"/>
-
-              <!-- Seoul: CIKM 2025 -->
-              <g class="map-dot-group" data-venue="CIKM 2025" data-loc="Seoul, South Korea" data-date="Nov 2025" data-type="paper" data-paper="EFU: Enforcing Federated Unlearning via Functional Encryption" data-href="https://dl.acm.org/doi/abs/10.1145/3746252.3761091">
-                <circle class="map-dot" cx="712" cy="118" r="6"/>
-                <circle class="map-pulse" cx="712" cy="118" r="6"/>
-              </g>
-              <!-- Rome: IJCNN 2025 -->
-              <g class="map-dot-group" data-venue="IJCNN 2025" data-loc="Rome, Italy" data-date="Jun 2025" data-type="paper" data-paper="Empirical Analysis of Asynchronous FL on Heterogeneous Devices" data-href="https://ieeexplore.ieee.org/abstract/document/11228075">
-                <circle class="map-dot" cx="424" cy="105" r="6"/>
-                <circle class="map-pulse" cx="424" cy="105" r="6"/>
-              </g>
-              <!-- Vancouver: NeurIPS 2024 -->
-              <g class="map-dot-group" data-venue="NeurIPS 2024" data-loc="Vancouver, Canada" data-date="Dec 2024" data-type="paper" data-paper="Bringing Functional Encryption to Federated Foundation Models" data-href="https://openreview.net/pdf?id=7bgJ7t5kkW">
-                <circle class="map-dot" cx="108" cy="98" r="6"/>
-                <circle class="map-pulse" cx="108" cy="98" r="6"/>
-              </g>
-              <!-- Flower Monthly (Online/Cambridge) -->
-              <g class="map-dot-group" data-venue="Flower Monthly" data-loc="Online · hosted by Prof. Nicholas Lane" data-date="Sep 2024" data-type="invited" data-paper="EncCluster: Scalable Functional Encryption in FL" data-href="https://www.youtube.com/watch?v=noLwP2yyRpY">
-                <circle class="map-dot map-dot--invited" cx="400" cy="82" r="7"/>
-                <circle class="map-pulse map-pulse--invited" cx="400" cy="82" r="7"/>
-              </g>
-              <!-- Tartu: University of Tartu -->
-              <g class="map-dot-group" data-venue="University of Tartu" data-loc="Tartu, Estonia" data-date="Aug 2024" data-type="invited" data-paper="Balancing Privacy and Performance in Federated Learning" data-href="#">
-                <circle class="map-dot map-dot--invited" cx="448" cy="68" r="7"/>
-                <circle class="map-pulse map-pulse--invited" cx="448" cy="68" r="7"/>
-              </g>
-              <!-- Warsaw: FedCSIS 2023 -->
-              <g class="map-dot-group" data-venue="FedCSIS 2023" data-loc="Warsaw, Poland" data-date="Sep 2023" data-type="paper" data-paper="Balancing Privacy and Accuracy in FL for Speech Emotion Recognition" data-href="https://www.research.unipd.it/bitstream/11577/3506537/2/444.pdf">
-                <circle class="map-dot" cx="437" cy="84" r="6"/>
-                <circle class="map-pulse" cx="437" cy="84" r="6"/>
-              </g>
-              <!-- Copenhagen: ISPEC 2023 -->
-              <g class="map-dot-group" data-venue="ISPEC 2023" data-loc="Copenhagen, Denmark" data-date="Aug 2023" data-type="paper" data-paper="Secure and Efficient FL with Homomorphic Encryption and Gradient Pruning" data-href="https://link.springer.com/chapter/10.1007/978-981-99-7032-2_1">
-                <circle class="map-dot" cx="418" cy="70" r="6"/>
-                <circle class="map-pulse" cx="418" cy="70" r="6"/>
-              </g>
-
-              <!-- Tooltip -->
-              <g id="map-tooltip" style="display:none" pointer-events="none">
-                <rect id="map-tt-bg" rx="6" ry="6" fill="white" stroke="#dbe2ea" stroke-width="1"/>
-                <text id="map-tt-venue" font-family="'Chakra Petch',sans-serif" font-size="11" font-weight="700" fill="#32465e"/>
-                <rect id="map-tt-badge-bg" rx="3" ry="3" style="display:none"/>
-                <text id="map-tt-badge" font-family="'IBM Plex Mono',monospace" font-size="8.5" fill="white" style="display:none"/>
-                <text id="map-tt-loc" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#6b737b"/>
-                <text id="map-tt-date" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#9aa5b1"/>
-                <text id="map-tt-paper" font-family="'Chakra Petch',sans-serif" font-size="9.5" fill="#6b737b"/>
-              </g>
-            </svg>
-            <div class="map-legend">
-              <span class="legend-item"><span class="legend-dot"></span>Paper Talk</span>
-              <span class="legend-item"><span class="legend-dot legend-dot--invited"></span>Invited Talk</span>
-            </div>
+          <!-- LEAFLET MAP -->
+          <div id="talk-map"></div>
+          <div class="map-legend">
+            <span class="legend-item"><span class="legend-dot"></span>Paper Talk</span>
+            <span class="legend-item"><span class="legend-dot legend-dot--invited"></span>Invited Talk</span>
           </div>
 
           <div class="pub-group" style="margin-top:32px">
@@ -372,59 +310,65 @@
       </main>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
     <script>
-      document.getElementById("year").textContent = String(new Date().getFullYear());
-
-      // Map tooltips
+      // Leaflet talk map
       (function () {
-        var tt = document.getElementById('map-tooltip');
-        var ttBg = document.getElementById('map-tt-bg');
-        var ttVenue = document.getElementById('map-tt-venue');
-        var ttBadge = document.getElementById('map-tt-badge');
-        var ttBadgeBg = document.getElementById('map-tt-badge-bg');
-        var ttLoc = document.getElementById('map-tt-loc');
-        var ttDate = document.getElementById('map-tt-date');
-        var ttPaper = document.getElementById('map-tt-paper');
-        if (!tt) return;
-        document.querySelectorAll('.map-dot-group').forEach(function (g) {
-          g.style.cursor = 'pointer';
-          g.addEventListener('mouseenter', function () {
-            var venue = g.getAttribute('data-venue');
-            var loc = g.getAttribute('data-loc');
-            var date = g.getAttribute('data-date');
-            var type = g.getAttribute('data-type');
-            var paper = g.getAttribute('data-paper');
-            var cx = parseFloat(g.querySelector('circle').getAttribute('cx'));
-            var cy = parseFloat(g.querySelector('circle').getAttribute('cy'));
-            var isInvited = type === 'invited';
-            var pad = 10, w = 220, lineH = 16;
-            var h = pad * 2 + lineH * (isInvited ? 5 : 4) + 4;
-            var tx = cx + 14; if (tx + w > 896) tx = cx - w - 14;
-            var ty = cy - h / 2; if (ty < 2) ty = 2; if (ty + h > 438) ty = 438 - h;
-            ttBg.setAttribute('x', tx); ttBg.setAttribute('y', ty);
-            ttBg.setAttribute('width', w); ttBg.setAttribute('height', h);
-            var y = ty + pad + 12;
-            ttVenue.setAttribute('x', tx + pad); ttVenue.setAttribute('y', y); ttVenue.textContent = venue; y += lineH;
-            if (isInvited) {
-              ttBadgeBg.setAttribute('x', tx + pad); ttBadgeBg.setAttribute('y', y - 11);
-              ttBadgeBg.setAttribute('width', 54); ttBadgeBg.setAttribute('height', 14);
-              ttBadgeBg.setAttribute('fill', '#4a5f78'); ttBadgeBg.style.display = '';
-              ttBadge.setAttribute('x', tx + pad + 4); ttBadge.setAttribute('y', y); ttBadge.textContent = 'INVITED'; ttBadge.style.display = '';
-              y += lineH;
-            } else { ttBadge.style.display = 'none'; ttBadgeBg.style.display = 'none'; }
-            ttLoc.setAttribute('x', tx + pad); ttLoc.setAttribute('y', y); ttLoc.textContent = loc; y += lineH;
-            ttDate.setAttribute('x', tx + pad); ttDate.setAttribute('y', y); ttDate.textContent = date; y += lineH + 2;
-            ttPaper.setAttribute('x', tx + pad); ttPaper.setAttribute('y', y);
-            ttPaper.textContent = paper.length > 38 ? paper.slice(0, 36) + '…' : paper;
-            tt.style.display = '';
-          });
-          g.addEventListener('mouseleave', function () { tt.style.display = 'none'; });
-          g.addEventListener('click', function () {
-            var href = g.getAttribute('data-href');
-            if (href && href !== '#') window.open(href, '_blank');
-          });
+        var talks = [
+          { lat: 37.5665, lng: 126.9780, venue: 'CIKM 2025', loc: 'Seoul, South Korea', date: 'Nov 2025', type: 'paper', paper: 'EFU: Enforcing Federated Unlearning via Functional Encryption', href: 'https://dl.acm.org/doi/abs/10.1145/3746252.3761091' },
+          { lat: 41.9028, lng: 12.4964, venue: 'IJCNN 2025', loc: 'Rome, Italy', date: 'Jun 2025', type: 'paper', paper: 'Empirical Analysis of Asynchronous FL on Heterogeneous Devices', href: 'https://ieeexplore.ieee.org/abstract/document/11228075' },
+          { lat: 49.2827, lng: -123.1207, venue: 'NeurIPS 2024', loc: 'Vancouver, Canada', date: 'Dec 2024', type: 'paper', paper: 'Bringing Functional Encryption to Federated Foundation Models', href: 'https://openreview.net/pdf?id=7bgJ7t5kkW' },
+          { lat: 52.2053, lng: 0.1218, venue: 'Flower Monthly', loc: 'Online · Cambridge / Flower Labs', date: 'Sep 2024', type: 'invited', paper: 'EncCluster: Scalable Functional Encryption in FL', href: 'https://www.youtube.com/watch?v=noLwP2yyRpY' },
+          { lat: 58.3780, lng: 26.7290, venue: 'University of Tartu', loc: 'Tartu, Estonia', date: 'Aug 2024', type: 'invited', paper: 'Balancing Privacy and Performance in Federated Learning', href: '' },
+          { lat: 52.2297, lng: 21.0122, venue: 'FedCSIS 2023', loc: 'Warsaw, Poland', date: 'Sep 2023', type: 'paper', paper: 'Balancing Privacy and Accuracy in FL for Speech Emotion Recognition', href: 'https://www.research.unipd.it/bitstream/11577/3506537/2/444.pdf' },
+          { lat: 55.6761, lng: 12.5683, venue: 'ISPEC 2023', loc: 'Copenhagen, Denmark', date: 'Aug 2023', type: 'paper', paper: 'Secure and Efficient FL with Homomorphic Encryption', href: 'https://link.springer.com/chapter/10.1007/978-981-99-7032-2_1' }
+        ];
+
+        var map = L.map('talk-map', {
+          scrollWheelZoom: false,
+          zoomControl: true,
+          dragging: true
+        }).setView([45, 20], 2);
+
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+          maxZoom: 18
+        }).addTo(map);
+
+        var paperColor = '#123c70';
+        var invitedColor = '#4a5f78';
+
+        talks.forEach(function (t) {
+          var color = t.type === 'invited' ? invitedColor : paperColor;
+          var marker = L.circleMarker([t.lat, t.lng], {
+            radius: t.type === 'invited' ? 9 : 7,
+            fillColor: color,
+            color: '#fff',
+            weight: 2,
+            opacity: 1,
+            fillOpacity: 0.9
+          }).addTo(map);
+
+          var badge = t.type === 'invited'
+            ? '<span style="display:inline-block;background:#4a5f78;color:#fff;font-size:10px;font-family:monospace;letter-spacing:0.06em;border-radius:3px;padding:1px 6px;margin-left:6px;vertical-align:middle;">Invited</span>'
+            : '';
+          var link = t.href
+            ? '<a href="' + t.href + '" target="_blank" style="color:#123c70;font-size:12px;">Open paper ↗</a>'
+            : '';
+
+          marker.bindPopup(
+            '<div style="font-family:\'Chakra Petch\',sans-serif;min-width:200px;">' +
+            '<div style="font-weight:700;font-size:13px;color:#32465e;">' + t.venue + badge + '</div>' +
+            '<div style="font-size:11px;color:#6b737b;margin:2px 0;">' + t.loc + ' · ' + t.date + '</div>' +
+            '<div style="font-size:11.5px;color:#2b2f33;margin:6px 0 4px;line-height:1.4;">' + t.paper + '</div>' +
+            link +
+            '</div>',
+            { maxWidth: 260 }
+          );
         });
       })();
+    </script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
 
       // Chip expand/collapse
       (function () {
