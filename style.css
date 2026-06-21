@@ -121,7 +121,7 @@ strong { color: var(--text); }
 /* shared xp role/place */
 .xp-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin-bottom: 6px; }
 .xp-role { font-weight: 700; color: var(--text); }
-.xp-place { color: var(--muted); font-size: var(--fs-meta); }
+.xp-place { color: var(--muted); }
 
 /* publications */
 .pub-group + .pub-group { margin-top: 36px; }
