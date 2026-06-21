@@ -144,21 +144,10 @@ strong { color: var(--text); }
 
 /* talks & teaching — grouped cards */
 .tt-group + .tt-group { margin-top: 30px; }
-.tt-group-head {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  margin-bottom: 12px;
-}
+.tt-group-head { margin-bottom: 12px; }
 .tt-group-head .pub-group-head { margin: 0; }
-.tt-count {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--line);
-  letter-spacing: 0.04em;
-}
 .tt-card {
-  background: var(--panel);
+  background: var(--panel-strong);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
@@ -173,7 +162,7 @@ strong { color: var(--text); }
   transition: background 140ms ease;
 }
 .tt-row + .tt-row { border-top: 1px solid var(--border); }
-.tt-row:hover { background: var(--panel-hover); }
+.tt-row:hover { background: var(--panel); }
 .tt-date {
   font-family: var(--font-mono);
   font-size: var(--fs-meta);
