@@ -161,6 +161,13 @@ strong { color: var(--text); }
 .tl-item {
   position: relative;
   padding-bottom: 32px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 420ms ease, transform 420ms ease;
+}
+.tl-item.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 .tl-item:last-child {
   padding-bottom: 0;
@@ -174,11 +181,13 @@ strong { color: var(--text); }
   border-radius: 50%;
   background: var(--panel);
   border: 2px solid var(--line);
-  transition: border-color 160ms ease, background 160ms ease;
+  transition: border-color 200ms ease, background 200ms ease, transform 200ms ease, box-shadow 200ms ease;
 }
 .tl-item:hover .tl-dot {
   border-color: var(--link);
   background: var(--link);
+  transform: scale(1.35);
+  box-shadow: 0 0 0 4px rgba(18, 60, 112, 0.12);
 }
 .tl-date {
   font-family: var(--font-mono);
@@ -186,7 +195,6 @@ strong { color: var(--text); }
   color: var(--muted);
   margin-bottom: 4px;
 }
-.tl-content { }
 .tl-sub {
   margin: 0 0 6px;
   font-size: var(--fs-meta);
