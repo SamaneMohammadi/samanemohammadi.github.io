@@ -261,7 +261,7 @@ button.chip[aria-expanded="true"] {
 .chip-pubs {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0;
   padding-top: 8px;
   border-top: 1px solid var(--border);
 }
@@ -271,12 +271,16 @@ button.chip[aria-expanded="true"] {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--muted);
-  margin-bottom: 2px;
+  margin-bottom: 6px;
 }
 .chip-pub-link {
+  display: list-item;
+  list-style: disc;
+  margin-left: 1.1rem;
   font-size: 0.82rem;
   color: var(--link);
-  line-height: 1.4;
+  line-height: 1.5;
+  padding: 2px 0;
 }
 .chip-pub-link:hover { color: var(--link-strong); text-decoration: underline; }
 
