@@ -88,11 +88,18 @@ strong { color: var(--text); }
 .sidebar-id { text-align: center; }
 .contact {
   list-style: none; margin: 0 0 18px; padding: 18px 0 0;
-  border-top: 1px solid var(--border); display: grid; gap: 11px;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: center; align-items: center; gap: 22px;
 }
-.contact li { display: flex; align-items: center; gap: 10px; font-size: 0.92rem; color: var(--text); }
-.contact a { color: var(--link); }
-.contact svg { flex: 0 0 16px; width: 16px; height: 16px; color: var(--muted); }
+.contact li { display: flex; }
+.contact a {
+  display: grid; place-items: center;
+  color: var(--muted);
+  width: 22px; height: 22px;
+  transition: color 140ms ease, transform 140ms ease;
+}
+.contact a:hover { color: var(--link); transform: translateY(-1px); }
+.contact svg { width: 20px; height: 20px; }
 .icon-line { fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .icon-fill { fill: currentColor; }
 
