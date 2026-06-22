@@ -142,27 +142,24 @@ strong { color: var(--text); }
 .teaching-item { display: grid; grid-template-columns: 150px 1fr; gap: 24px; align-items: start; }
 .teaching-label { font-family: var(--font-mono); color: var(--muted); font-size: var(--fs-meta); padding-top: 2px; }
 
-/* talks & teaching — grouped cards */
-.tt-group + .tt-group { margin-top: 30px; }
-.tt-group-head { margin-bottom: 12px; }
+/* talks & teaching — grouped, editorial (no cards) */
+.tt-group + .tt-group { margin-top: 34px; }
+.tt-group-head { margin-bottom: 14px; }
 .tt-group-head .pub-group-head { margin: 0; }
 .tt-card {
-  background: var(--panel-hover);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
-  overflow: hidden;
+  display: grid;
+  gap: 16px;
 }
 .tt-row {
   display: grid;
-  grid-template-columns: 110px 1fr;
-  gap: 20px;
+  grid-template-columns: 96px 1fr;
+  gap: 22px;
   align-items: baseline;
-  padding: 13px 20px;
-  transition: background 140ms ease;
+  padding-left: 16px;
+  border-left: 2px solid var(--border);
+  transition: border-color 160ms ease;
 }
-.tt-row + .tt-row { border-top: 1px solid var(--border); }
-.tt-row:hover { background: var(--panel); }
+.tt-row:hover { border-left-color: var(--link); }
 .tt-date {
   font-family: var(--font-mono);
   font-size: var(--fs-meta);
