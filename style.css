@@ -250,21 +250,22 @@ strong { color: var(--text); }
 }
 button.chip {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: var(--accent-strong);
-  background: var(--panel-hover);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  background: transparent;
   border: 1px solid var(--border);
   border-radius: 6px;
-  padding: 3px 10px;
+  padding: 2px 9px;
   cursor: pointer;
   transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
   white-space: nowrap;
 }
 button.chip:hover {
-  background: var(--panel-strong);
+  background: var(--panel-hover);
   border-color: var(--line);
+  color: var(--accent-strong);
 }
 button.chip[aria-expanded="true"] {
   background: var(--link);
