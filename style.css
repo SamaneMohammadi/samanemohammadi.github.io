@@ -261,16 +261,6 @@ strong { color: var(--text); }
   color: var(--text);
   font-weight: 600;
 }
-.tl-pub {
-  display: block;
-  margin-top: 2px;
-  font-size: 0.8rem;
-  color: var(--muted);
-  line-height: 1.5;
-}
-.tl-pub a { color: var(--link); }
-.tl-pub a:hover { text-decoration: underline; }
-.tl-pub-sep { color: var(--border); padding: 0 6px; }
 .pub-title {
   color: var(--link);
 }
