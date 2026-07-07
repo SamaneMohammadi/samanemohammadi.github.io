@@ -16,10 +16,10 @@
   --muted: #6b737b;
   --accent: #4a5f78;
   --accent-strong: #32465e;
-  --link: #A624A6;
-  --link-strong: #8a1e8a;
-  /* --link: #1f66d0;
-  --link-strong: #1a54ad; */
+  /* --link: #A624A6;
+  --link-strong: #8a1e8a; */
+  --link: #1f66d0;
+  --link-strong: #1a54ad;
   --line: #9aa5b1;
   --border: #dbe2ea;
   --shadow: 0 8px 20px rgba(30, 40, 50, 0.05);
