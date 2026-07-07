@@ -246,7 +246,17 @@ strong { color: var(--text); }
   color: var(--muted);
   line-height: 1.65;
 }
-/* project lists inside each role — always visible, no interaction */
+.tl-projects li {
+  padding-left: 18px;
+  position: relative;
+}
+.tl-projects li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #9aa5b1;
+}
+/* 
 .tl-projects {
   list-style: none;
   margin: 12px 0 0;
@@ -258,7 +268,7 @@ strong { color: var(--text); }
   font-size: var(--fs-meta);
   color: var(--muted);
   line-height: 1.58;
-}
+} */
 .tl-projects strong {
   color: var(--text);
   font-weight: 600;
