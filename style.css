@@ -244,85 +244,45 @@ strong { color: var(--text); }
   color: var(--muted);
   line-height: 1.65;
 }
-.tl-chips {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+/* project lists inside each role — always visible, no interaction */
+.tl-projects {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
 }
-.chip-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-button.chip {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 400;
-  letter-spacing: 0.03em;
-  color: var(--muted);
-  background: transparent;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 2px 9px;
-  cursor: pointer;
-  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
-  white-space: nowrap;
-}
-button.chip:hover {
-  background: var(--panel-hover);
-  border-color: var(--line);
-  color: var(--accent-strong);
-}
-button.chip[aria-expanded="true"] {
-  background: var(--link);
-  border-color: var(--link);
-  color: #fff;
-}
-.chip-panel {
-  padding: 12px 14px;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  animation: fadeSlide 180ms ease;
-}
-@keyframes fadeSlide {
-  from { opacity: 0; transform: translateY(-4px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.chip-detail {
-  margin: 0 0 10px;
+.tl-projects li {
+  position: relative;
+  padding-left: 16px;
   font-size: var(--fs-meta);
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.65;
 }
-.chip-detail:last-child { margin-bottom: 0; }
-.chip-pubs {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  padding-top: 8px;
-  border-top: 1px solid var(--border);
+.tl-projects li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--line);
 }
-.chip-pubs-label {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-  margin-bottom: 6px;
-}
-.chip-pub-link {
-  display: list-item;
-  list-style: disc;
-  margin-left: 1.1rem;
-  font-size: 0.82rem;
+.tl-projects strong {
   color: var(--text);
-  line-height: 1.5;
-  padding: 2px 0;
-  text-decoration: none;
+  font-weight: 600;
 }
-.chip-pub-link:hover .pub-title { text-decoration: underline; }
+.tl-pub {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.tl-pub a { color: var(--link); }
+.tl-pub a:hover { text-decoration: underline; }
+.tl-pub-sep { color: var(--border); padding: 0 5px; }
 .pub-title {
   color: var(--link);
 }
