@@ -16,8 +16,11 @@
   --muted: #6b737b;
   --accent: #4a5f78;
   --accent-strong: #32465e;
+  --link: #1f66d0;
+--link-strong: #1a54ad;
+  /* 
   --link: #123c70;
-  --link-strong: #133a6b;
+  --link-strong: #133a6b; */
   --line: #9aa5b1;
   --border: #dbe2ea;
   --shadow: 0 8px 20px rgba(30, 40, 50, 0.05);
