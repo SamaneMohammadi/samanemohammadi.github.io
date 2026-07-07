@@ -246,7 +246,17 @@ strong { color: var(--text); }
   color: var(--muted);
   line-height: 1.65;
 }
+.tl-projects {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 15px;
+}
 .tl-projects li {
+  font-size: var(--fs-meta);
+  color: var(--muted);
+  line-height: 1.58;
   padding-left: 18px;
   position: relative;
 }
@@ -254,7 +264,11 @@ strong { color: var(--text); }
   content: "–";
   position: absolute;
   left: 0;
-  color: #9aa5b1;
+  color: var(--line);
+}
+.tl-projects strong {
+  color: var(--text);
+  font-weight: 600;
 }
 /* 
 .tl-projects {
@@ -269,10 +283,10 @@ strong { color: var(--text); }
   color: var(--muted);
   line-height: 1.58;
 } */
-.tl-projects strong {
+/* .tl-projects strong {
   color: var(--text);
   font-weight: 600;
-}
+} */
 .pub-title {
   color: var(--link);
 }
