@@ -146,6 +146,29 @@ strong { color: var(--text); }
 .pub-venue { color: var(--muted); font-size: var(--fs-meta); }
 .pub-award { color: var(--accent); font-weight: 600; }
 
+/* per-paper links (PDF / Code) */
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 7px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.pub-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--muted);
+  transition: color 140ms ease;
+}
+.pub-links a:hover { color: var(--link); text-decoration: none; }
+.pub-links svg { width: 13px; height: 13px; }
+.pub-links .icon-line { fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.pub-links .icon-fill { fill: currentColor; }
+
 /* talks & teaching */
 .teaching-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
 .teaching-item { display: grid; grid-template-columns: 150px 1fr; gap: 24px; align-items: start; }
