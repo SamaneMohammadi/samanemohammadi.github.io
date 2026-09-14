@@ -1,502 +1,397 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="color-scheme" content="light" />
-<title>Samaneh Mohammadi</title>
-<meta name="description" content="Samaneh Mohammadi — PhD researcher, University of Edinburgh. Machine unlearning, privacy-preserving machine learning, and fairness in large language models." />
-<link rel="icon" type="image/jpeg" href="favicon.jpg" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-<header class="nav">
-  <div class="shell nav-inner">
-    <span class="nav-name">Samaneh Mohammadi</span>
-    <nav class="nav-links" aria-label="Sections">
-      <a href="#work">Work</a>
-      <a href="#background">Background</a>
-      <a href="#about">About</a>
-      <a class="cv" href="CV_Samaneh_Mohammadi.pdf">CV</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-<!-- ============ HERO ============ -->
-<section class="shell hero">
-  <p class="hero-kicker">PhD candidate, School of Informatics, University of Edinburgh</p>
-  <h1>Changing what a trained model knows &mdash; <em>removing a person's data, removing a bias</em> &mdash; without retraining it.</h1>
-  <p class="hero-body">
-    That problem runs through everything below. Deleting one person's influence from a
-    deployed model, stripping a learned bias out of an LLM, and proving a system is
-    fair before it screens a job application are the same technical question under
-    different constraints: how do you change one property of a model precisely, and
-    leave the rest of it alone?
-  </p>
-  <div class="hero-links">
-    <a href="mailto:samaneh.mohammadi@ed.ac.uk">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="m3 8 9 6 9-6"/></svg>
-      samaneh.mohammadi@ed.ac.uk
-    </a>
-    <a href="https://scholar.google.com/citations?user=hVsI_-4AAAAJ&amp;hl=en">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5Z"/><path d="M6 11v4c2 2 10 2 12 0v-4"/></svg>
-      Google Scholar
-    </a>
-    <a href="https://github.com/SamaneMohammadi">
-      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-      GitHub
-    </a>
-    <a href="https://www.linkedin.com/in/samaneh-mohammadi-22879b159/">
-      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M0 1.15C0 .52.52 0 1.16 0h13.68C15.48 0 16 .52 16 1.15v13.69c0 .63-.52 1.15-1.16 1.15H1.16A1.16 1.16 0 0 1 0 14.84V1.15Zm4.94 13.01V6.17H2.28v7.99h2.66ZM3.61 5.08c.86 0 1.39-.57 1.39-1.29-.02-.73-.53-1.29-1.37-1.29-.84 0-1.39.56-1.39 1.29 0 .72.53 1.29 1.35 1.29h.02Zm5.45 9.08V9.7c0-.24.02-.48.09-.65.19-.48.63-.97 1.38-.97.97 0 1.36.73 1.36 1.8v4.28h2.66V9.57c0-2.46-1.31-3.6-3.06-3.6-1.44 0-2.07.78-2.42 1.32h.02v-1.13H6.84c.03.75 0 7.99 0 7.99h2.66Z"/></svg>
-      LinkedIn
-    </a>
-  </div>
-</section>
-
-<!-- ============ WORK ============ -->
-<div class="band band-wash" id="work">
-<section class="shell sec">
-  <div class="sec-head">
-    <h2>Work</h2>
-    <p class="sec-note">Six peer-reviewed papers, 200+ citations. Code is public where the paper is.</p>
-  </div>
-
-  <div class="work">
-
-    <!-- ---- EFU ---- -->
-    <article class="card">
-      <figure class="card-fig">
-        <!-- Swap for a real paper figure: <img src="assets/efu.png" alt="..."> -->
-        <svg viewBox="0 0 240 150" role="img" aria-label="Three clients send encrypted updates to an untrusted server; one client requests deletion and the server applies it without reading the request.">
-          <g fill="none" stroke="#0a5c62" stroke-width="1.6" stroke-linecap="round">
-            <circle cx="26" cy="30" r="11"/>
-            <circle cx="26" cy="75" r="11"/>
-            <circle cx="26" cy="120" r="11"/>
-            <path d="M40 32 L96 58"/>
-            <path d="M40 75 L96 72"/>
-            <path d="M40 118 L96 86" stroke-dasharray="4 4"/>
-            <rect x="98" y="48" width="48" height="48" rx="3"/>
-            <path d="M114 66v-5a6 6 0 0 1 12 0v5"/>
-            <rect x="110" y="66" width="20" height="16" rx="2" fill="#0a5c62" stroke="none"/>
-            <path d="M148 72h34"/>
-            <rect x="184" y="52" width="42" height="40" rx="3"/>
-            <path d="M192 64h26M192 72h26M192 80h17"/>
-          </g>
-          <g fill="none" stroke="#a8323c" stroke-width="1.8" stroke-linecap="round">
-            <path d="M21 115l10 10M31 115l-10 10"/>
-          </g>
-          <text x="26" y="144" font-family="Inter, sans-serif" font-size="8" fill="#5f6b76" text-anchor="middle">clients</text>
-          <text x="122" y="112" font-family="Inter, sans-serif" font-size="8" fill="#5f6b76" text-anchor="middle">untrusted server</text>
-          <text x="205" y="104" font-family="Inter, sans-serif" font-size="8" fill="#5f6b76" text-anchor="middle">model</text>
-        </svg>
-        <figcaption>A client withdraws. The server removes that influence without ever reading the request.</figcaption>
-      </figure>
-
-      <div>
-        <h3 class="card-title">EFU &mdash; enforcing the right to be forgotten</h3>
-        <p class="card-claim">
-          Machine unlearning in federated learning, where the server coordinating
-          training cannot be trusted with the deletion request.
-        </p>
-        <dl>
-          <dt>Why it's hard</dt>
-          <dd>
-            GDPR gives people the right to have their data deleted, but you cannot lift a
-            row back out of a trained model, and retraining from scratch is infeasible.
-            In federated learning it is worse: the party that would carry out the deletion
-            is the same party you are trying to keep the request private from.
-          </dd>
-          <dt>What I built</dt>
-          <dd>
-            A framework using functional encryption that lets a client remove their data's
-            influence from a collaboratively trained model. The server executes the
-            unlearning without learning whose data was removed or what the request
-            contained, so deletion does not depend on trusting it.
-          </dd>
-          <dt>Why it matters beyond privacy</dt>
-          <dd>
-            Removing a specific learned influence from a deployed model, verifiably and
-            without retraining, is the same problem as removing a capability you no longer
-            want a model to have.
-          </dd>
-        </dl>
-        <div class="card-meta">
-          <span class="venue">CIKM &rsquo;25 &middot; first author</span>
-          <a href="https://dl.acm.org/doi/pdf/10.1145/3746252.3761091">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>Paper</a>
-          <a href="https://github.com/SamaneMohammadi/EFU">
-            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Code</a>
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#f4f6f8" />
+    <title>Samaneh Mohammadi | University of Edinburgh</title>
+    <meta name="robots" content="noimageindex" />
+    <meta
+      name="description"
+      content="Homepage of Samaneh Mohammadi, PhD researcher at School of Informatics - University of Edinburgh. Research in efficient and trustworthy ML."
+    />
+    <link rel="icon" type="image/jpeg" href="favicon.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <nav class="nav" aria-label="Sections">
+          <a class="navlink" href="#about">About</a>
+          <a class="navlink" href="#research">Research</a>
+          <a class="navlink" href="#experience">Experience</a>
+          <a class="navlink" href="#education">Education</a>
+          <a class="navlink" href="#teaching">Talks &amp; Teaching</a>
+        </nav>
       </div>
-    </article>
+    </div>
 
-    <!-- ---- LLM BIAS ---- -->
-    <article class="card">
-      <figure class="card-fig">
-        <svg viewBox="0 0 240 150" role="img" aria-label="A stack of transformer layers with a small number of attention heads and feed-forward blocks highlighted.">
-          <g fill="none" stroke="#0a5c62" stroke-width="1.4">
-            <rect x="30" y="16" width="180" height="26" rx="2"/>
-            <rect x="30" y="50" width="180" height="26" rx="2"/>
-            <rect x="30" y="84" width="180" height="26" rx="2"/>
-            <rect x="30" y="118" width="180" height="26" rx="2"/>
-          </g>
-          <g fill="none" stroke="#0a5c62" stroke-width="1.1" opacity="0.42">
-            <circle cx="48" cy="29" r="6"/><circle cx="70" cy="29" r="6"/><circle cx="92" cy="29" r="6"/><circle cx="114" cy="29" r="6"/><circle cx="136" cy="29" r="6"/><circle cx="158" cy="29" r="6"/><circle cx="180" cy="29" r="6"/>
-            <circle cx="48" cy="63" r="6"/><circle cx="70" cy="63" r="6"/><circle cx="92" cy="63" r="6"/><circle cx="114" cy="63" r="6"/><circle cx="136" cy="63" r="6"/><circle cx="158" cy="63" r="6"/><circle cx="180" cy="63" r="6"/>
-            <circle cx="48" cy="97" r="6"/><circle cx="70" cy="97" r="6"/><circle cx="92" cy="97" r="6"/><circle cx="114" cy="97" r="6"/><circle cx="136" cy="97" r="6"/><circle cx="158" cy="97" r="6"/><circle cx="180" cy="97" r="6"/>
-            <circle cx="48" cy="131" r="6"/><circle cx="70" cy="131" r="6"/><circle cx="92" cy="131" r="6"/><circle cx="114" cy="131" r="6"/><circle cx="136" cy="131" r="6"/><circle cx="158" cy="131" r="6"/><circle cx="180" cy="131" r="6"/>
-          </g>
-          <g fill="#0a5c62">
-            <circle cx="92" cy="29" r="6"/>
-            <circle cx="158" cy="63" r="6"/>
-            <circle cx="70" cy="97" r="6"/>
-            <circle cx="136" cy="97" r="6"/>
-          </g>
-        </svg>
-        <figcaption>Bias sits in a handful of components, not across the whole network. Find those, touch only those.</figcaption>
-      </figure>
-
-      <div>
-        <h3 class="card-title">Where bias lives inside an LLM</h3>
-        <p class="card-claim">
-          Locating the specific attention heads and feed-forward layers that carry a bias,
-          then fine-tuning only those against a fairness-aware objective.
-        </p>
-        <dl>
-          <dt>The premise</dt>
-          <dd>
-            Bias is not spread evenly through a language model. It concentrates in
-            identifiable components. If that is true, model-wide retraining is the wrong
-            instrument &mdash; it is expensive and it damages capabilities you wanted to keep.
-          </dd>
-          <dt>The approach</dt>
-          <dd>
-            Localise the components that carry the behaviour, then apply a targeted
-            fine-tune with fairness written into the loss. The intervention is narrow by
-            construction, which is what keeps the capability cost down.
-          </dd>
-          <dt>Status</dt>
-          <dd>
-            In progress. The open questions are how cleanly bias localises across model
-            families, and how much of the reduction survives further fine-tuning.
-          </dd>
-        </dl>
-        <div class="card-meta">
-          <span class="tag tag-open">In progress</span>
-          <span class="venue">University of Edinburgh, 2026&ndash;</span>
+    <div class="container shell" id="top">
+      <aside class="sidebar">
+        <figure class="portrait">
+          <img
+            src="assets/img3.jpg"
+            alt="Portrait of Samaneh Mohammadi"
+            onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span class=&quot;fallback&quot;>SM</span>')"
+          />
+        </figure>
+        <div class="sidebar-id">
+          <h1>Samaneh Mohammadi</h1>
+          <p class="role">PhD Candidate · School of Informatics · University of Edinburgh</p>
         </div>
-      </div>
-    </article>
+        <ul class="contact">
+          <li>
+            <a href="mailto:samaneh.mohammadi@ed.ac.uk" aria-label="Email" title="Email">
+              <svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z" /><path d="m3 8 9 6 9-6" /></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://scholar.google.com/citations?user=hVsI_-4AAAAJ&hl=en" aria-label="Google Scholar" title="Google Scholar">
+              <svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5Z" /><path d="M6 11v4c2 2 10 2 12 0v-4" /><path d="M22 10v5" /></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/samaneh-mohammadi-22879b159/" aria-label="LinkedIn" title="LinkedIn">
+              <svg class="icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.15C0 .52.52 0 1.16 0h13.68C15.48 0 16 .52 16 1.15v13.69c0 .63-.52 1.15-1.16 1.15H1.16A1.16 1.16 0 0 1 0 14.84V1.15Zm4.94 13.01V6.17H2.28v7.99h2.66ZM3.61 5.08c.86 0 1.39-.57 1.39-1.29-.02-.73-.53-1.29-1.37-1.29-.84 0-1.39.56-1.39 1.29 0 .72.53 1.29 1.35 1.29h.02Zm5.45 9.08V9.7c0-.24.02-.48.09-.65.19-.48.63-.97 1.38-.97.97 0 1.36.73 1.36 1.8v4.28h2.66V9.57c0-2.46-1.31-3.6-3.06-3.6-1.44 0-2.07.78-2.42 1.32h.02v-1.13H6.84c.03.75 0 7.99 0 7.99h2.66Z" /></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/SamaneMohammadi" aria-label="GitHub" title="GitHub">
+              <svg class="icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z" /></svg>
+            </a>
+          </li>
+        </ul>
+      </aside>
 
-    <!-- ---- HIRING SoK ---- -->
-    <article class="card">
-      <figure class="card-fig">
-        <svg viewBox="0 0 240 150" role="img" aria-label="A four-stage hiring pipeline with risk markers above three of the stages.">
-          <g fill="none" stroke="#0a5c62" stroke-width="1.5">
-            <rect x="10" y="62" width="46" height="30" rx="2"/>
-            <rect x="68" y="62" width="46" height="30" rx="2"/>
-            <rect x="126" y="62" width="46" height="30" rx="2"/>
-            <rect x="184" y="62" width="46" height="30" rx="2"/>
-            <path d="M58 77h8M116 77h8M174 77h8"/>
-          </g>
-          <g fill="none" stroke="#a8323c" stroke-width="1.5" stroke-linecap="round">
-            <path d="M33 50v-14M33 30v-3"/>
-            <path d="M91 50v-22M91 22v-3"/>
-            <path d="M207 50v-16M207 28v-3"/>
-          </g>
-          <g font-family="Inter, sans-serif" font-size="7.5" fill="#5f6b76" text-anchor="middle">
-            <text x="33" y="81">sourcing</text>
-            <text x="91" y="81">screening</text>
-            <text x="149" y="81">ranking</text>
-            <text x="207" y="81">decision</text>
-            <text x="120" y="115">fairness and security risk at each stage</text>
-          </g>
-        </svg>
-        <figcaption>Mapping where an AI hiring system can be attacked or skewed, stage by stage.</figcaption>
-      </figure>
+      <main>
+        <!-- ABOUT -->
+        <section class="section" id="about" aria-labelledby="about-title">
+          <h2 id="about-title">About</h2>
+          <p class="lede">
+            <p class="lede">
+              I am in the final year of my PhD in the School of Informatics at the University of
+              Edinburgh, supervised by <a href="https://mjuarezm.github.io/">Dr. Marc Juarez</a>.
+              My main research focus is on <strong>efficient and trustworthy AI/ML</strong>. I have
+              conducted research on preserving privacy and fairness of distributed machine learning
+              under practical constraints. I am currently working on <strong>fairness and bias in
+              large language models</strong>, and on the <strong>trustworthiness of AI/ML tools
+              used in hiring decisions</strong> (an Amazon-funded project).
+            </p>
 
-      <div>
-        <h3 class="card-title">Auditing AI tools that screen job applicants</h3>
-        <p class="card-claim">
-          Whether LLM-based hiring systems are actually more robust and more equitable
-          than the algorithmic methods they are replacing &mdash; and how you would measure it.
-        </p>
-        <dl>
-          <dt>Three questions</dt>
-          <dd>
-            What security and fairness failures arise across the hiring pipeline, and what
-            do they cost. Whether LLM-based approaches genuinely improve on what came
-            before, rather than being assumed to. And what an evaluation framework needs
-            to contain so that any hiring system can be measured on both.
-          </dd>
-          <dt>Why this domain</dt>
-          <dd>
-            Hiring is a deployed, high-stakes, legally constrained use of LLMs where the
-            harms are concrete and the incumbent systems are well studied. It is a good
-            testbed for evaluation methodology that generalises past it.
-          </dd>
-        </dl>
-        <div class="card-meta">
-          <span class="tag tag-open">SoK in progress</span>
-          <span class="venue">Funded by and in collaboration with Amazon</span>
-        </div>
-      </div>
-    </article>
+        </section>
 
-    <!-- ---- ENCCLUSTER ---- -->
-    <article class="card">
-      <figure class="card-fig">
-        <svg viewBox="0 0 240 150" role="img" aria-label="A large set of model weights is clustered into a small set of centroids, which is what gets encrypted.">
-          <g fill="none" stroke="#0a5c62" stroke-width="1.1" opacity="0.4">
-            <circle cx="22" cy="26" r="3.4"/><circle cx="38" cy="40" r="3.4"/><circle cx="30" cy="58" r="3.4"/><circle cx="48" cy="22" r="3.4"/><circle cx="18" cy="46" r="3.4"/><circle cx="44" cy="62" r="3.4"/><circle cx="56" cy="44" r="3.4"/><circle cx="26" cy="76" r="3.4"/><circle cx="50" cy="84" r="3.4"/><circle cx="34" cy="96" r="3.4"/><circle cx="58" cy="66" r="3.4"/><circle cx="20" cy="94" r="3.4"/><circle cx="46" cy="104" r="3.4"/><circle cx="60" cy="98" r="3.4"/><circle cx="30" cy="114" r="3.4"/>
-          </g>
-          <g fill="#0a5c62">
-            <circle cx="112" cy="42" r="5"/><circle cx="112" cy="70" r="5"/><circle cx="112" cy="98" r="5"/>
-          </g>
-          <g fill="none" stroke="#0a5c62" stroke-width="1.5" stroke-linecap="round">
-            <path d="M74 70h26"/>
-            <path d="M126 70h24"/>
-            <rect x="154" y="52" width="40" height="36" rx="3"/>
-            <path d="M166 66v-5a8 8 0 0 1 16 0v5"/>
-            <rect x="162" y="66" width="24" height="16" rx="2" fill="#0a5c62" stroke="none"/>
-          </g>
-          <g font-family="Inter, sans-serif" font-size="7.5" fill="#5f6b76" text-anchor="middle">
-            <text x="38" y="136">full model</text>
-            <text x="112" y="136">clustered</text>
-            <text x="174" y="104">encrypted</text>
-          </g>
-        </svg>
-        <figcaption>Encrypt a small clustered representation, not every weight, so cost stops tracking model size.</figcaption>
-      </figure>
-
-      <div>
-        <h3 class="card-title">EncCluster &mdash; encryption that scales with the model</h3>
-        <p class="card-claim">
-          Making functional and homomorphic encryption practical in federated learning,
-          including on resource-constrained devices.
-        </p>
-        <dl>
-          <dt>The obstacle</dt>
-          <dd>
-            Encrypting model updates gives strong privacy guarantees and is usually
-            dismissed as too expensive: cost scales with the number of parameters, which
-            rules it out for anything large or anything running on a phone.
-          </dd>
-          <dt>The idea</dt>
-          <dd>
-            Compress client updates through weight clustering and probabilistic filters
-            before encrypting, so that what gets encrypted is a compact representation
-            rather than the full parameter set. Communication and computation costs fall,
-            updates stay encrypted through aggregation, and accuracy holds.
-          </dd>
-        </dl>
-        <div class="card-meta">
-          <span class="venue">PMCJ &rsquo;25 &middot; NeurIPS &rsquo;24 workshop &middot; ISPEC &rsquo;23</span>
-          <a href="https://www.sciencedirect.com/science/article/pii/S1574119225000100">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>Paper</a>
-          <a href="https://github.com/SamaneMohammadi/EncCluster">
-            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Code</a>
-          <a href="https://www.youtube.com/watch?v=noLwP2yyRpY">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="m11 9 5 3-5 3z"/></svg>Talk</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- ---- TESTBED ---- -->
-    <article class="card">
-      <figure class="card-fig">
-        <svg viewBox="0 0 240 150" role="img" aria-label="Devices of different sizes and capabilities training a shared model together.">
-          <g fill="none" stroke="#0a5c62" stroke-width="1.5">
-            <rect x="14" y="94" width="22" height="36" rx="3"/>
-            <rect x="52" y="82" width="34" height="48" rx="3"/>
-            <rect x="102" y="100" width="20" height="30" rx="3"/>
-            <rect x="138" y="76" width="40" height="54" rx="3"/>
-            <rect x="194" y="98" width="26" height="32" rx="3"/>
-            <path d="M25 92V58h150v34" stroke-dasharray="3 4"/>
-            <path d="M69 80V58M112 98V58M158 74V58M207 96V58" stroke-dasharray="3 4"/>
-            <rect x="80" y="16" width="80" height="30" rx="3"/>
-            <path d="M120 58V46"/>
-            <path d="M94 28h52M94 36h34"/>
-          </g>
-          <text x="120" y="146" font-family="Inter, sans-serif" font-size="7.5" fill="#5f6b76" text-anchor="middle">heterogeneous edge hardware, not simulation</text>
-        </svg>
-        <figcaption>Real devices, unequal speeds. The trade-offs look different from how they look in simulation.</figcaption>
-      </figure>
-
-      <div>
-        <h3 class="card-title">Federated learning on hardware that actually differs</h3>
-        <p class="card-claim">
-          A physical testbed for training and deploying speech emotion recognition across
-          heterogeneous edge devices, to measure efficiency, fairness, and privacy under
-          real conditions.
-        </p>
-        <dl>
-          <dt>Why build the hardware</dt>
-          <dd>
-            Federated learning results are usually reported from simulation, where every
-            client is equally fast and equally available. Device heterogeneity changes who
-            contributes to the model and therefore who it works well for &mdash; a fairness
-            effect that simulation hides.
-          </dd>
-          <dt>What came out of it</dt>
-          <dd>
-            An empirical account of the efficiency, fairness, and privacy trade-offs in
-            asynchronous federated learning across real devices, plus the differential
-            privacy work that preceded it.
-          </dd>
-        </dl>
-        <div class="card-meta">
-          <span class="venue">IJCNN &rsquo;25 &middot; FedCSIS &rsquo;23</span>
-          <span class="tag tag-award">Prof. Zdzis&#322;aw Pawlak Award</span>
-          <a href="https://ieeexplore.ieee.org/abstract/document/11228075">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>Paper</a>
-          <a href="https://github.com/SamaneMohammadi/FL_on_Edge_Devices">
-            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Code</a>
-        </div>
-      </div>
-    </article>
-
-  </div>
-
-  <p class="sec-note" style="margin-top:28px">
-    Also: healthcare AI on clinical mental-health records in Swedish hospitals
-    (PharML at ECML PKDD &rsquo;26), and a systematic review of privacy&ndash;performance
-    methods and metrics in federated learning (JPDC &rsquo;24).
-    <a href="https://scholar.google.com/citations?user=hVsI_-4AAAAJ&amp;hl=en">Full list on Google Scholar.</a>
-  </p>
-</section>
-</div>
-
-<!-- ============ BACKGROUND ============ -->
-<div class="band" id="background">
-<section class="shell sec">
-  <div class="sec-head"><h2>Background</h2></div>
-
-  <div class="rows" style="margin-bottom:44px">
-    <div class="row">
-      <div class="row-when">Sep 2026 &ndash; present</div>
-      <p class="row-what">Associate Researcher, part-time
-        <span class="where">&middot; <a href="https://informatics.ed.ac.uk/">School of Informatics, University of Edinburgh</a></span>
-        <span class="detail">Trustworthiness of AI/ML tools in hiring, with Amazon.</span>
-      </p>
-    </div>
-    <div class="row">
-      <div class="row-when">Mar 2026 &ndash; present</div>
-      <p class="row-what">PhD Researcher
-        <span class="where">&middot; <a href="https://informatics.ed.ac.uk/">School of Informatics, University of Edinburgh</a></span>
-        <span class="detail">Fairness and bias in LLMs; group-aware federated learning under differential privacy (under review, NDSS &rsquo;27).</span>
-      </p>
-    </div>
-    <div class="row">
-      <div class="row-when">Sep 2021 &ndash; Feb 2026</div>
-      <p class="row-what">Industrial PhD Researcher &amp; Developer
-        <span class="where">&middot; <a href="https://www.ri.se/en">RISE Research Institutes of Sweden</a>, V&auml;ster&aring;s</span>
-        <span class="detail">EU projects <a href="https://dais-project.eu/">DAIS</a> (47 partners) and <a href="https://dadap-project.eu/">DADAP</a>, with academic, industrial and clinical partners.</span>
-      </p>
-    </div>
-    <div class="row">
-      <div class="row-when">Sep 2020 &ndash; Aug 2021</div>
-      <p class="row-what">Technology Engineer / Software Developer
-        <span class="where">&middot; <a href="https://www.open-inside.com/">Openinside Co. W.L.L</a>, Manama</span>
-        <span class="detail">Odoo ERP modules end to end &mdash; Python backend, JavaScript front end &mdash; and integration with client finance and supply-chain systems.</span>
-      </p>
-    </div>
-    <div class="row">
-      <div class="row-when">Sep 2017 &ndash; Oct 2020</div>
-      <p class="row-what">Research Assistant, MSc thesis
-        <span class="where">&middot; <a href="https://coinlab.ut.ac.ir/">CoinLab, University of Tehran</a></span>
-        <span class="detail">Graph-based anomaly detection in dynamic information networks.</span>
-      </p>
-    </div>
-  </div>
-
-  <div class="two">
-    <div>
-      <p class="sub">Education</p>
-      <div class="rows">
-        <div class="row">
-          <div class="row-when">2021 &ndash; 2026</div>
-          <p class="row-what">PhD, Cyber Security, Privacy &amp; Trust
-            <span class="where">&middot; University of Edinburgh</span>
-            <span class="detail">Reconciling Privacy with Fairness and Accountability in Federated Learning under Practical Constraints. Supervisor <a href="https://mjuarezm.github.io/">Dr. Marc Juarez</a>.</span>
+        <!-- RESEARCH -->
+        <section class="section" id="research" aria-labelledby="research-title">
+          <h2 id="research-title">Research &amp; Publications</h2>
+          <div class="pub-group">
+            <p class="pub-group-head">Efficient Privacy-Enhancing Technologies in Federated Learning</p>
+            <ul class="pub-list">
+              <li class="pub-item">
+                <div class="pub-title"><a href="https://dl.acm.org/doi/abs/10.1145/3746252.3761091">EFU: Enforcing Federated Unlearning via Functional Encryption</a></div>
+                <div class="pub-venue"><strong>CIKM '25</strong> — 34th ACM Conference on Information and Knowledge Management.</div>
+                <div class="pub-links">
+                  <a href="https://dl.acm.org/doi/pdf/10.1145/3746252.3761091">
+                    <svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>
+                    PDF
+                  </a>
+                  <a href="https://github.com/SamaneMohammadi/EFU">
+                    <svg class="icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                    Code
+                  </a>
+                </div>
+              </li>
+              <li class="pub-item">
+                <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S1574119225000100">EncCluster: Scalable Functional Encryption in Federated Learning Through Weight Clustering and Probabilistic Filters</a></div>
+                <div class="pub-venue"><strong>PMCJ '25</strong> — Pervasive and Mobile Computing Journal.</div>
+                <div class="pub-links">
+                  <a href="https://www.sciencedirect.com/science/article/pii/S1574119225000100">
+                    <svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>
+                    PDF
+                  </a>
+                  <a href="https://github.com/SamaneMohammadi/EncCluster">
+                    <svg class="icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                    Code
+                  </a>
+                </div>
+              </li>
+              <li class="pub-item">
+                <div class="pub-title"><a href="https://neurips.cc/virtual/2024/103974">Bringing Functional Encryption to Federated Foundation Models</a></div>
+                <div class="pub-venue"><strong>FL@FM NeurIPS'24</strong> — Workshop on Federated Foundation Models at NeurIPS '24</div>
+                <div class="pub-links">
+                  <a href="https://openreview.net/pdf?id=7bgJ7t5kkW">
+                    <svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>
+                    PDF
+                  </a>
+                  <a href="https://github.com/SamaneMohammadi/EncCluster">
+                    <svg class="icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                    Code
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="pub-group">
+            <p class="pub-group-head">Efficiency, Fairness &amp; Privacy Trade-offs in Federated Learning</p>
+            <ul class="pub-list">
+              <li class="pub-item">
+                <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/11228075">Empirical Analysis of Asynchronous Federated Learning on Heterogeneous Devices: Efficiency, Fairness, and Privacy Trade-offs</a></div>
+                <div class="pub-venue"><strong>IJCNN '25</strong> — International Joint Conference on Neural Networks.</div>
+                <div class="pub-links">
+                  <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11228075">
+                    <svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>
+                    PDF
+                  </a>
+                  <a href="https://github.com/SamaneMohammadi/FL_on_Edge_Devices">
+                    <svg class="icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                    Code
+                  </a>
+                </div>
+              </li>
+              <li class="pub-item">
+                <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/10306049">Balancing Privacy and Accuracy in Federated Learning for Speech Emotion Recognition</a></div>
+                <div class="pub-venue"><strong>FedCSIS '23</strong> — 18th Conference on Computer Science and Intelligent Systems. <span class="pub-award">Best Paper Award.</span></div>
+                <div class="pub-links">
+                  <a href="https://www.research.unipd.it/bitstream/11577/3506537/2/444.pdf">
+                    <svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>
+                    PDF
+                  </a>
+                  <a href="https://github.com/SamaneMohammadi/LDP-FL">
+                    <svg class="icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+                    Code
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <p class="entry-sub" style="margin-top: 24px">
+            <a href="https://scholar.google.com/citations?user=hVsI_-4AAAAJ&hl=en">Full publication list on Google Scholar →</a>
           </p>
-        </div>
-        <div class="row">
-          <div class="row-when">2017 &ndash; 2020</div>
-          <p class="row-what">MSc, Information Technology Engineering
-            <span class="where">&middot; University of Tehran</span>
-            <span class="detail">Anomaly Detection in Dynamic Information Networks. Grade A.</span>
-          </p>
-        </div>
-      </div>
+        </section>
+
+        <!-- EXPERIENCE — timeline -->
+        <section class="section" id="experience" aria-labelledby="experience-title">
+        <h2 id="experience-title">Professional Experience</h2>
+        <div class="timeline">
+      
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date">Mar 2026 – Present</div>
+            <div class="tl-content">
+              <div class="xp-head">
+                <span class="xp-role">PhD Researcher</span>
+                <span class="xp-place"><a href="https://informatics.ed.ac.uk/">School of Informatics, University of Edinburgh</a> · Edinburgh, UK</span>
+              </div>
+              <ul class="tl-projects">
+                <li><strong>Trustworthiness of AI/ML Tools used in Hiring Decisions</strong> – Amazon-funded project, to Feb 2027</li>
+                <li><strong>Fairness and Bias in LLM</strong> — (ongoing).</li>
+                <li><strong>Group-aware Federated Learning Architecture</strong> — providing fair outcome across demographic groups under Differential Privacy. Publication (under review — <a href="https://petsymposium.org/cfp27.php">PETS '27</a>)</li>
+              </ul>
+            </div>
+          </div>
+      
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date">Sep 2021 – Feb 2026</div>
+            <div class="tl-content">
+              <div class="xp-head">
+                <span class="xp-role">Industrial PhD Researcher &amp; Developer</span>
+                <span class="xp-place"><a href="https://www.ri.se/en">RISE Research Institutes of Sweden</a> · Västerås, Sweden</span>
+              </div>
+              <p class="tl-sub">Research and development across two EU projects — <a href="https://dais-project.eu/">DAIS</a> and <a href="https://dadap-project.eu/">DADAP</a> — with academic, industrial, and clinical partners.</p>
+              <ul class="tl-projects">
+                <li><strong>Scalable Encryption for Federated Learning</strong> — developed FL frameworks that make functional and homomorphic encryption practical to deploy on resource-constrained devices. Publication (<a href="https://www.sciencedirect.com/science/article/pii/S1574119225000100">PMCJ '25</a>, <a href="https://openreview.net/pdf?id=7bgJ7t5kkW">Workshop at NeurIPS '24</a>, <a href="https://link.springer.com/chapter/10.1007/978-981-99-7032-2_1">ISPEC '23</a>)</li>
+                <li><strong>Physical Federated Learning Testbed and Model Deployment</strong> — deployed federated Speech Emotion Recognition across heterogeneous edge hardware to benchmark efficiency, fairness, and privacy under real-world constraints. Publication (<a href="https://ieeexplore.ieee.org/abstract/document/11228075">IJCNN '25</a>, <a href="https://www.research.unipd.it/bitstream/11577/3506537/2/444.pdf">FedCSIS '23</a>)</li>
+                <li><strong>Transformer Models on Clinical Mental Health Data</strong> — improving reliability, accuracy, and fairness for Swedish hospital deployment. Publication (<a href="https://sites.google.com/view/pharml-2026">PharML Workshop at ECML PKDD 2026</a>)</li>
+              </ul>
+            </div>
+          </div>
+
+        
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-date">Sep 2020 – Sep 2021</div>
+              <div class="tl-content">
+                <div class="xp-head">
+                  <span class="xp-role">Technology Engineer / Developer</span>
+                  <span class="xp-place"><a href="https://www.open-inside.com/">Openinside Co. W.L.L.</a> · Manama, Bahrain</span>
+                </div>
+                <ul class="tl-projects">
+                  <li><strong>ERP Development</strong> — new Odoo modules for finance and supply-chain operations.</li>
+                  <li><strong>System Integration</strong> — connecting new modules with existing finance and supply-chain systems.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-date">Sep 2017 – Oct 2020</div>
+              <div class="tl-content">
+                <div class="xp-head">
+                  <span class="xp-role">Research Assistant (M.Sc. Thesis)</span>
+                  <span class="xp-place"><a href="https://coinlab.ut.ac.ir/">CoinLab, University of Tehran</a> · Tehran, Iran</span>
+                </div>
+                <ul class="tl-projects">
+                  <li><strong>Anomaly Detection in Dynamic Networks</strong> — detected anomalous nodes from changes in the structure and properties of the communities they belong to in information networks.</li>
+                  <li><strong>Inductive Learning</strong> — a GraphSAGE-based model that captures how a node's neighbours affect its anomaly score.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="section" id="education" aria-labelledby="education-title">
+          <h2 id="education-title">Education</h2>
+          <ul class="entry-list">
+            <li class="entry">
+              <div class="entry-meta">2021 – 2026 (exp.)</div>
+              <div class="entry-body">
+                <div class="entry-title"><a href="https://informatics.ed.ac.uk/">School of Informatics - University of Edinburgh</a> </div>
+                <div class="entry-sub">Ph.D. in Cyber Security, Privacy, and Trust.<br />Thesis: <strong>Reconciling Privacy with Fairness and Accountability in Federated Learning under Practical Constraints</strong>.</div>
+              </div>
+            </li>
+            <li class="entry">
+              <div class="entry-meta">2017 – 2020</div>
+              <div class="entry-body">
+                <div class="entry-title"><a href="https://ut.ac.ir/en">University of Tehran</a> </div>
+                <div class="entry-sub">M.Sc. in Information Technology Engineering.<br />Thesis: <strong>Anomaly Detection in Dynamic Information Networks</strong>. Grade: A.</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- TALKS & TEACHING -->
+        <section class="section" id="teaching" aria-labelledby="teaching-title">
+          <h2 id="teaching-title">Talks &amp; Teaching</h2>
+
+          <div class="tt-group">
+            <div class="tt-group-head">
+              <span class="pub-group-head">Conference paper talks</span>
+            </div>
+            <div class="tt-card">
+              <div class="tt-row">
+                <div class="tt-date">Nov 2025</div>
+                <div class="tt-body"><strong>CIKM 2025</strong> <span class="tt-place">· Seoul, South Korea</span></div>
+              </div>
+              <div class="tt-row">
+                <div class="tt-date">Jun 2025</div>
+                <div class="tt-body"><strong>IJCNN 2025</strong> <span class="tt-place">· Rome, Italy</span></div>
+              </div>
+              <div class="tt-row">
+                <div class="tt-date">Dec 2024</div>
+                <div class="tt-body"><strong>NeurIPS 2024</strong> <span class="tt-place">· Vancouver, Canada</span></div>
+              </div>
+              <div class="tt-row">
+                <div class="tt-date">Sep 2023</div>
+                <div class="tt-body"><strong>FedCSIS 2023</strong> <span class="tt-place">· Warsaw, Poland</span></div>
+              </div>
+              <div class="tt-row">
+                <div class="tt-date">Aug 2023</div>
+                <div class="tt-body"><strong>ISPEC 2023</strong> <span class="tt-place">· Copenhagen, Denmark</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tt-group">
+            <div class="tt-group-head">
+              <span class="pub-group-head">Invited talks</span>
+            </div>
+            <div class="tt-card">
+              <div class="tt-row">
+                <div class="tt-date">Sep 2024</div>
+                <div class="tt-body"><a href="https://www.youtube.com/watch?v=noLwP2yyRpY&feature=youtu.be">Flower Monthly</a> — &ldquo;Scalable Functional Encryption in Federated Learning,&rdquo; hosted by Prof. Nicholas Lane (University of Cambridge / co-founder of Flower Labs).</div>
+              </div>
+              <div class="tt-row">
+                <div class="tt-date">Aug 2024</div>
+                <div class="tt-body"><a href="https://school.flta-conference.org/">MegaData Summer School on Federated Machine Learning</a> — &ldquo;Balancing privacy and performance in Federated Learning,&rdquo; organizer: University of Tartu.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tt-group">
+            <div class="tt-group-head">
+              <span class="pub-group-head">Service</span>
+            </div>
+            <div class="tt-card">
+              <div class="tt-row">
+                <div class="tt-date">2025</div>
+                <div class="tt-body">Program Committee — <a href="https://cfagentic.github.io/">CFAgentic @ ICML '25</a>, Workshop on Collaborative and Federated Agentic Workflows.</div>
+              </div>
+              <div class="tt-row">
+                <div class="tt-date">2025</div>
+                <div class="tt-body">Program Committee — <a href="https://flta-conference.org/flta-2025/index.php">IEEE International Conference on Federated Learning Technologies and Applications (FLTA'25)</a></div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="tt-group">
+            <div class="tt-group-head">
+              <span class="pub-group-head">Teaching</span>
+            </div>
+            <div class="tt-card">
+              <div class="tt-row">
+                <div class="tt-date">2020</div>
+                <div class="tt-body">Teaching Assistant — <strong>Computational Data Mining</strong>, University of Tehran.</div>
+              </div>
+              <div class="tt-row">
+                <div class="tt-date">2019–2020</div>
+                <div class="tt-body">Teaching Assistant — <strong>Complex Networks</strong>, University of Tehran.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="footer">© <span id="year"></span> Samaneh Mohammadi</footer>
+      </main>
     </div>
 
-    <div>
-      <p class="sub">Talks and service</p>
-      <ul class="plain">
-        <li><strong>Program committee</strong> &mdash; <a href="https://flta-conference.org/flta-2025/index.php">IEEE FLTA</a>, 2025 and 2026; <a href="https://cfagentic.github.io/">CFAgentic at ICML 2025</a>.</li>
-        <li><strong>Invited talk</strong> &mdash; <a href="https://www.youtube.com/watch?v=noLwP2yyRpY">Flower Monthly</a>, hosted by Prof. Nicholas Lane (Cambridge, co-founder of Flower Labs), Sep 2024.</li>
-        <li><strong>Invited talk</strong> &mdash; <a href="https://school.flta-conference.org/">MegaData Summer School</a> on federated machine learning, University of Tartu, Aug 2024.</li>
-        <li><strong>Conference talks</strong> &mdash; ECML PKDD &rsquo;26 Naples, CIKM &rsquo;25 Seoul, IJCNN &rsquo;25 Rome, NeurIPS &rsquo;24 Vancouver, ISPEC &rsquo;23 Copenhagen, FedCSIS &rsquo;23 Warsaw.</li>
-        <li><strong>Teaching</strong> &mdash; Computational Data Mining and Complex Networks, University of Tehran, 2019&ndash;2020.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-</div>
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
 
-<!-- ============ ABOUT ============ -->
-<div class="band band-wash" id="about">
-<section class="shell sec">
-  <div class="sec-head"><h2>About</h2></div>
-  <div class="about">
-    <img src="assets/img3.jpg" alt="Samaneh Mohammadi"
-         onerror="this.style.display='none'" />
-    <div>
-      <p>
-        I am finishing a PhD in the School of Informatics at the University of Edinburgh,
-        supervised by <a href="https://mjuarezm.github.io/">Dr. Marc Juarez</a>. Most of my
-        work has been on privacy-preserving and distributed machine learning &mdash;
-        unlearning, encryption, and the fairness costs that appear when you deploy any of
-        it on real hardware.
-      </p>
-      <p>
-        I started the PhD at RISE Research Institutes of Sweden on EU consortium projects,
-        which meant building things that had to survive contact with hospitals, industrial
-        partners, and devices that do not behave like a simulator. That shaped what I find
-        interesting: methods that hold up under constraints someone else imposed, not ones
-        that only work in the setting where they were invented.
-      </p>
-      <p>
-        I am currently most interested in precise intervention on trained models &mdash;
-        changing one property without disturbing the rest &mdash; and in the evaluation
-        methods you need to tell whether the change actually worked.
-        I am open to research roles from December 2026, and reachable at
-        <a href="mailto:samaneh.mohammadi@ed.ac.uk">samaneh.mohammadi@ed.ac.uk</a>.
-      </p>
-    </div>
-  </div>
-</section>
-</div>
-
-</main>
-
-<footer class="shell foot">
-  <span>&copy; <span id="year"></span> Samaneh Mohammadi</span>
-  <span>&middot;</span>
-  <a href="CV_Samaneh_Mohammadi.pdf">Curriculum vitae</a>
-  <span>&middot;</span>
-  <a href="https://scholar.google.com/citations?user=hVsI_-4AAAAJ&amp;hl=en">Google Scholar</a>
-</footer>
-
-<script>
-  document.getElementById("year").textContent = String(new Date().getFullYear());
-</script>
-</body>
+      (function () {
+        var items = document.querySelectorAll('.tl-item');
+        if (!items.length || !('IntersectionObserver' in window)) {
+          items.forEach(function (el) { el.classList.add('visible'); });
+          return;
+        }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        items.forEach(function (el) { io.observe(el); });
+      })();
+      (function () {
+        var links = Array.prototype.slice.call(document.querySelectorAll('.nav a.navlink[href^="#"]'));
+        var byId = {}, targets = [];
+        links.forEach(function (link) {
+          var id = link.getAttribute("href").slice(1);
+          var section = document.getElementById(id);
+          if (section) { byId[id] = link; targets.push(section); }
+        });
+        if (!("IntersectionObserver" in window) || targets.length === 0) return;
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              links.forEach(function (l) { l.classList.remove("active"); });
+              if (byId[entry.target.id]) { byId[entry.target.id].classList.add("active"); }
+            }
+          });
+        }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+        targets.forEach(function (section) { observer.observe(section); });
+      })();
+    </script>
+  </body>
 </html>
