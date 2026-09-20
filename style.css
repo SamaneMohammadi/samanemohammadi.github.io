@@ -97,8 +97,8 @@ strong { color: var(--text); }
 
 /* education in the sidebar */
 .sidebar-edu {
-  margin: 0 0 18px;
-  padding: 14px 0 0;
+  margin: 12px 0 18px;
+  padding: 18px 0 0;
   border-top: 1px solid var(--border);
   text-align: left;
 }
@@ -107,14 +107,8 @@ strong { color: var(--text); }
   text-transform: uppercase; letter-spacing: 0.1em;
   color: var(--muted); font-weight: 500; margin: 0 0 12px;
 }
-.sidebar-edu ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
-.sidebar-edu li {
-  display: grid; gap: 2px;
-  padding-left: 12px;
-  border-left: 2px solid var(--border);
-  transition: border-color 160ms ease;
-}
-.sidebar-edu li:hover { border-left-color: var(--link); }
+.sidebar-edu ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.sidebar-edu li { display: grid; gap: 2px; }
 .edu-deg { font-size: 0.88rem; font-weight: 600; color: var(--text); line-height: 1.4; }
 .edu-org { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); line-height: 1.45; }
 
@@ -171,9 +165,20 @@ strong { color: var(--text); }
   text-transform: uppercase; letter-spacing: 0.1em;
   color: var(--muted); font-weight: 500; margin: 0 0 16px;
 }
+/* publication theme headings read as titles, like the section heading */
+.pub-group > .pub-group-head {
+  font-family: var(--font-body);
+  font-size: 1.16rem;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  color: var(--accent-strong);
+  line-height: 1.35;
+  margin: 0 0 8px;
+}
 /* short note under a publication group heading */
 .pub-group-note {
-  margin: -6px 0 18px;
+  margin: 0 0 18px;
   max-width: 68ch;
   font-size: 0.95rem;
   line-height: 1.7;
