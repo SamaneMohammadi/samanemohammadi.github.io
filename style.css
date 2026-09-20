@@ -68,6 +68,8 @@ strong { color: var(--text); }
   border-radius: var(--radius-sm); transition: color 140ms ease, background 140ms ease;
 }
 .navlink.active { color: var(--link); background: var(--panel-hover); font-weight: 700; }
+/* the page you are currently on (multi-page nav) */
+.navlink.current { color: var(--link); background: var(--panel-hover); font-weight: 700; }
 .navlink:hover { color: var(--accent-strong); background: var(--panel-hover); text-decoration: none; }
 
 /* shell */
@@ -87,8 +89,36 @@ strong { color: var(--text); }
 .portrait img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .portrait .fallback { font-family: var(--font-mono); font-size: 2.4rem; color: var(--muted); letter-spacing: 0.05em; }
 .sidebar h1 { margin: 0 0 2px; font-size: 1.5rem; line-height: 1.15; letter-spacing: 0.01em; }
+/* name links back to the homepage on sub-pages */
+.sidebar h1 a { color: inherit; text-decoration: none; }
+.sidebar h1 a:hover { color: var(--accent-strong); text-decoration: none; }
 .sidebar .role { margin: 0 0 18px; color: var(--muted); font-size: 0.92rem; font-weight: 500; }
 .sidebar-id { text-align: center; }
+
+/* education in the sidebar */
+.sidebar-edu {
+  margin: 0 0 18px;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--border);
+  text-align: left;
+}
+.sidebar-edu-head {
+  font-family: var(--font-mono); font-size: var(--fs-eyebrow);
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--muted); font-weight: 500; margin: 0 0 12px;
+}
+.sidebar-edu ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.sidebar-edu li {
+  display: grid; gap: 2px;
+  padding-left: 12px;
+  border-left: 2px solid var(--border);
+  transition: border-color 160ms ease;
+}
+.sidebar-edu li:hover { border-left-color: var(--link); }
+.edu-deg { font-size: 0.88rem; font-weight: 600; color: var(--text); line-height: 1.4; }
+.edu-org { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); line-height: 1.45; }
+.edu-thesis { font-size: 0.8rem; font-style: italic; color: var(--muted); line-height: 1.45; }
+
 .contact {
   list-style: none; margin: 0 0 18px; padding: 14px 0 0;
   border-top: 1px solid var(--border);
@@ -135,10 +165,20 @@ strong { color: var(--text); }
 
 /* publications */
 .pub-group + .pub-group { margin-top: 36px; }
+/* space between the section intro and the first theme heading */
+.lede + .pub-group { margin-top: 30px; }
 .pub-group-head {
   font-family: var(--font-mono); font-size: var(--fs-eyebrow);
   text-transform: uppercase; letter-spacing: 0.1em;
   color: var(--muted); font-weight: 500; margin: 0 0 16px;
+}
+/* short note under a publication group heading */
+.pub-group-note {
+  margin: -6px 0 18px;
+  max-width: 68ch;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--muted);
 }
 .pub-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
 .pub-item { padding-left: 16px; border-left: 2px solid var(--border); transition: border-color 160ms ease; }
@@ -169,6 +209,41 @@ strong { color: var(--text); }
 .pub-links svg { width: 13px; height: 13px; }
 .pub-links .icon-line { fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .pub-links .icon-fill { fill: currentColor; }
+
+/* contact block on the homepage */
+.contact-list {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  max-width: 70ch;
+}
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.98rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.contact-list svg { width: 18px; height: 18px; flex: none; color: var(--muted); }
+.contact-list .icon-line { fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.contact-list .icon-fill { fill: currentColor; }
+
+/* "more pages" line at the foot of a section */
+.pagelinks {
+  margin: 34px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: var(--fs-eyebrow);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+.pagelinks a { color: var(--muted); transition: color 140ms ease; }
+.pagelinks a:hover { color: var(--link); text-decoration: none; }
 
 /* talks & teaching */
 .teaching-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
@@ -294,7 +369,7 @@ strong { color: var(--text); }
   color: var(--text);
   font-weight: 600;
 }
-/* 
+/*
 .tl-projects {
   list-style: none;
   margin: 12px 0 0;
@@ -326,7 +401,23 @@ strong { color: var(--text); }
   .portrait { width: 124px; height: 124px; margin-bottom: 0; }
   .sidebar-id { align-self: center; text-align: left; }
   .contact, .sidebar address { grid-column: 1 / -1; }
-  .topbar { display: none; }
+  /* education spans the full width under the portrait and name */
+  .sidebar-edu { grid-column: 1 / -1; }
+
+  /* The nav now moves between pages, so it has to stay visible on phones.
+     It is not sticky here: on two rows it would eat too much of the screen.
+     It sits at the top of each page, and every page also ends with the
+     "More:" links. */
+  .topbar { position: static; }
+  .topbar-inner {
+    padding-left: 0;
+    min-height: 44px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .nav { gap: 2px; row-gap: 4px; }
+  .navlink { padding: 5px 9px; font-size: 0.86rem; white-space: nowrap; }
+
   .entry, .teaching-item { grid-template-columns: 1fr; gap: 4px; }
   .entry-meta, .teaching-label { padding-top: 0; }
   .tt-row { grid-template-columns: 1fr; gap: 2px; padding: 12px 16px; }
