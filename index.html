@@ -19,16 +19,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="extra.css" />
   </head>
   <body>
     <div class="topbar">
       <div class="container topbar-inner">
-        <nav class="nav" aria-label="Sections">
+        <nav class="nav" aria-label="Pages">
           <a class="navlink" href="#about">About</a>
-          <a class="navlink" href="#research">Research</a>
-          <a class="navlink" href="#experience">Experience</a>
-          <a class="navlink" href="#education">Education</a>
-          <a class="navlink" href="#teaching">Talks &amp; Teaching</a>
+          <a class="navlink" href="#research">Publications</a>
+          <a class="navlink" href="#contact">Contact</a>
+          <a class="navlink" href="experience.html">Experience</a>
+          <a class="navlink" href="talks.html">Talks &amp; Teaching</a>
         </nav>
       </div>
     </div>
@@ -46,6 +47,23 @@
           <h1>Samaneh Mohammadi</h1>
           <p class="role">PhD Candidate · School of Informatics · University of Edinburgh</p>
         </div>
+
+        <div class="sidebar-edu">
+          <p class="sidebar-edu-head">Education</p>
+          <ul>
+            <li>
+              <span class="edu-deg">Ph.D. in Cyber Security, Privacy &amp; Trust</span>
+              <span class="edu-org"><a href="https://informatics.ed.ac.uk/">University of Edinburgh</a> · 2021–2026 (exp.)</span>
+              <span class="edu-thesis">Reconciling Privacy with Fairness and Accountability in Federated Learning under Practical Constraints</span>
+            </li>
+            <li>
+              <span class="edu-deg">M.Sc. in Information Technology Engineering</span>
+              <span class="edu-org"><a href="https://ut.ac.ir/en">University of Tehran</a> · 2017–2020</span>
+              <span class="edu-thesis">Anomaly Detection in Dynamic Information Networks</span>
+            </li>
+          </ul>
+        </div>
+
         <ul class="contact">
           <li>
             <a href="mailto:samaneh.mohammadi@ed.ac.uk" aria-label="Email" title="Email">
@@ -74,21 +92,21 @@
         <!-- ABOUT -->
         <section class="section" id="about" aria-labelledby="about-title">
           <h2 id="about-title">About</h2>
-                    <p class="lede">
+          <p class="lede">
             I am in the final year of my PhD in the <a href="https://informatics.ed.ac.uk/">School of Informatics at the University of
             Edinburgh</a>, supervised by <a href="https://mjuarezm.github.io/">Dr. Marc Juarez</a>.
             My main research interest is in trustworthy AI/ML.
           </p>
           <p class="lede">
             During my PhD, my work has focused on preserving <strong>privacy</strong> in <strong>distributed machine
-            learning</strong>, where a model is trained collaboratively across many devices rather than on centrally pooled data. 
-            These devices vary in computational capacity and in the data they hold, so some contribute far more to the final model than others. 
-            This raises a <strong>fairness</strong>  challenge, which is the second area of my research.
+            learning</strong>, where a model is trained collaboratively across many devices rather than on centrally pooled data.
+            These devices vary in computational capacity and in the data they hold, so some contribute far more to the final model than others.
+            This raises a <strong>fairness</strong> challenge, which is the second area of my research.
           </p>
           <p class="lede">
             Recently, as an associate researcher in the <a href="https://informatics.ed.ac.uk/">School of Informatics at the University of
-            Edinburgh</a>, I started working on the <strong>trustworthiness in LLM-based systems</strong> deployed in high-stakes domains such as hiring decisions, 
-            where the questions become how robust such systems are against security attacks and whether they treat every group equitably. 
+            Edinburgh</a>, I started working on the <strong>trustworthiness in LLM-based systems</strong> deployed in high-stakes domains such as hiring decisions,
+            where the questions become how robust such systems are against security attacks and whether they treat every group equitably.
             The project is funded by and carried out in collaboration with Amazon.
           </p>
         </section>
@@ -96,17 +114,20 @@
         <!-- RESEARCH -->
         <section class="section" id="research" aria-labelledby="research-title">
           <h2 id="research-title">Research &amp; Publications</h2>
+          <p class="lede">
+            My work sits at the point where privacy, fairness and accountability meet the practical limits of real deployments:
+            encryption that is too expensive to run at scale, devices that are too unequal to contribute equally, and
+            guarantees that are hard to honour once a model has already been trained. The papers below are grouped by the
+            question they set out to answer rather than by date.
+          </p>
+
           <div class="pub-group">
-            <p class="pub-group-head">Selected publications</p>
+            <p class="pub-group-head">Making privacy affordable in distributed learning</p>
+            <p class="pub-group-note">
+              Strong cryptographic protection normally costs more as the model grows, which rules it out for the model sizes
+              people actually train. These papers reduce what has to be protected, so that the guarantee stays and the cost does not.
+            </p>
             <ul class="pub-list">
-              <li class="pub-item">
-                <div class="pub-title"><a href="https://dl.acm.org/doi/abs/10.1145/3746252.3761091">EFU: Enforcing Federated Unlearning via Functional Encryption</a></div>
-                <div class="pub-venue"><strong>Mohammadi, S.</strong>*, Tsouvalas, V.,* et al. — <strong>CIKM '25</strong>.</div>
-                <div class="pub-links">
-                  <a href="https://dl.acm.org/doi/pdf/10.1145/3746252.3761091"><svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>PDF</a>
-                  <a href="https://github.com/SamaneMohammadi/EFU"><svg class="icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Code</a>
-                </div>
-              </li>
               <li class="pub-item">
                 <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S1574119225000100">EncCluster: Scalable Functional Encryption through Weight Clustering and Probabilistic Filters</a></div>
                 <div class="pub-venue">Tsouvalas, V.,* <strong>Mohammadi, S.</strong>,* et al. — <strong>PMCJ '25</strong>.</div>
@@ -116,25 +137,10 @@
                 </div>
               </li>
               <li class="pub-item">
-                <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/11228075">Empirical Analysis of Asynchronous Federated Learning on Heterogeneous Devices: Efficiency, Fairness, and Privacy Trade-offs</a></div>
-                <div class="pub-venue"><strong>Mohammadi, S.</strong> et al. — <strong>IJCNN '25</strong>.</div>
-                <div class="pub-links">
-                  <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11228075"><svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>PDF</a>
-                  <a href="https://github.com/SamaneMohammadi/FL_on_Edge_Devices"><svg class="icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Code</a>
-                </div>
-              </li>
-              <li class="pub-item">
                 <div class="pub-title"><a href="https://openreview.net/pdf?id=7bgJ7t5kkW">Bringing Functional Encryption to Federated Foundation Models</a></div>
                 <div class="pub-venue">Tsouvalas, V.,* <strong>Mohammadi, S.</strong>,* et al. — <strong>Workshop at NeurIPS '24</strong>.</div>
                 <div class="pub-links">
                   <a href="https://openreview.net/pdf?id=7bgJ7t5kkW"><svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>PDF</a>
-                </div>
-              </li>
-              <li class="pub-item">
-                <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0743731524000820">Balancing Privacy and Performance in Federated Learning: A Systematic Literature Review on Methods and Metrics</a></div>
-                <div class="pub-venue"><strong>Mohammadi, S.</strong> et al. — <strong>JPDC '24</strong>.</div>
-                <div class="pub-links">
-                  <a href="https://www.sciencedirect.com/science/article/pii/S0743731524000820"><svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>PDF</a>
                 </div>
               </li>
               <li class="pub-item">
@@ -147,204 +153,90 @@
               </li>
             </ul>
           </div>
+
+          <div class="pub-group">
+            <p class="pub-group-head">Accountability and the right to be forgotten</p>
+            <p class="pub-group-note">
+              Privacy law gives people the right to withdraw their data, but in collaborative training the server that would
+              carry out the deletion is not necessarily a party they can trust. This work makes deletion something an
+              individual can enforce themselves.
+            </p>
+            <ul class="pub-list">
+              <li class="pub-item">
+                <div class="pub-title"><a href="https://dl.acm.org/doi/abs/10.1145/3746252.3761091">EFU: Enforcing Federated Unlearning via Functional Encryption</a></div>
+                <div class="pub-venue"><strong>Mohammadi, S.</strong>*, Tsouvalas, V.,* et al. — <strong>CIKM '25</strong>.</div>
+                <div class="pub-links">
+                  <a href="https://dl.acm.org/doi/pdf/10.1145/3746252.3761091"><svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>PDF</a>
+                  <a href="https://github.com/SamaneMohammadi/EFU"><svg class="icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Code</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pub-group">
+            <p class="pub-group-head">Fairness, efficiency and privacy trade-offs</p>
+            <p class="pub-group-note">
+              Protection is never free: it is paid for in accuracy, in training time, and often unevenly across the people
+              taking part. These papers measure that cost, on real hardware and across the literature, so that the
+              trade-off can be chosen deliberately rather than discovered late.
+            </p>
+            <ul class="pub-list">
+              <li class="pub-item">
+                <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/11228075">Empirical Analysis of Asynchronous Federated Learning on Heterogeneous Devices: Efficiency, Fairness, and Privacy Trade-offs</a></div>
+                <div class="pub-venue"><strong>Mohammadi, S.</strong> et al. — <strong>IJCNN '25</strong>.</div>
+                <div class="pub-links">
+                  <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11228075"><svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>PDF</a>
+                  <a href="https://github.com/SamaneMohammadi/FL_on_Edge_Devices"><svg class="icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Code</a>
+                </div>
+              </li>
+              <li class="pub-item">
+                <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0743731524000820">Balancing Privacy and Performance in Federated Learning: A Systematic Literature Review on Methods and Metrics</a></div>
+                <div class="pub-venue"><strong>Mohammadi, S.</strong> et al. — <strong>JPDC '24</strong>.</div>
+                <div class="pub-links">
+                  <a href="https://www.sciencedirect.com/science/article/pii/S0743731524000820"><svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>PDF</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
           <p class="entry-sub" style="margin-top: 24px">
             * Equal contribution.
             <a href="https://scholar.google.com/citations?user=hVsI_-4AAAAJ&hl=en">Full publication list on Google Scholar →</a>
           </p>
         </section>
 
-        <!-- EXPERIENCE — timeline -->
-        <section class="section" id="experience" aria-labelledby="experience-title">
-        <h2 id="experience-title">Professional Experience</h2>
-        <div class="timeline">
-
-          <div class="tl-item">
-            <div class="tl-dot"></div>
-            <div class="tl-date">Sep 2026 – Present</div>
-            <div class="tl-content">
-              <div class="xp-head">
-                <span class="xp-role">Associate Researcher (Part-time)</span>
-                <span class="xp-place"><a href="https://informatics.ed.ac.uk/">School of Informatics, University of Edinburgh</a> · Edinburgh, UK</span>
-              </div>
-              <ul class="tl-projects">
-                <li><strong>Responsible AI in hiring and recruitment</strong> — assessing the trustworthiness of AI/ML tools used to support hiring decisions, with a particular focus on the fairness and security challenges of LLM-based systems, including how such systems should be audited and governed before deployment. Funded by and in collaboration with Amazon (SoK paper, ongoing).</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="tl-item">
-            <div class="tl-dot"></div>
-            <div class="tl-date">Mar 2026 – Present</div>
-            <div class="tl-content">
-              <div class="xp-head">
-                <span class="xp-role">PhD Researcher (Full-time)</span>
-                <span class="xp-place"><a href="https://informatics.ed.ac.uk/">School of Informatics, University of Edinburgh</a> · Edinburgh, UK</span>
-              </div>
-              <ul class="tl-projects">
-                <li><strong>Bias and fairness in large language models (LLMs)</strong> — bias in an LLM is not spread evenly across the network but concentrated in particular components, so the work first locates which attention heads and feed-forward layers carry it, then fine-tunes only those components against a fairness-aware training objective (ongoing).</li>
-                <li><strong>Fair and privacy-preserving distributed machine learning</strong> — designed a group-aware federated learning architecture that provides equitable model performance across demographic groups while training under differential privacy. Publication under review (<a href="https://www.ndss-symposium.org/">NDSS '27</a>).</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="tl-item">
-            <div class="tl-dot"></div>
-            <div class="tl-date">Sep 2021 – Feb 2026</div>
-            <div class="tl-content">
-              <div class="xp-head">
-                <span class="xp-role">PhD Researcher &amp; Developer (Full-time)</span>
-                <span class="xp-place"><a href="https://www.ri.se/en">RISE Research Institutes of Sweden</a> · Västerås, Sweden</span>
-              </div>
-              <p class="tl-sub">Research and development across EU-funded projects including <a href="https://dais-project.eu/">DAIS</a> (EU flagship project, 47 partners) and <a href="https://dadap-project.eu/">DADAP</a> (hospital and clinical partners working on mental health disorders), collaborating closely with academic, industrial, and clinical partners to move privacy-preserving machine learning from research into practice.</p>
-              <ul class="tl-projects">
-                <li><strong>GDPR compliance from the &ldquo;right to be forgotten&rdquo;</strong> — built a data-deletion (machine unlearning) framework that lets individuals remove the influence of their data from a collaboratively trained model in distributed machine learning systems where the central server coordinating training is not a trusted party. The framework enforces the right to be forgotten using encryption, so that each individual can autonomously request deletion without relying on the central server or revealing their request. Publication (<a href="https://dl.acm.org/doi/abs/10.1145/3746252.3761091">CIKM '25</a>).</li>
-                <li><strong>Scalable privacy preservation in distributed machine learning</strong> — made strong encryption practical at scale in federated learning by compressing client updates before encrypting them, so that encryption cost no longer scales with model size, keeping updates encrypted throughout aggrgetaion while holding communication and computation costs low and model performance intact. Publications (<a href="https://www.sciencedirect.com/science/article/pii/S1574119225000100">PMCJ '25</a>, <a href="https://openreview.net/pdf?id=7bgJ7t5kkW">Workshop at NeurIPS '24</a>, <a href="https://link.springer.com/chapter/10.1007/978-981-99-7032-2_1">ISPEC '23</a>).</li>
-                <li><strong>Real-world model deployment</strong> — built a physical testbed and used it to train and deploy speech emotion recognition models collaboratively across heterogeneous edge devices, measuring efficiency, fairness, and privacy trade-offs under real deployment conditions. Publications (<a href="https://ieeexplore.ieee.org/abstract/document/11228075">IJCNN '25</a>, <a href="https://www.research.unipd.it/bitstream/11577/3506537/2/444.pdf">FedCSIS '23</a>).</li>
-                <li><strong>Healthcare AI on sensitive data</strong> — benchmarked a range of machine learning models, including recent transformer architectures, on clinical mental-health tabular records collected in Swedish hospitals, and provided a broad evaluation of predictive performance and of how that performance varies across demographic groups, in order to give clinicians reliable decision support. Publication (<a href="https://sites.google.com/view/pharml-2026/accepted-submissions?authuser=0">PharML at ECML PKDD '26</a>).</li>
-              </ul>
-            </div>
-          </div>
-
-            <div class="tl-item">
-              <div class="tl-dot"></div>
-              <div class="tl-date">Sep 2020 – Aug 2021</div>
-              <div class="tl-content">
-                <div class="xp-head">
-                  <span class="xp-role">Technology Engineer / Software Developer (Full-time)</span>
-                  <span class="xp-place"><a href="https://www.open-inside.com/">Openinside Co. W.L.L.</a> · Manama, Bahrain (Remote)</span>
-                </div>
-                <ul class="tl-projects">
-                  <li><strong>Enterprise software development (ERP)</strong> — built new Odoo modules end to end (Python backend, JavaScript front end), supporting finance and supply-chain operations for business clients.</li>
-                  <li><strong>Systems integration</strong> — connected those modules to clients' existing finance and supply-chain systems, keeping data and processes consistent across both.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="tl-item">
-              <div class="tl-dot"></div>
-              <div class="tl-date">Sep 2017 – Oct 2020</div>
-              <div class="tl-content">
-                <div class="xp-head">
-                  <span class="xp-role">Research Assistant (M.Sc. Thesis)</span>
-                  <span class="xp-place"><a href="https://coinlab.ut.ac.ir/">CoinLab, University of Tehran</a> · Tehran, Iran</span>
-                </div>
-                <ul class="tl-projects">
-                  <li><strong>Anomaly detection in information networks</strong> — developed graph-based methods that flag suspicious nodes by tracking their activity and how it changes over time, an approach applicable to fraud detection, security monitoring, and abuse detection in social networks.</li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- EDUCATION -->
-        <section class="section" id="education" aria-labelledby="education-title">
-          <h2 id="education-title">Education</h2>
-          <ul class="entry-list">
-            <li class="entry">
-              <div class="entry-meta">2021 – 2026 (exp.)</div>
-              <div class="entry-body">
-                <div class="entry-title"><a href="https://informatics.ed.ac.uk/">School of Informatics - University of Edinburgh</a> </div>
-                <div class="entry-sub">Ph.D. in Cyber Security, Privacy &amp; Trust.<br />Thesis: <strong>Reconciling Privacy with Fairness and Accountability in Federated Learning under Practical Constraints</strong>.<br /></div>
-              </div>
+        <!-- CONTACT -->
+        <section class="section" id="contact" aria-labelledby="contact-title">
+          <h2 id="contact-title">Reach me here</h2>
+          <p class="lede">
+            I am based in Edinburgh, UK. Email is the surest way to reach me, and I am glad to hear from people working on
+            related problems.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z" /><path d="m3 8 9 6 9-6" /></svg>
+              <a href="mailto:samaneh.mohammadi@ed.ac.uk">samaneh.mohammadi@ed.ac.uk</a>
             </li>
-            <li class="entry">
-              <div class="entry-meta">2017 – 2020</div>
-              <div class="entry-body">
-                <div class="entry-title"><a href="https://ut.ac.ir/en">University of Tehran</a> </div>
-                <div class="entry-sub">M.Sc. in Information Technology Engineering.<br />Thesis: <strong>Anomaly Detection in Dynamic Information Networks</strong>. Grade: A.</div>
-              </div>
+            <li>
+              <svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
+              <span>School of Informatics, University of Edinburgh · Edinburgh, UK</span>
+            </li>
+            <li>
+              <svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5Z" /><path d="M6 11v4c2 2 10 2 12 0v-4" /><path d="M22 10v5" /></svg>
+              <a href="https://scholar.google.com/citations?user=hVsI_-4AAAAJ&hl=en">Google Scholar</a>
+            </li>
+            <li>
+              <svg class="icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.15C0 .52.52 0 1.16 0h13.68C15.48 0 16 .52 16 1.15v13.69c0 .63-.52 1.15-1.16 1.15H1.16A1.16 1.16 0 0 1 0 14.84V1.15Zm4.94 13.01V6.17H2.28v7.99h2.66ZM3.61 5.08c.86 0 1.39-.57 1.39-1.29-.02-.73-.53-1.29-1.37-1.29-.84 0-1.39.56-1.39 1.29 0 .72.53 1.29 1.35 1.29h.02Zm5.45 9.08V9.7c0-.24.02-.48.09-.65.19-.48.63-.97 1.38-.97.97 0 1.36.73 1.36 1.8v4.28h2.66V9.57c0-2.46-1.31-3.6-3.06-3.6-1.44 0-2.07.78-2.42 1.32h.02v-1.13H6.84c.03.75 0 7.99 0 7.99h2.66Z" /></svg>
+              <a href="https://www.linkedin.com/in/samaneh-mohammadi-22879b159/">LinkedIn</a>
+            </li>
+            <li>
+              <svg class="icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z" /></svg>
+              <a href="https://github.com/SamaneMohammadi">GitHub</a>
             </li>
           </ul>
-        </section>
-
-        <!-- TALKS & TEACHING -->
-        <section class="section" id="teaching" aria-labelledby="teaching-title">
-          <h2 id="teaching-title">Talks &amp; Teaching</h2>
-
-          <div class="tt-group">
-            <div class="tt-group-head">
-              <span class="pub-group-head">Conference paper talks</span>
-            </div>
-            <div class="tt-card">
-              <div class="tt-row">
-                <div class="tt-date">Sep 2026</div>
-                <div class="tt-body"><strong>ECML PKDD 2026</strong> <span class="tt-place">· Naples, Italy</span></div>
-              </div>
-              <div class="tt-row">
-                <div class="tt-date">Nov 2025</div>
-                <div class="tt-body"><strong>CIKM 2025</strong> <span class="tt-place">· Seoul, South Korea</span></div>
-              </div>
-              <div class="tt-row">
-                <div class="tt-date">Jun 2025</div>
-                <div class="tt-body"><strong>IJCNN 2025</strong> <span class="tt-place">· Rome, Italy</span></div>
-              </div>
-              <div class="tt-row">
-                <div class="tt-date">Dec 2024</div>
-                <div class="tt-body"><strong>NeurIPS 2024</strong> <span class="tt-place">· Vancouver, Canada</span></div>
-              </div>
-              <div class="tt-row">
-                <div class="tt-date">Sep 2023</div>
-                <div class="tt-body"><strong>FedCSIS 2023</strong> <span class="tt-place">· Warsaw, Poland</span></div>
-              </div>
-              <div class="tt-row">
-                <div class="tt-date">Aug 2023</div>
-                <div class="tt-body"><strong>ISPEC 2023</strong> <span class="tt-place">· Copenhagen, Denmark</span></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tt-group">
-            <div class="tt-group-head">
-              <span class="pub-group-head">Invited talks</span>
-            </div>
-            <div class="tt-card">
-              <div class="tt-row">
-                <div class="tt-date">Sep 2024</div>
-                <div class="tt-body"><a href="https://www.youtube.com/watch?v=noLwP2yyRpY&feature=youtu.be">Flower Monthly</a> — &ldquo;Scalable Functional Encryption in Federated Learning,&rdquo; hosted by Prof. Nicholas Lane (University of Cambridge / co-founder of Flower Labs).</div>
-              </div>
-              <div class="tt-row">
-                <div class="tt-date">Aug 2024</div>
-                <div class="tt-body"><a href="https://school.flta-conference.org/">MegaData Summer School on Federated Machine Learning</a> — &ldquo;Balancing privacy and performance in Federated Learning,&rdquo; organizer: University of Tartu.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tt-group">
-            <div class="tt-group-head">
-              <span class="pub-group-head">Service</span>
-            </div>
-            <div class="tt-card">
-              <div class="tt-row">
-                <div class="tt-date">2026</div>
-                <div class="tt-body">Program Committee — <a href="https://flta-conference.org/flta-2025/index.php">IEEE International Conference on Federated Learning Technologies and Applications (FLTA'26)</a></div>
-              </div>
-              <div class="tt-row">
-                <div class="tt-date">2025</div>
-                <div class="tt-body">Program Committee — <a href="https://flta-conference.org/flta-2025/index.php">IEEE International Conference on Federated Learning Technologies and Applications (FLTA'25)</a></div>
-              </div>
-              <div class="tt-row">
-                <div class="tt-date">2025</div>
-                <div class="tt-body">Program Committee — <a href="https://cfagentic.github.io/">CFAgentic @ ICML '25</a>, Workshop on Collaborative and Federated Agentic Workflows.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="tt-group">
-            <div class="tt-group-head">
-              <span class="pub-group-head">Teaching</span>
-            </div>
-            <div class="tt-card">
-              <div class="tt-row">
-                <div class="tt-date">2020</div>
-                <div class="tt-body">Teaching Assistant — <strong>Computational Data Mining</strong>, University of Tehran.</div>
-              </div>
-              <div class="tt-row">
-                <div class="tt-date">2019–2020</div>
-                <div class="tt-body">Teaching Assistant — <strong>Complex Networks</strong>, University of Tehran.</div>
-              </div>
-            </div>
-          </div>
+          <p class="pagelinks">
+            More: <a href="experience.html">Professional experience</a> · <a href="talks.html">Talks &amp; teaching</a>
+          </p>
         </section>
 
         <footer class="footer">© <span id="year"></span> Samaneh Mohammadi</footer>
@@ -354,22 +246,6 @@
     <script>
       document.getElementById("year").textContent = String(new Date().getFullYear());
 
-      (function () {
-        var items = document.querySelectorAll('.tl-item');
-        if (!items.length || !('IntersectionObserver' in window)) {
-          items.forEach(function (el) { el.classList.add('visible'); });
-          return;
-        }
-        var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              io.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.15 });
-        items.forEach(function (el) { io.observe(el); });
-      })();
       (function () {
         var links = Array.prototype.slice.call(document.querySelectorAll('.nav a.navlink[href^="#"]'));
         var byId = {}, targets = [];
