@@ -118,13 +118,12 @@
           </p>
 
           <div class="pub-group">
-            <p class="pub-group-head">Training on data the company is never allowed to collect</p>
+            <p class="pub-group-head">Scalable privacy-preserving techniques in distributed machine learning</p>
             <p class="pub-group-note">
-              Much of the most valuable training data cannot legally or contractually be pooled: it sits on customers' phones,
-              inside hospitals, or on the wrong side of a border. Federated learning trains a shared model without moving that
-              data, but the cryptography that makes it genuinely private has historically grown more expensive as the model
-              grows, which rules it out at the sizes teams actually ship. This work cuts that cost by orders of magnitude,
-              keeping the guarantee while making it deployable — including on foundation models.
+              Federated learning keeps raw data on the device, but the encryption that protects the model updates themselves
+              has traditionally scaled with model size, which makes it impractical at the sizes systems are actually deployed
+              at. This work reduces what has to be encrypted, so that strong cryptographic guarantees hold while communication
+              and computation costs stay low — including for federated foundation models.
             </p>
             <ul class="pub-list">
               <li class="pub-item">
@@ -154,13 +153,12 @@
           </div>
 
           <div class="pub-group">
-            <p class="pub-group-head">Removing a user from a model that has already shipped</p>
+            <p class="pub-group-head">Machine unlearning for the GDPR &ldquo;right to be forgotten&rdquo; in distributed machine learning</p>
             <p class="pub-group-note">
-              GDPR gives people the right to have their data erased, and deleting the row is not enough once that data is
-              baked into a trained model. Retraining from scratch on every request is not an option at production scale.
-              This work lets an individual enforce their own deletion cryptographically, without having to trust the server
-              to do it honestly or even to learn that they asked — a verifiable answer to a compliance obligation every ML
-              team now carries.
+              The right to be forgotten entitles individuals to have their data removed, but deleting a record is not enough
+              once its influence is embedded in a trained model, and retraining from scratch on every request does not scale.
+              This data-deletion (machine unlearning) framework lets a participant enforce removal of their own contribution
+              using encryption, without relying on the coordinating server or revealing that a request was made.
             </p>
             <ul class="pub-list">
               <li class="pub-item">
@@ -175,12 +173,12 @@
           </div>
 
           <div class="pub-group">
-            <p class="pub-group-head">What privacy and fairness actually cost in production</p>
+            <p class="pub-group-head">Privacy and fairness tensions in distributed machine learning</p>
             <p class="pub-group-note">
-              Every safeguard is paid for somewhere — in accuracy, in training time, in battery — and the bill rarely falls
-              evenly on the users who contribute least. These papers put numbers on that, both on a physical testbed of
-              mismatched edge devices and across the published literature, so the trade-off becomes something a team decides
-              up front rather than discovers after launch.
+              Privacy, fairness and efficiency pull against one another: differential privacy and encryption are paid for in
+              accuracy and compute, and devices that differ in capacity and in the data they hold do not contribute equally.
+              These papers quantify those tensions, both on a physical testbed of heterogeneous edge devices and across the
+              published literature.
             </p>
             <ul class="pub-list">
               <li class="pub-item">
