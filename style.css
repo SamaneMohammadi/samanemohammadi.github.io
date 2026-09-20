@@ -117,7 +117,6 @@ strong { color: var(--text); }
 .sidebar-edu li:hover { border-left-color: var(--link); }
 .edu-deg { font-size: 0.88rem; font-weight: 600; color: var(--text); line-height: 1.4; }
 .edu-org { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); line-height: 1.45; }
-.edu-thesis { font-size: 0.8rem; font-style: italic; color: var(--muted); line-height: 1.45; }
 
 .contact {
   list-style: none; margin: 0 0 18px; padding: 14px 0 0;
@@ -230,20 +229,6 @@ strong { color: var(--text); }
 .contact-list svg { width: 18px; height: 18px; flex: none; color: var(--muted); }
 .contact-list .icon-line { fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .contact-list .icon-fill { fill: currentColor; }
-
-/* "more pages" line at the foot of a section */
-.pagelinks {
-  margin: 34px 0 0;
-  padding-top: 18px;
-  border-top: 1px solid var(--border);
-  font-family: var(--font-mono);
-  font-size: var(--fs-eyebrow);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-}
-.pagelinks a { color: var(--muted); transition: color 140ms ease; }
-.pagelinks a:hover { color: var(--link); text-decoration: none; }
 
 /* talks & teaching */
 .teaching-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
