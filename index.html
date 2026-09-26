@@ -25,7 +25,7 @@
         --pub-accent: #1f5f8b;
         --pub-muted: #5b6673;
         --pub-line: #d9dee4;
-        --pub-ongoing: #2e7d4f;
+        --pub-ongoing: var(--pub-accent);
       }
 
       .project { margin: 0 0 36px; }
@@ -34,6 +34,8 @@
         margin: 0 0 6px;
       }
       .project-title { font-weight: 600; font-size: 1.08rem; margin: 0; }
+      .project.ongoing .project-title { color: var(--pub-accent); }
+      .project-status { background: rgba(31, 95, 139, 0.08); }
       .project-status {
         font-family: "IBM Plex Mono", monospace; font-size: 0.72rem;
         letter-spacing: 0.04em; text-transform: uppercase;
@@ -54,15 +56,10 @@
       ol.bib { list-style: none; counter-reset: bib; margin: 0; padding: 0; }
       ol.bib > li {
         counter-increment: bib;
-        display: grid; grid-template-columns: 2rem 7.5rem 1fr; gap: 14px;
+        display: grid; grid-template-columns: 8rem 1fr; gap: 14px;
         padding: 14px 0; border-top: 1px solid var(--pub-line);
       }
       ol.bib > li:last-child { border-bottom: 1px solid var(--pub-line); }
-      ol.bib > li::before {
-        content: counter(bib) ".";
-        font-family: "IBM Plex Mono", monospace; color: var(--pub-muted);
-        padding-top: 3px; text-align: right;
-      }
       .abbr { padding-top: 2px; }
       a.badge:hover { filter: brightness(1.2); }
       .badge {
@@ -77,7 +74,7 @@
       .bib-author { font-size: 0.92rem; margin: 0 0 2px; }
       .bib-author .me { font-style: italic; text-decoration: underline; text-underline-offset: 2px; }
       .bib-periodical { font-size: 0.9rem; color: var(--pub-muted); margin: 0; }
-      .bib-periodical em { font-style: italic; }
+      .bib-periodical strong { color: var(--pub-text, inherit); font-weight: 600; font-style: normal; }
       .bib-award {
         display: inline-block; margin-top: 4px; font-size: 0.85rem;
         color: #9a6a00; font-weight: 500;
@@ -94,10 +91,10 @@
       .bib-links svg { width: 12px; height: 12px; }
 
       @media (max-width: 640px) {
-        ol.bib > li { grid-template-columns: 1.5rem 1fr; gap: 8px 10px; }
-        .abbr { grid-column: 2; }
+        ol.bib > li { grid-template-columns: 1fr; gap: 8px; }
+        .abbr { grid-column: 1; }
         .abbr .badge { display: inline-block; }
-        .bib-body { grid-column: 2; }
+        .bib-body { grid-column: 1; }
       }
     </style>
   </head>
@@ -192,7 +189,7 @@
           <h2 id="research-title">Projects &amp; Publications</h2>
 
           <!-- Ongoing -->
-          <div class="project">
+          <div class="project ongoing">
             <div class="project-head">
               <p class="project-title">Bias and fairness in large language models (LLMs)</p>
               <span class="project-status">Ongoing</span>
@@ -208,7 +205,7 @@
           </div>
 
           <!-- Ongoing -->
-          <div class="project">
+          <div class="project ongoing">
             <div class="project-head">
               <p class="project-title">Trustworthiness in LLM-based systems for high-stakes decisions</p>
               <span class="project-status">Ongoing</span>
@@ -234,7 +231,7 @@
                 <div class="bib-body">
                   <p class="bib-title"><a href="https://www.sciencedirect.com/science/article/pii/S1574119225000100">EncCluster: Scalable Functional Encryption through Weight Clustering and Probabilistic Filters</a></p>
                   <p class="bib-author">V. Tsouvalas*, <span class="me">S. Mohammadi</span>*, et al.</p>
-                  <p class="bib-periodical"><em>In Pervasive and Mobile Computing</em> '25</p>
+                  <p class="bib-periodical"><strong>PMCJ '25:</strong> Pervasive and Mobile Computing (Elsevier)</p>
                   <div class="bib-links">
                     <a href="https://www.sciencedirect.com/science/article/pii/S1574119225000100">PDF</a>
                     <a href="https://github.com/SamaneMohammadi/EncCluster">Code</a>
@@ -242,13 +239,14 @@
                 </div>
               </li>
               <li>
-                <div class="abbr"><a class="badge" href="https://neurips.cc/Conferences/2024">NeurIPS W '24</a></div>
+                <div class="abbr"><a class="badge" href="https://federated-learning.org/fl@fm-neurips-2024/">Workshop at NeurIPS '24</a></div>
                 <div class="bib-body">
                   <p class="bib-title"><a href="https://openreview.net/pdf?id=7bgJ7t5kkW">Bringing Functional Encryption to Federated Foundation Models</a></p>
                   <p class="bib-author">V. Tsouvalas*, <span class="me">S. Mohammadi</span>*, et al.</p>
-                  <p class="bib-periodical"><em>In NeurIPS Workshop</em> '24</p>
+                  <p class="bib-periodical"><strong>Workshop at NeurIPS '24:</strong> International Workshop on Federated Foundation Models in Conjunction with NeurIPS 2024 (FL@FM-NeurIPS'24)</p>
                   <div class="bib-links">
                     <a href="https://openreview.net/pdf?id=7bgJ7t5kkW">PDF</a>
+                    <a href="https://github.com/SamaneMohammadi/EncCluster">Code</a>
                   </div>
                 </div>
               </li>
@@ -257,7 +255,7 @@
                 <div class="bib-body">
                   <p class="bib-title"><a href="https://ieeexplore.ieee.org/abstract/document/10306049">Balancing Privacy and Accuracy in Federated Learning for Speech Emotion Recognition</a></p>
                   <p class="bib-author"><span class="me">S. Mohammadi</span>, et al.</p>
-                  <p class="bib-periodical"><em>In FedCSIS</em> '23</p>
+                  <p class="bib-periodical"><strong>FedCSIS '23:</strong> Proceedings of the 18th Conference on Computer Science and Intelligence Systems</p>
                   <span class="bib-award">🏆 Professor Zdzis&#322;aw Pawlak Award</span>
                   <div class="bib-links">
                     <a href="https://www.research.unipd.it/bitstream/11577/3506537/2/444.pdf">PDF</a>
@@ -279,7 +277,7 @@
                 <div class="bib-body">
                   <p class="bib-title"><a href="https://dl.acm.org/doi/abs/10.1145/3746252.3761091">EFU: Enforcing Federated Unlearning via Functional Encryption</a></p>
                   <p class="bib-author"><span class="me">S. Mohammadi</span>*, V. Tsouvalas*, et al.</p>
-                  <p class="bib-periodical"><em>In CIKM</em> '25</p>
+                  <p class="bib-periodical"><strong>CIKM '25:</strong> Proceedings of the 34th ACM International Conference on Information and Knowledge Management</p>
                   <div class="bib-links">
                     <a href="https://dl.acm.org/doi/pdf/10.1145/3746252.3761091">PDF</a>
                     <a href="https://github.com/SamaneMohammadi/EFU">Code</a>
@@ -300,7 +298,7 @@
                 <div class="bib-body">
                   <p class="bib-title"><a href="https://ieeexplore.ieee.org/abstract/document/11228075">Empirical Analysis of Asynchronous Federated Learning on Heterogeneous Devices: Efficiency, Fairness, and Privacy Trade-offs</a></p>
                   <p class="bib-author"><span class="me">S. Mohammadi</span>, et al.</p>
-                  <p class="bib-periodical"><em>In IJCNN</em> '25</p>
+                  <p class="bib-periodical"><strong>IJCNN '25:</strong> 2025 International Joint Conference on Neural Networks</p>
                   <div class="bib-links">
                     <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11228075">PDF</a>
                     <a href="https://github.com/SamaneMohammadi/FL_on_Edge_Devices">Code</a>
@@ -312,7 +310,7 @@
                 <div class="bib-body">
                   <p class="bib-title"><a href="https://www.sciencedirect.com/science/article/pii/S0743731524000820">Balancing Privacy and Performance in Federated Learning: A Systematic Literature Review on Methods and Metrics</a></p>
                   <p class="bib-author"><span class="me">S. Mohammadi</span>, et al.</p>
-                  <p class="bib-periodical"><em>In Journal of Parallel and Distributed Computing</em> '24</p>
+                  <p class="bib-periodical"><strong>JPDC '24:</strong> Journal of Parallel and Distributed Computing (Elsevier)</p>
                   <div class="bib-links">
                     <a href="https://www.sciencedirect.com/science/article/pii/S0743731524000820">PDF</a>
                   </div>
