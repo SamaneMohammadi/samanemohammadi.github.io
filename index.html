@@ -90,6 +90,36 @@
       .bib-links a:hover { background: var(--pub-accent); color: #fff; }
       .bib-links svg { width: 12px; height: 12px; }
 
+
+      .proj-cat {
+        font-family: "IBM Plex Mono", monospace; font-size: 0.8rem;
+        text-transform: uppercase; letter-spacing: 0.1em; color: var(--pub-muted);
+        font-weight: 500; margin: 8px 0 18px; padding-bottom: 6px;
+        border-bottom: 1px solid var(--pub-line);
+      }
+      .proj-cat ~ .proj-cat { margin-top: 12px; }
+      .badge-review {
+        background: transparent; color: var(--pub-muted);
+        border: 1px dashed var(--pub-muted); padding: 3px 5px;
+      }
+      .bib-desc { font-size: 0.92rem; color: var(--pub-muted); margin: 0; line-height: 1.6; }
+      .bib-links a, .bib-toggle {
+        display: inline-flex; align-items: center; gap: 5px;
+        font-family: "IBM Plex Mono", monospace; font-size: 0.75rem;
+        text-transform: uppercase; letter-spacing: 0.03em; line-height: inherit;
+        padding: 2px 9px; border: 1px solid var(--pub-accent); border-radius: 3px;
+        color: var(--pub-accent); background: transparent; text-decoration: none; cursor: pointer;
+      }
+      .bib-links a:hover, .bib-toggle:hover, .bib-toggle[aria-expanded="true"] {
+        background: var(--pub-accent); color: #fff; text-decoration: none;
+      }
+      pre.bibtex {
+        margin: 10px 0 0; padding: 12px 14px; overflow-x: auto;
+        font-family: "IBM Plex Mono", monospace; font-size: 0.74rem; line-height: 1.55;
+        background: #f3f6f9; border: 1px solid var(--pub-line); border-radius: 4px;
+        white-space: pre;
+      }
+
       @media (max-width: 640px) {
         ol.bib > li { grid-template-columns: 1fr; gap: 8px; }
         .abbr { grid-column: 1; }
@@ -179,8 +209,10 @@
           </p>
           <p class="lede">
             Recently, as an associate researcher in the <a href="https://informatics.ed.ac.uk/">School of Informatics at the University of
-            Edinburgh</a>, I started working on the <strong>trustworthiness in LLM-based systems</strong> deployed in high-stakes domains such as hiring pipelines.
-            The project is funded by and carried out in collaboration with <strong>Amazon</strong>.
+            Edinburgh</a>, I started working on the <strong>trustworthiness of LLM-based systems</strong> deployed in high-stakes domains such as hiring pipelines,
+            a project funded by and carried out in collaboration with <strong>Amazon</strong>. Alongside this, I work on <strong>bias and fairness in large
+            language models</strong>: locating the attention heads and feed-forward layers that carry bias, and fine-tuning only those components
+            against a fairness-aware training objective.
           </p>
         </section>
 
@@ -188,7 +220,8 @@
         <section class="section" id="research" aria-labelledby="research-title">
           <h2 id="research-title">Projects &amp; Publications</h2>
 
-          <!-- Ongoing -->
+          <p class="proj-cat">Ongoing</p>
+
           <div class="project ongoing">
             <div class="project-head">
               <p class="project-title">Bias and fairness in large language models (LLMs)</p>
@@ -204,14 +237,13 @@
             </p>
           </div>
 
-          <!-- Ongoing -->
           <div class="project ongoing">
             <div class="project-head">
               <p class="project-title">Trustworthiness in LLM-based systems for high-stakes decisions</p>
               <span class="project-status">Ongoing</span>
             </div>
             <p class="project-where">
-              <a href="https://informatics.ed.ac.uk/">School of Informatics, The University of Edinburgh</a> · Edinburgh, United Kingdom
+              <a href="https://informatics.ed.ac.uk/">School of Informatics, The University of Edinburgh</a> · Edinburgh, United Kingdom · In collaboration with Amazon
             </p>
             <p class="project-desc">
               LLM-based systems are increasingly deployed in high-stakes domains such as hiring pipelines, where their
@@ -220,7 +252,8 @@
             </p>
           </div>
 
-          <!-- Scalable privacy -->
+          <p class="proj-cat">Completed</p>
+
           <div class="project">
             <div class="project-head">
               <p class="project-title">Scalable privacy-preserving techniques in distributed machine learning</p>
@@ -234,20 +267,41 @@
                   <p class="bib-periodical"><strong>PMCJ '25:</strong> Pervasive and Mobile Computing (Elsevier)</p>
                   <div class="bib-links">
                     <a href="https://www.sciencedirect.com/science/article/pii/S1574119225000100">PDF</a>
+                    <a href="https://arxiv.org/abs/2406.09152">arXiv</a>
                     <a href="https://github.com/SamaneMohammadi/EncCluster">Code</a>
+                    <button type="button" class="bib-toggle" aria-expanded="false">Bib</button>
                   </div>
+                  <pre class="bibtex" hidden>@article{tsouvalas2025enccluster,
+  title   = {EncCluster: Scalable functional encryption in federated learning through weight clustering and probabilistic filters},
+  author  = {Tsouvalas, Vasileios and Mohammadi, Samaneh and Balador, Ali and {\"O}z{\c{c}}elebi, Tanir and Flammini, Francesco and Meratnia, Nirvana},
+  journal = {Pervasive and Mobile Computing},
+  volume  = {108},
+  pages   = {102021},
+  year    = {2025},
+  publisher = {Elsevier},
+  doi     = {10.1016/j.pmcj.2025.102021}
+}</pre>
                 </div>
               </li>
               <li>
-                <div class="abbr"><a class="badge" href="https://federated-learning.org/fl@fm-neurips-2024/">NeurIPS '24</a></div>
+                <div class="abbr"><a class="badge" href="https://federated-learning.org/fl@fm-neurips-2024/">Workshop at NeurIPS '24</a></div>
                 <div class="bib-body">
-                  <p class="bib-title"><a href="https://openreview.net/forum?id=7bgJ7t5kkW">Bringing Functional Encryption to Federated Foundation Models</a></p>
+                  <p class="bib-title"><a href="https://openreview.net/pdf?id=7bgJ7t5kkW">Bringing Functional Encryption to Federated Foundation Models</a></p>
                   <p class="bib-author">V. Tsouvalas*, <span class="me">S. Mohammadi</span>*, et al.</p>
                   <p class="bib-periodical"><strong>Workshop at NeurIPS '24:</strong> International Workshop on Federated Foundation Models in Conjunction with NeurIPS 2024 (FL@FM-NeurIPS'24)</p>
                   <div class="bib-links">
                     <a href="https://openreview.net/pdf?id=7bgJ7t5kkW">PDF</a>
+                    <a href="https://arxiv.org/abs/2406.09152">arXiv</a>
                     <a href="https://github.com/SamaneMohammadi/EncCluster">Code</a>
+                    <button type="button" class="bib-toggle" aria-expanded="false">Bib</button>
                   </div>
+                  <pre class="bibtex" hidden>@inproceedings{tsouvalas2024neuripsw,
+  title     = {EncCluster: Bringing Functional Encryption in Federated Foundational Models},
+  author    = {Tsouvalas, Vasileios and Mohammadi, Samaneh and Balador, Ali and {\"O}z{\c{c}}elebi, Tanir and Flammini, Francesco and Meratnia, Nirvana},
+  booktitle = {International Workshop on Federated Foundation Models in Conjunction with NeurIPS 2024 (FL@FM-NeurIPS'24)},
+  year      = {2024},
+  url       = {https://openreview.net/forum?id=7bgJ7t5kkW}
+}</pre>
                 </div>
               </li>
               <li>
@@ -260,13 +314,23 @@
                   <div class="bib-links">
                     <a href="https://www.research.unipd.it/bitstream/11577/3506537/2/444.pdf">PDF</a>
                     <a href="https://github.com/SamaneMohammadi/LDP-FL">Code</a>
+                    <button type="button" class="bib-toggle" aria-expanded="false">Bib</button>
                   </div>
+                  <pre class="bibtex" hidden>@inproceedings{mohammadi2023balancing,
+  title     = {Balancing Privacy and Accuracy in Federated Learning for Speech Emotion Recognition},
+  author    = {Mohammadi, Samaneh and Mohammadi, Mohammadreza and Sinaei, Sima and Balador, Ali and Nowroozi, Ehsan and Flammini, Francesco and Conti, Mauro},
+  booktitle = {Proceedings of the 18th Conference on Computer Science and Intelligence Systems (FedCSIS)},
+  series    = {Annals of Computer Science and Information Systems},
+  volume    = {35},
+  pages     = {191--199},
+  year      = {2023},
+  doi       = {10.15439/2023F444}
+}</pre>
                 </div>
               </li>
             </ol>
           </div>
 
-          <!-- Unlearning -->
           <div class="project">
             <div class="project-head">
               <p class="project-title">Private machine unlearning in distributed settings</p>
@@ -280,19 +344,40 @@
                   <p class="bib-periodical"><strong>CIKM '25:</strong> Proceedings of the 34th ACM International Conference on Information and Knowledge Management</p>
                   <div class="bib-links">
                     <a href="https://dl.acm.org/doi/pdf/10.1145/3746252.3761091">PDF</a>
+                    <a href="https://arxiv.org/abs/2508.07873">arXiv</a>
                     <a href="https://github.com/SamaneMohammadi/EFU">Code</a>
+                    <button type="button" class="bib-toggle" aria-expanded="false">Bib</button>
                   </div>
+                  <pre class="bibtex" hidden>@inproceedings{mohammadi2025efu,
+  title     = {EFU: Enforcing Federated Unlearning via Functional Encryption},
+  author    = {Mohammadi, Samaneh and Tsouvalas, Vasileios and Symeonidis, Iraklis and Balador, Ali and {\"O}z{\c{c}}elebi, Tanir and Flammini, Francesco and Meratnia, Nirvana},
+  booktitle = {Proceedings of the 34th ACM International Conference on Information and Knowledge Management (CIKM)},
+  pages     = {2148--2158},
+  year      = {2025},
+  publisher = {ACM},
+  address   = {Seoul, Republic of Korea},
+  doi       = {10.1145/3746252.3761091}
+}</pre>
                 </div>
               </li>
             </ol>
           </div>
 
-          <!-- Tensions -->
           <div class="project">
             <div class="project-head">
               <p class="project-title">Privacy and fairness tensions in distributed machine learning</p>
             </div>
             <ol class="bib">
+              <li>
+                <div class="abbr"><span class="badge badge-review">Under review</span></div>
+                <div class="bib-body">
+                  <p class="bib-title">Fair and privacy-preserving distributed machine learning</p>
+                  <p class="bib-desc">
+                    Designed a group-aware federated learning architecture that provides equitable model performance across
+                    demographic groups while training under differential privacy.
+                  </p>
+                </div>
+              </li>
               <li>
                 <div class="abbr"><a class="badge" href="https://2025.ijcnn.org/">IJCNN '25</a></div>
                 <div class="bib-body">
@@ -300,9 +385,18 @@
                   <p class="bib-author"><span class="me">S. Mohammadi</span>, et al.</p>
                   <p class="bib-periodical"><strong>IJCNN '25:</strong> 2025 International Joint Conference on Neural Networks</p>
                   <div class="bib-links">
-                    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11228075">PDF</a>
+                    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=11228075">PDF</a>
+                    <a href="https://arxiv.org/abs/2505.07041">arXiv</a>
                     <a href="https://github.com/SamaneMohammadi/FL_on_Edge_Devices">Code</a>
+                    <button type="button" class="bib-toggle" aria-expanded="false">Bib</button>
                   </div>
+                  <pre class="bibtex" hidden>@inproceedings{mohammadi2025empirical,
+  title     = {Empirical Analysis of Asynchronous Federated Learning on Heterogeneous Devices: Efficiency, Fairness, and Privacy Trade-offs},
+  author    = {Mohammadi, Samaneh and Symeonidis, Iraklis and Balador, Ali and Flammini, Francesco},
+  booktitle = {2025 International Joint Conference on Neural Networks (IJCNN)},
+  year      = {2025},
+  publisher = {IEEE}
+}</pre>
                 </div>
               </li>
               <li>
@@ -313,7 +407,18 @@
                   <p class="bib-periodical"><strong>JPDC '24:</strong> Journal of Parallel and Distributed Computing (Elsevier)</p>
                   <div class="bib-links">
                     <a href="https://www.sciencedirect.com/science/article/pii/S0743731524000820">PDF</a>
+                    <button type="button" class="bib-toggle" aria-expanded="false">Bib</button>
                   </div>
+                  <pre class="bibtex" hidden>@article{mohammadi2024balancing,
+  title   = {Balancing privacy and performance in federated learning: A systematic literature review on methods and metrics},
+  author  = {Mohammadi, Samaneh and Balador, Ali and Sinaei, Sima and Flammini, Francesco},
+  journal = {Journal of Parallel and Distributed Computing},
+  volume  = {192},
+  pages   = {104918},
+  year    = {2024},
+  publisher = {Elsevier},
+  doi     = {10.1016/j.jpdc.2024.104918}
+}</pre>
                 </div>
               </li>
             </ol>
@@ -321,7 +426,7 @@
 
           <p class="entry-sub" style="margin-top: 24px">
             * Equal contribution.
-            <a href="https://scholar.google.com/citations?user=hVsI_-4AAAAJ&hl=en">Full publication list on Google Scholar →</a>
+            <a href="https://scholar.google.com/citations?user=hVsI_-4AAAAJ&amp;hl=en">Full publication list on Google Scholar →</a>
           </p>
         </section>
 
@@ -358,6 +463,15 @@
 
     <script>
       document.getElementById("year").textContent = String(new Date().getFullYear());
+
+      document.querySelectorAll(".bib-toggle").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var pre = btn.closest(".bib-body").querySelector("pre.bibtex");
+          var open = pre.hasAttribute("hidden");
+          if (open) { pre.removeAttribute("hidden"); } else { pre.setAttribute("hidden", ""); }
+          btn.setAttribute("aria-expanded", String(open));
+        });
+      });
 
       (function () {
         var links = Array.prototype.slice.call(document.querySelectorAll('.nav a.navlink[href^="#"]'));
