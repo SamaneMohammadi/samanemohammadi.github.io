@@ -20,26 +20,28 @@
     />
     <link rel="stylesheet" href="style.css" />
     <style>
-      .tt-media { grid-template-columns: 96px 168px 1fr; align-items: start; gap: 20px; }
-      .tt-thumb {
-        display: block; width: 168px; height: 112px; border-radius: 8px; overflow: hidden;
+      .talk-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 24px; }
+      .talk { display: flex; flex-direction: column; }
+      .talk-img {
+        display: block; aspect-ratio: 16 / 10; border-radius: 10px; overflow: hidden; margin-bottom: 12px;
         border: 1px solid var(--border); background: var(--panel-strong);
-        box-shadow: 0 4px 12px rgba(30, 40, 50, 0.06);
+        box-shadow: 0 6px 16px rgba(30, 40, 50, 0.07);
       }
-      .tt-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 240ms ease; }
-      .tt-thumb:hover img { transform: scale(1.04); }
-      .tt-talk { margin-top: 2px; }
-      .tt-award { color: #9a6a00; font-weight: 500; }
+      .talk-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 260ms ease; }
+      .talk-img:hover img { transform: scale(1.04); }
+      .talk-meta { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); margin-bottom: 2px; }
+      .talk-head { margin: 0 0 4px; font-size: 1.05rem; font-weight: 700; color: var(--text); line-height: 1.35; }
+      .talk-head a { color: inherit; }
+      .talk-head a:hover { color: var(--link); }
+      .talk-title { margin: 0; font-size: 0.93rem; line-height: 1.5; color: var(--muted); }
+      .tt-award { display: block; margin-top: 4px; color: #9a6a00; font-weight: 500; }
       .tt-post {
-        display: inline-flex; margin-top: 8px; padding: 1px 9px;
+        align-self: flex-start; margin-top: 10px; padding: 1px 9px;
         font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em;
         border: 1px solid #1f5f8b; border-radius: 3px; color: #1f5f8b;
       }
       .tt-post:hover { background: #1f5f8b; color: #fff; text-decoration: none; }
-      @media (max-width: 820px) {
-        .tt-media { grid-template-columns: 1fr; gap: 8px; }
-        .tt-thumb { width: 100%; max-width: 360px; height: 190px; }
-      }
+      @media (max-width: 640px) { .talk-grid { grid-template-columns: 1fr; } }
     </style>
   </head>
   <body>
@@ -123,61 +125,49 @@
             <div class="tt-group-head">
               <span class="pub-group-head">Conference talks &amp; posters</span>
             </div>
-            <div class="tt-card">
-              <div class="tt-row tt-media">
-                <div class="tt-date">Sep 2026</div>
-                <a class="tt-thumb" href="https://www.linkedin.com/feed/update/urn:li:activity:7504118928957153280/" aria-label="LinkedIn post: Presenting at the PharML workshop, ECML PKDD 2026"><img src="assets/talks/ecml2026.jpg" alt="Presenting at the PharML workshop, ECML PKDD 2026" loading="lazy" /></a>
-                <div class="tt-body">
-                  <div><strong>ECML PKDD 2026</strong> <span class="tt-place">· Naples, Italy</span></div>
-                  <div class="tt-talk">&ldquo;Benchmarking Machine Learning for Multi-Label Psychiatric Diagnosis&rdquo; &mdash; PharML workshop</div>
-                  <a class="tt-post" href="https://www.linkedin.com/feed/update/urn:li:activity:7504118928957153280/">LinkedIn post</a>
-                </div>
-              </div>
-              <div class="tt-row tt-media">
-                <div class="tt-date">Nov 2025</div>
-                <a class="tt-thumb" href="https://www.linkedin.com/feed/update/urn:li:activity:7394546596950048768/" aria-label="LinkedIn post: Presenting EFU at CIKM 2025"><img src="assets/talks/cikm2025.jpg" alt="Presenting EFU at CIKM 2025" loading="lazy" /></a>
-                <div class="tt-body">
-                  <div><strong>CIKM 2025</strong> <span class="tt-place">· Seoul, South Korea</span></div>
-                  <div class="tt-talk">&ldquo;EFU: Enforcing Federated Unlearning via Functional Encryption&rdquo;</div>
-                  <a class="tt-post" href="https://www.linkedin.com/feed/update/urn:li:activity:7394546596950048768/">LinkedIn post</a>
-                </div>
-              </div>
-              <div class="tt-row tt-media">
-                <div class="tt-date">Jun 2025</div>
-                <a class="tt-thumb" href="https://www.linkedin.com/posts/samaneh-mohammadi-22879b159_federatedlearning-privacy-ai-activity-7348019513319120896-wwjL" aria-label="LinkedIn post: Presenting at IJCNN 2025"><img src="assets/talks/ijcnn2025.jpg" alt="Presenting at IJCNN 2025" loading="lazy" /></a>
-                <div class="tt-body">
-                  <div><strong>IJCNN 2025</strong> <span class="tt-place">· Rome, Italy</span></div>
-                  <div class="tt-talk">&ldquo;Empirical Analysis of Asynchronous Federated Learning on Heterogeneous Devices: Efficiency, Fairness, and Privacy Trade-offs&rdquo;</div>
-                  <a class="tt-post" href="https://www.linkedin.com/posts/samaneh-mohammadi-22879b159_federatedlearning-privacy-ai-activity-7348019513319120896-wwjL">LinkedIn post</a>
-                </div>
-              </div>
-              <div class="tt-row tt-media">
-                <div class="tt-date">Dec 2024</div>
-                <a class="tt-thumb" href="https://www.linkedin.com/feed/update/urn:li:activity:7273427890963107841/" aria-label="LinkedIn post: EncCluster oral talk and poster at the FL@FM workshop, NeurIPS 2024"><img src="assets/talks/neurips2024.jpg" alt="EncCluster oral talk and poster at the FL@FM workshop, NeurIPS 2024" loading="lazy" /></a>
-                <div class="tt-body">
-                  <div><strong>NeurIPS 2024</strong> <span class="tt-place">· Vancouver, Canada</span></div>
-                  <div class="tt-talk">Oral talk &amp; poster &mdash; &ldquo;Bringing Functional Encryption in Federated Foundational Models&rdquo;, FL@FM workshop</div>
-                  <a class="tt-post" href="https://www.linkedin.com/feed/update/urn:li:activity:7273427890963107841/">LinkedIn post</a>
-                </div>
-              </div>
-              <div class="tt-row tt-media">
-                <div class="tt-date">Sep 2023</div>
-                <a class="tt-thumb" href="https://www.linkedin.com/posts/samaneh-mohammadi-22879b159_fedcsis2023-research-award-activity-7110951321872023552-es9u" aria-label="LinkedIn post: Receiving the Professor Zdzisław Pawlak Award at FedCSIS 2023"><img src="assets/talks/fedcsis2023.jpg" alt="Receiving the Professor Zdzisław Pawlak Award at FedCSIS 2023" loading="lazy" /></a>
-                <div class="tt-body">
-                  <div><strong>FedCSIS 2023</strong> <span class="tt-place">· Warsaw, Poland</span></div>
-                  <div class="tt-talk">&ldquo;Balancing Privacy and Accuracy in Federated Learning for Speech Emotion Recognition&rdquo; &mdash; <span class="tt-award">🏆 Professor Zdzis&#322;aw Pawlak Award</span></div>
-                  <a class="tt-post" href="https://www.linkedin.com/posts/samaneh-mohammadi-22879b159_fedcsis2023-research-award-activity-7110951321872023552-es9u">LinkedIn post</a>
-                </div>
-              </div>
-              <div class="tt-row tt-media">
-                <div class="tt-date">Aug 2023</div>
-                <a class="tt-thumb" href="https://www.linkedin.com/posts/samaneh-mohammadi-22879b159_ispec2023-activity-7117428874912632832-bPMz" aria-label="LinkedIn post: Presenting at ISPEC 2023"><img src="assets/talks/ispec2023.jpg" alt="Presenting at ISPEC 2023" loading="lazy" /></a>
-                <div class="tt-body">
-                  <div><strong>ISPEC 2023</strong> <span class="tt-place">· Copenhagen, Denmark</span></div>
-                  <div class="tt-talk">&ldquo;Secure and Efficient Federated Learning by Combining Homomorphic Encryption and Gradient Pruning in Speech Emotion Recognition&rdquo;</div>
-                  <a class="tt-post" href="https://www.linkedin.com/posts/samaneh-mohammadi-22879b159_ispec2023-activity-7117428874912632832-bPMz">LinkedIn post</a>
-                </div>
-              </div>
+            <div class="talk-grid">
+              <article class="talk">
+                <a class="talk-img" href="https://www.linkedin.com/feed/update/urn:li:activity:7504118928957153280/" aria-label="LinkedIn post: Presenting at the PharML workshop, ECML PKDD 2026"><img src="assets/talks/ecml2026.jpg" alt="Presenting at the PharML workshop, ECML PKDD 2026" loading="lazy" /></a>
+                <div class="talk-meta">Sep 2026 · Naples, Italy</div>
+                <h3 class="talk-head">ECML PKDD 2026</h3>
+                <p class="talk-title">&ldquo;Benchmarking Machine Learning for Multi-Label Psychiatric Diagnosis&rdquo; &mdash; PharML workshop</p>
+                <a class="tt-post" href="https://www.linkedin.com/feed/update/urn:li:activity:7504118928957153280/">LinkedIn post</a>
+              </article>
+              <article class="talk">
+                <a class="talk-img" href="https://www.linkedin.com/feed/update/urn:li:activity:7394546596950048768/" aria-label="LinkedIn post: Presenting EFU at CIKM 2025"><img src="assets/talks/cikm2025.jpg" alt="Presenting EFU at CIKM 2025" loading="lazy" /></a>
+                <div class="talk-meta">Nov 2025 · Seoul, South Korea</div>
+                <h3 class="talk-head">CIKM 2025</h3>
+                <p class="talk-title">&ldquo;EFU: Enforcing Federated Unlearning via Functional Encryption&rdquo;</p>
+                <a class="tt-post" href="https://www.linkedin.com/feed/update/urn:li:activity:7394546596950048768/">LinkedIn post</a>
+              </article>
+              <article class="talk">
+                <a class="talk-img" href="https://www.linkedin.com/posts/samaneh-mohammadi-22879b159_federatedlearning-privacy-ai-activity-7348019513319120896-wwjL" aria-label="LinkedIn post: Presenting at IJCNN 2025"><img src="assets/talks/ijcnn2025.jpg" alt="Presenting at IJCNN 2025" loading="lazy" /></a>
+                <div class="talk-meta">Jun 2025 · Rome, Italy</div>
+                <h3 class="talk-head">IJCNN 2025</h3>
+                <p class="talk-title">&ldquo;Empirical Analysis of Asynchronous Federated Learning on Heterogeneous Devices: Efficiency, Fairness, and Privacy Trade-offs&rdquo;</p>
+                <a class="tt-post" href="https://www.linkedin.com/posts/samaneh-mohammadi-22879b159_federatedlearning-privacy-ai-activity-7348019513319120896-wwjL">LinkedIn post</a>
+              </article>
+              <article class="talk">
+                <a class="talk-img" href="https://www.linkedin.com/feed/update/urn:li:activity:7273427890963107841/" aria-label="LinkedIn post: EncCluster oral talk and poster at the FL@FM workshop, NeurIPS 2024"><img src="assets/talks/neurips2024.jpg" alt="EncCluster oral talk and poster at the FL@FM workshop, NeurIPS 2024" loading="lazy" /></a>
+                <div class="talk-meta">Dec 2024 · Vancouver, Canada</div>
+                <h3 class="talk-head">NeurIPS 2024</h3>
+                <p class="talk-title">Oral talk &amp; poster &mdash; &ldquo;Bringing Functional Encryption in Federated Foundational Models&rdquo;, FL@FM workshop</p>
+                <a class="tt-post" href="https://www.linkedin.com/feed/update/urn:li:activity:7273427890963107841/">LinkedIn post</a>
+              </article>
+              <article class="talk">
+                <a class="talk-img" href="https://www.linkedin.com/posts/samaneh-mohammadi-22879b159_fedcsis2023-research-award-activity-7110951321872023552-es9u" aria-label="LinkedIn post: Receiving the Professor Zdzisław Pawlak Award at FedCSIS 2023"><img src="assets/talks/fedcsis2023.jpg" alt="Receiving the Professor Zdzisław Pawlak Award at FedCSIS 2023" loading="lazy" /></a>
+                <div class="talk-meta">Sep 2023 · Warsaw, Poland</div>
+                <h3 class="talk-head">FedCSIS 2023</h3>
+                <p class="talk-title">&ldquo;Balancing Privacy and Accuracy in Federated Learning for Speech Emotion Recognition&rdquo;<span class="tt-award">🏆 Professor Zdzis&#322;aw Pawlak Award</span></p>
+                <a class="tt-post" href="https://www.linkedin.com/posts/samaneh-mohammadi-22879b159_fedcsis2023-research-award-activity-7110951321872023552-es9u">LinkedIn post</a>
+              </article>
+              <article class="talk">
+                <a class="talk-img" href="https://www.linkedin.com/posts/samaneh-mohammadi-22879b159_ispec2023-activity-7117428874912632832-bPMz" aria-label="LinkedIn post: Presenting at ISPEC 2023"><img src="assets/talks/ispec2023.jpg" alt="Presenting at ISPEC 2023" loading="lazy" /></a>
+                <div class="talk-meta">Aug 2023 · Copenhagen, Denmark</div>
+                <h3 class="talk-head">ISPEC 2023</h3>
+                <p class="talk-title">&ldquo;Secure and Efficient Federated Learning by Combining Homomorphic Encryption and Gradient Pruning in Speech Emotion Recognition&rdquo;</p>
+                <a class="tt-post" href="https://www.linkedin.com/posts/samaneh-mohammadi-22879b159_ispec2023-activity-7117428874912632832-bPMz">LinkedIn post</a>
+              </article>
             </div>
           </div>
 
@@ -185,25 +175,21 @@
             <div class="tt-group-head">
               <span class="pub-group-head">Invited talks</span>
             </div>
-            <div class="tt-card">
-              <div class="tt-row tt-media">
-                <div class="tt-date">Sep 2024</div>
-                <a class="tt-thumb" href="https://www.linkedin.com/posts/flwrlabs_available-now-flower-monthly-september-activity-7239929343844528129-xpur" aria-label="LinkedIn post: Flower Monthly, September 2024"><img src="assets/talks/flower2024.jpg" alt="Flower Monthly, September 2024" loading="lazy" /></a>
-                <div class="tt-body">
-                  <div><strong><a href="https://www.youtube.com/watch?v=noLwP2yyRpY&amp;feature=youtu.be">Flower Monthly</a></strong></div>
-                  <div class="tt-talk">&ldquo;Scalable Functional Encryption in Federated Learning,&rdquo; hosted by Prof. Nicholas Lane (University of Cambridge / co-founder of Flower Labs).</div>
-                  <a class="tt-post" href="https://www.linkedin.com/posts/flwrlabs_available-now-flower-monthly-september-activity-7239929343844528129-xpur">LinkedIn post</a>
-                </div>
-              </div>
-              <div class="tt-row tt-media">
-                <div class="tt-date">Aug 2024</div>
-                <a class="tt-thumb" href="https://www.linkedin.com/posts/samaneh-mohammadi-22879b159_federatedlearning-machinelearning-dataprivacy-activity-7228706071844970497-5EDS" aria-label="LinkedIn post: Teaching at the MegaData Summer School on Federated Machine Learning"><img src="assets/talks/tartu2024.jpg" alt="Teaching at the MegaData Summer School on Federated Machine Learning" loading="lazy" /></a>
-                <div class="tt-body">
-                  <div><strong><a href="https://school.flta-conference.org/">MegaData Summer School on Federated Machine Learning</a></strong></div>
-                  <div class="tt-talk">&ldquo;Balancing privacy and performance in Federated Learning,&rdquo; organizer: University of Tartu.</div>
-                  <a class="tt-post" href="https://www.linkedin.com/posts/samaneh-mohammadi-22879b159_federatedlearning-machinelearning-dataprivacy-activity-7228706071844970497-5EDS">LinkedIn post</a>
-                </div>
-              </div>
+            <div class="talk-grid">
+              <article class="talk">
+                <a class="talk-img" href="https://www.linkedin.com/posts/flwrlabs_available-now-flower-monthly-september-activity-7239929343844528129-xpur" aria-label="LinkedIn post: Flower Monthly, September 2024"><img src="assets/talks/flower2024.jpg" alt="Flower Monthly, September 2024" loading="lazy" /></a>
+                <div class="talk-meta">Sep 2024 · Online</div>
+                <h3 class="talk-head"><a href="https://www.youtube.com/watch?v=noLwP2yyRpY&amp;feature=youtu.be">Flower Monthly</a></h3>
+                <p class="talk-title">&ldquo;Scalable Functional Encryption in Federated Learning,&rdquo; hosted by Prof. Nicholas Lane (University of Cambridge / co-founder of Flower Labs).</p>
+                <a class="tt-post" href="https://www.linkedin.com/posts/flwrlabs_available-now-flower-monthly-september-activity-7239929343844528129-xpur">LinkedIn post</a>
+              </article>
+              <article class="talk">
+                <a class="talk-img" href="https://www.linkedin.com/posts/samaneh-mohammadi-22879b159_federatedlearning-machinelearning-dataprivacy-activity-7228706071844970497-5EDS" aria-label="LinkedIn post: Teaching at the MegaData Summer School on Federated Machine Learning"><img src="assets/talks/tartu2024.jpg" alt="Teaching at the MegaData Summer School on Federated Machine Learning" loading="lazy" /></a>
+                <div class="talk-meta">Aug 2024 · University of Tartu</div>
+                <h3 class="talk-head"><a href="https://school.flta-conference.org/">MegaData Summer School on Federated Machine Learning</a></h3>
+                <p class="talk-title">&ldquo;Balancing privacy and performance in Federated Learning.&rdquo;</p>
+                <a class="tt-post" href="https://www.linkedin.com/posts/samaneh-mohammadi-22879b159_federatedlearning-machinelearning-dataprivacy-activity-7228706071844970497-5EDS">LinkedIn post</a>
+              </article>
             </div>
           </div>
 
