@@ -21,11 +21,12 @@
     <link rel="stylesheet" href="style.css" />
     <style>
       /* ---- Projects & publications (al-folio style). Can be moved into style.css ---- */
+      
       :root {
         --pub-accent: #1f5f8b;
         --pub-muted: #5b6673;
         --pub-line: #d9dee4;
-        /* --pub-ongoing: var(--pub-accent); */
+        --pub-ongoing: var(--pub-accent);
       }
 
       .project { margin: 0 0 34px; }
@@ -34,8 +35,9 @@
         display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
         margin: 0 0 6px;
       }
-      .project-title { font-weight: 700; font-size: 1.12rem; margin: 0; color: var(--accent-strong, #32465e); }
-      .project.ongoing .project-title { color: var(--pub-accent); }
+      /* .project-title { font-weight: 700; font-size: 1.12rem; margin: 0; color: var(--accent-strong, #32465e); } */
+      .project-title { font-weight: 700; font-size: 1.12rem; margin: 0; color: var(--link); }
+      .project.ongoing .project-title {}
       .project-status { background: rgba(31, 95, 139, 0.08); }
       .project-status {
         font-family: "IBM Plex Mono", monospace; font-size: 0.72rem;
