@@ -39,7 +39,7 @@ body {
   color: var(--text);
   font-family: var(--font-body);
   font-size: var(--fs-body);
-  line-height: 1.72;
+  line-height: 1.6;
   letter-spacing: 0.012em;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -138,9 +138,9 @@ strong { color: var(--text); }
   margin-bottom: 34px;
 }
 .section h2 { margin: 0 0 20px; font-size: 1.4rem; color: var(--accent-strong); letter-spacing: 0.01em; }
-.lede { margin: 0; max-width: 70ch; font-size: 1.07rem; line-height: 1.78; }
+.lede { margin: 0; max-width: 70ch; font-size: 1.07rem; line-height: 1.6; }
 .lede + .lede { margin-top: 14px; }
-#about { padding-bottom: 60px; }
+#about { padding-bottom: 40px; }
 #about h2 { margin-bottom: 14px; }
 
 /* entry lists (education, talks) */
