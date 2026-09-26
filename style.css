@@ -412,6 +412,12 @@ strong { color: var(--text); }
 .contact a:hover { border-color: var(--link); }
 .contact svg { width: 18px; height: 18px; }
 .sidebar-edu { list-style: none; margin: 0; padding: 0; border-top: 0; }
+.sidebar > .sidebar-edu-head {
+  margin: 0; padding: 18px 0 2px; border-top: 1px solid var(--border);
+  font-family: var(--font-body); font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-strong);
+}
+.sidebar-edu li:first-child { border-top: 0; }
 .sidebar-edu li { display: grid; gap: 1px; padding: 12px 0; border-top: 1px solid var(--border); }
 .sidebar-edu .edu-org { font-weight: 600; color: var(--text); font-size: 0.95rem; font-family: var(--font-body); }
 .sidebar-edu .edu-org:hover { color: var(--link); }
@@ -428,6 +434,7 @@ strong { color: var(--text); }
   /* education spans the full width under the portrait and name */
   .sidebar-edu { grid-column: 1 / -1; }
   .sidebar-reach { grid-column: 1 / -1; margin-bottom: 0; }
+  .sidebar > .sidebar-edu-head { grid-column: 1 / -1; }
   .portrait { width: 110px; height: 110px; }
   .sidebar h1 { white-space: normal; }
 
