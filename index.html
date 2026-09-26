@@ -90,7 +90,6 @@
       .bib-links a:hover { background: var(--pub-accent); color: #fff; }
       .bib-links svg { width: 12px; height: 12px; }
 
-
       .proj-cat {
         display: inline-flex; align-items: center; gap: 8px;
         font-family: "IBM Plex Mono", monospace; font-size: 0.78rem; font-weight: 500;
@@ -125,7 +124,6 @@
         background: #f3f6f9; border: 1px solid var(--pub-line); border-radius: 4px;
         white-space: pre;
       }
-
 
       .about-threads { margin: 10px 0 14px; padding-left: 1.2em; max-width: 70ch; font-size: 1.07rem; line-height: 1.7; }
       .about-threads li { margin: 0 0 8px; padding-left: 4px; }
@@ -278,6 +276,45 @@
 
           <div class="project">
             <div class="project-head">
+              <p class="project-title">Privacy and fairness tensions in distributed machine learning</p>
+            </div>
+            <ol class="bib">
+              <li>
+                <div class="abbr"><span class="badge badge-review">Under review</span></div>
+                <div class="bib-body">
+                  <p class="bib-title">Fair and privacy-preserving distributed machine learning</p>
+                  <p class="bib-desc">
+                    Designed a group-aware federated learning architecture that provides equitable model performance across
+                    demographic groups while training under differential privacy.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div class="abbr"><a class="badge" href="https://2025.ijcnn.org/">IJCNN '25</a></div>
+                <div class="bib-body">
+                  <p class="bib-title"><a href="https://ieeexplore.ieee.org/abstract/document/11228075">Empirical Analysis of Asynchronous Federated Learning on Heterogeneous Devices: Efficiency, Fairness, and Privacy Trade-offs</a></p>
+                  <p class="bib-author"><span class="me">S. Mohammadi</span>, et al.</p>
+                  <p class="bib-periodical"><strong>IJCNN '25:</strong> 2025 International Joint Conference on Neural Networks</p>
+                  <div class="bib-links">
+                    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=11228075">PDF</a>
+                    <a href="https://arxiv.org/abs/2505.07041">arXiv</a>
+                    <a href="https://github.com/SamaneMohammadi/FL_on_Edge_Devices">Code</a>
+                    <button type="button" class="bib-toggle" aria-expanded="false">Bib</button>
+                  </div>
+                  <pre class="bibtex" hidden>@inproceedings{mohammadi2025empirical,
+  title     = {Empirical Analysis of Asynchronous Federated Learning on Heterogeneous Devices: Efficiency, Fairness, and Privacy Trade-offs},
+  author    = {Mohammadi, Samaneh and Symeonidis, Iraklis and Balador, Ali and Flammini, Francesco},
+  booktitle = {2025 International Joint Conference on Neural Networks (IJCNN)},
+  year      = {2025},
+  publisher = {IEEE}
+}</pre>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div class="project">
+            <div class="project-head">
               <p class="project-title">Scalable privacy-preserving techniques in distributed machine learning</p>
             </div>
             <ol class="bib">
@@ -306,7 +343,7 @@
                 </div>
               </li>
               <li>
-                <div class="abbr"><a class="badge" href="https://federated-learning.org/fl@fm-neurips-2024/">Workshop at NeurIPS '24</a></div>
+                <div class="abbr"><a class="badge" href="https://federated-learning.org/fl@fm-neurips-2024/">NeurIPS W '24</a></div>
                 <div class="bib-body">
                   <p class="bib-title"><a href="https://openreview.net/pdf?id=7bgJ7t5kkW">Bringing Functional Encryption to Federated Foundation Models</a></p>
                   <p class="bib-author">V. Tsouvalas*, <span class="me">S. Mohammadi</span>*, et al.</p>
@@ -379,67 +416,6 @@
   publisher = {ACM},
   address   = {Seoul, Republic of Korea},
   doi       = {10.1145/3746252.3761091}
-}</pre>
-                </div>
-              </li>
-            </ol>
-          </div>
-
-          <div class="project">
-            <div class="project-head">
-              <p class="project-title">Privacy and fairness tensions in distributed machine learning</p>
-            </div>
-            <ol class="bib">
-              <li>
-                <div class="abbr"><span class="badge badge-review">Under review</span></div>
-                <div class="bib-body">
-                  <p class="bib-title">Fair and privacy-preserving distributed machine learning</p>
-                  <p class="bib-desc">
-                    Designed a group-aware federated learning architecture that provides equitable model performance across
-                    demographic groups while training under differential privacy.
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div class="abbr"><a class="badge" href="https://2025.ijcnn.org/">IJCNN '25</a></div>
-                <div class="bib-body">
-                  <p class="bib-title"><a href="https://ieeexplore.ieee.org/abstract/document/11228075">Empirical Analysis of Asynchronous Federated Learning on Heterogeneous Devices: Efficiency, Fairness, and Privacy Trade-offs</a></p>
-                  <p class="bib-author"><span class="me">S. Mohammadi</span>, et al.</p>
-                  <p class="bib-periodical"><strong>IJCNN '25:</strong> 2025 International Joint Conference on Neural Networks</p>
-                  <div class="bib-links">
-                    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=11228075">PDF</a>
-                    <a href="https://arxiv.org/abs/2505.07041">arXiv</a>
-                    <a href="https://github.com/SamaneMohammadi/FL_on_Edge_Devices">Code</a>
-                    <button type="button" class="bib-toggle" aria-expanded="false">Bib</button>
-                  </div>
-                  <pre class="bibtex" hidden>@inproceedings{mohammadi2025empirical,
-  title     = {Empirical Analysis of Asynchronous Federated Learning on Heterogeneous Devices: Efficiency, Fairness, and Privacy Trade-offs},
-  author    = {Mohammadi, Samaneh and Symeonidis, Iraklis and Balador, Ali and Flammini, Francesco},
-  booktitle = {2025 International Joint Conference on Neural Networks (IJCNN)},
-  year      = {2025},
-  publisher = {IEEE}
-}</pre>
-                </div>
-              </li>
-              <li>
-                <div class="abbr"><a class="badge" href="https://www.sciencedirect.com/journal/journal-of-parallel-and-distributed-computing">JPDC '24</a></div>
-                <div class="bib-body">
-                  <p class="bib-title"><a href="https://www.sciencedirect.com/science/article/pii/S0743731524000820">Balancing Privacy and Performance in Federated Learning: A Systematic Literature Review on Methods and Metrics</a></p>
-                  <p class="bib-author"><span class="me">S. Mohammadi</span>, et al.</p>
-                  <p class="bib-periodical"><strong>JPDC '24:</strong> Journal of Parallel and Distributed Computing (Elsevier)</p>
-                  <div class="bib-links">
-                    <a href="https://www.sciencedirect.com/science/article/pii/S0743731524000820">PDF</a>
-                    <button type="button" class="bib-toggle" aria-expanded="false">Bib</button>
-                  </div>
-                  <pre class="bibtex" hidden>@article{mohammadi2024balancing,
-  title   = {Balancing privacy and performance in federated learning: A systematic literature review on methods and metrics},
-  author  = {Mohammadi, Samaneh and Balador, Ali and Sinaei, Sima and Flammini, Francesco},
-  journal = {Journal of Parallel and Distributed Computing},
-  volume  = {192},
-  pages   = {104918},
-  year    = {2024},
-  publisher = {Elsevier},
-  doi     = {10.1016/j.jpdc.2024.104918}
 }</pre>
                 </div>
               </li>
