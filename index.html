@@ -19,6 +19,87 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      /* ---- Projects & publications (al-folio style). Can be moved into style.css ---- */
+      :root {
+        --pub-accent: #1f5f8b;
+        --pub-muted: #5b6673;
+        --pub-line: #d9dee4;
+        --pub-ongoing: #2e7d4f;
+      }
+
+      .project { margin: 0 0 36px; }
+      .project-head {
+        display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+        margin: 0 0 6px;
+      }
+      .project-title { font-weight: 600; font-size: 1.08rem; margin: 0; }
+      .project-status {
+        font-family: "IBM Plex Mono", monospace; font-size: 0.72rem;
+        letter-spacing: 0.04em; text-transform: uppercase;
+        padding: 2px 8px; border-radius: 999px;
+        color: var(--pub-ongoing); border: 1px solid var(--pub-ongoing);
+        display: inline-flex; align-items: center; gap: 6px;
+      }
+      .project-status::before {
+        content: ""; width: 6px; height: 6px; border-radius: 50%;
+        background: var(--pub-ongoing);
+        animation: pub-pulse 1.8s ease-in-out infinite;
+      }
+      @keyframes pub-pulse { 50% { opacity: 0.3; } }
+      .project-where { font-size: 0.88rem; color: var(--pub-muted); margin: 0 0 8px; }
+      .project-where a { color: inherit; }
+      .project-desc { margin: 0 0 12px; line-height: 1.6; }
+
+      ol.bib { list-style: none; counter-reset: bib; margin: 0; padding: 0; }
+      ol.bib > li {
+        counter-increment: bib;
+        display: grid; grid-template-columns: 2rem 7.5rem 1fr; gap: 14px;
+        padding: 14px 0; border-top: 1px solid var(--pub-line);
+      }
+      ol.bib > li:last-child { border-bottom: 1px solid var(--pub-line); }
+      ol.bib > li::before {
+        content: counter(bib) ".";
+        font-family: "IBM Plex Mono", monospace; color: var(--pub-muted);
+        padding-top: 3px; text-align: right;
+      }
+      .abbr { padding-top: 2px; }
+      a.badge:hover { filter: brightness(1.2); }
+      .badge {
+        display: block; text-align: center;
+        font-family: "IBM Plex Mono", monospace; font-size: 0.74rem; font-weight: 500;
+        color: #fff; background: var(--pub-accent);
+        padding: 4px 6px; border-radius: 3px; text-decoration: none;
+      }
+      .bib-title { font-weight: 600; line-height: 1.4; margin: 0 0 4px; }
+      .bib-title a { color: inherit; text-decoration: none; }
+      .bib-title a:hover { color: var(--pub-accent); }
+      .bib-author { font-size: 0.92rem; margin: 0 0 2px; }
+      .bib-author .me { font-style: italic; text-decoration: underline; text-underline-offset: 2px; }
+      .bib-periodical { font-size: 0.9rem; color: var(--pub-muted); margin: 0; }
+      .bib-periodical em { font-style: italic; }
+      .bib-award {
+        display: inline-block; margin-top: 4px; font-size: 0.85rem;
+        color: #9a6a00; font-weight: 500;
+      }
+      .bib-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+      .bib-links a {
+        display: inline-flex; align-items: center; gap: 5px;
+        font-family: "IBM Plex Mono", monospace; font-size: 0.75rem;
+        text-transform: uppercase; letter-spacing: 0.03em;
+        padding: 2px 9px; border: 1px solid currentColor; border-radius: 3px;
+        color: var(--pub-accent); text-decoration: none;
+      }
+      .bib-links a:hover { background: var(--pub-accent); color: #fff; }
+      .bib-links svg { width: 12px; height: 12px; }
+
+      @media (max-width: 640px) {
+        ol.bib > li { grid-template-columns: 1.5rem 1fr; gap: 8px 10px; }
+        .abbr { grid-column: 2; }
+        .abbr .badge { display: inline-block; }
+        .bib-body { grid-column: 2; }
+      }
+    </style>
   </head>
   <body>
     <div class="topbar">
@@ -101,94 +182,143 @@
           </p>
           <p class="lede">
             Recently, as an associate researcher in the <a href="https://informatics.ed.ac.uk/">School of Informatics at the University of
-            Edinburgh</a>, I started working on the <strong>trustworthiness in LLM-based systems</strong> deployed in high-stakes domains such as hiring decisions.
-            The project is funded by and carried out in collaboration with Amazon.
+            Edinburgh</a>, I started working on the <strong>trustworthiness in LLM-based systems</strong> deployed in high-stakes domains such as hiring pipelines.
+            The project is funded by and carried out in collaboration with <strong>Amazon</strong>.
           </p>
         </section>
 
         <!-- RESEARCH -->
         <section class="section" id="research" aria-labelledby="research-title">
           <h2 id="research-title">Projects &amp; Publications</h2>
-          <div class="pub-group">
-            <p class="pub-group-head">Scalable privacy-preserving techniques in distributed machine learning</p>
-            <!-- <p class="pub-group-note">
-              Federated learning keeps raw data on the device, but the encryption that protects the model updates themselves
-              has traditionally scaled with model size, which makes it impractical at the sizes systems are actually deployed
-              at. This work reduces what has to be encrypted, so that strong cryptographic guarantees hold while communication
-              and computation costs stay low — including for federated foundation models.
-            </p> -->
-            <ul class="pub-list">
-              <li class="pub-item">
-                <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S1574119225000100">EncCluster: Scalable Functional Encryption through Weight Clustering and Probabilistic Filters</a></div>
-                <div class="pub-venue">Tsouvalas, V.,* <strong>Mohammadi, S.</strong>,* et al. — <strong>PMCJ '25</strong>.</div>
-                <div class="pub-links">
-                  <a href="https://www.sciencedirect.com/science/article/pii/S1574119225000100"><svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>PDF</a>
-                  <a href="https://github.com/SamaneMohammadi/EncCluster"><svg class="icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Code</a>
-                </div>
-              </li>
-              <li class="pub-item">
-                <div class="pub-title"><a href="https://openreview.net/pdf?id=7bgJ7t5kkW">Bringing Functional Encryption to Federated Foundation Models</a></div>
-                <div class="pub-venue">Tsouvalas, V.,* <strong>Mohammadi, S.</strong>,* et al. — <strong>Workshop at NeurIPS '24</strong>.</div>
-                <div class="pub-links">
-                  <a href="https://openreview.net/pdf?id=7bgJ7t5kkW"><svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>PDF</a>
-                </div>
-              </li>
-              <li class="pub-item">
-                <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/10306049">Balancing Privacy and Accuracy in Federated Learning for Speech Emotion Recognition</a></div>
-                <div class="pub-venue"><strong>Mohammadi, S.</strong> et al. — <strong>FedCSIS '23</strong>. <span class="pub-award">Professor Zdzis&#322;aw Pawlak Award.</span></div>
-                <div class="pub-links">
-                  <a href="https://www.research.unipd.it/bitstream/11577/3506537/2/444.pdf"><svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>PDF</a>
-                  <a href="https://github.com/SamaneMohammadi/LDP-FL"><svg class="icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Code</a>
-                </div>
-              </li>
-            </ul>
+
+          <!-- Ongoing -->
+          <div class="project">
+            <div class="project-head">
+              <p class="project-title">Bias and fairness in large language models (LLMs)</p>
+              <span class="project-status">Ongoing</span>
+            </div>
+            <p class="project-where">
+              <a href="https://informatics.ed.ac.uk/">School of Informatics, The University of Edinburgh</a> · Edinburgh, United Kingdom
+            </p>
+            <p class="project-desc">
+              Bias in an LLM is not spread evenly across the network but concentrated in particular components. This work
+              first locates which attention heads and feed-forward layers carry it, then fine-tunes only those components
+              against a fairness-aware training objective.
+            </p>
           </div>
 
-          <div class="pub-group">
-            <p class="pub-group-head">Private machine unlearning in distributed Setting</p>
-            <!-- <p class="pub-group-note">
-              The right to be forgotten entitles individuals to have their data removed, but deleting a record is not enough
-              once its influence is embedded in a trained model, and retraining from scratch on every request does not scale.
-              This data-deletion (machine unlearning) framework lets a participant enforce removal of their own contribution
-              using encryption, without relying on the coordinating server or revealing that a request was made.
-            </p> -->
-            <ul class="pub-list">
-              <li class="pub-item">
-                <div class="pub-title"><a href="https://dl.acm.org/doi/abs/10.1145/3746252.3761091">EFU: Enforcing Federated Unlearning via Functional Encryption</a></div>
-                <div class="pub-venue"><strong>Mohammadi, S.</strong>*, Tsouvalas, V.,* et al. — <strong>CIKM '25</strong>.</div>
-                <div class="pub-links">
-                  <a href="https://dl.acm.org/doi/pdf/10.1145/3746252.3761091"><svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>PDF</a>
-                  <a href="https://github.com/SamaneMohammadi/EFU"><svg class="icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Code</a>
-                </div>
-              </li>
-            </ul>
+          <!-- Ongoing -->
+          <div class="project">
+            <div class="project-head">
+              <p class="project-title">Trustworthiness in LLM-based systems for high-stakes decisions</p>
+              <span class="project-status">Ongoing</span>
+            </div>
+            <p class="project-where">
+              <a href="https://informatics.ed.ac.uk/">School of Informatics, The University of Edinburgh</a> · Edinburgh, United Kingdom · In collaboration with Amazon
+            </p>
+            <p class="project-desc">
+              LLM-based systems are increasingly deployed in high-stakes domains such as hiring pipelines, where their
+              decisions directly affect people. This project studies how trustworthy these systems are in such settings.
+              It is funded by and carried out in collaboration with Amazon.
+            </p>
           </div>
 
-          <div class="pub-group">
-            <p class="pub-group-head">Privacy and fairness tensions in distributed machine learning</p>
-            <!-- <p class="pub-group-note">
-              Privacy, fairness and efficiency pull against one another: differential privacy and encryption are paid for in
-              accuracy and compute, and devices that differ in capacity and in the data they hold do not contribute equally.
-              These papers quantify those tensions, both on a physical testbed of heterogeneous edge devices and across the
-              published literature.
-            </p> -->
-            <ul class="pub-list">
-              <li class="pub-item">
-                <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/11228075">Empirical Analysis of Asynchronous Federated Learning on Heterogeneous Devices: Efficiency, Fairness, and Privacy Trade-offs</a></div>
-                <div class="pub-venue"><strong>Mohammadi, S.</strong> et al. — <strong>IJCNN '25</strong>.</div>
-                <div class="pub-links">
-                  <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11228075"><svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>PDF</a>
-                  <a href="https://github.com/SamaneMohammadi/FL_on_Edge_Devices"><svg class="icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>Code</a>
+          <!-- Scalable privacy -->
+          <div class="project">
+            <div class="project-head">
+              <p class="project-title">Scalable privacy-preserving techniques in distributed machine learning</p>
+            </div>
+            <ol class="bib">
+              <li>
+                <div class="abbr"><a class="badge" href="https://www.sciencedirect.com/journal/pervasive-and-mobile-computing">PMCJ '25</a></div>
+                <div class="bib-body">
+                  <p class="bib-title"><a href="https://www.sciencedirect.com/science/article/pii/S1574119225000100">EncCluster: Scalable Functional Encryption through Weight Clustering and Probabilistic Filters</a></p>
+                  <p class="bib-author">V. Tsouvalas*, <span class="me">S. Mohammadi</span>*, et al.</p>
+                  <p class="bib-periodical"><em>In Pervasive and Mobile Computing</em> '25</p>
+                  <div class="bib-links">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S1574119225000100">PDF</a>
+                    <a href="https://github.com/SamaneMohammadi/EncCluster">Code</a>
+                  </div>
                 </div>
               </li>
-              <li class="pub-item">
-                <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S0743731524000820">Balancing Privacy and Performance in Federated Learning: A Systematic Literature Review on Methods and Metrics</a></div>
-                <div class="pub-venue"><strong>Mohammadi, S.</strong> et al. — <strong>JPDC '24</strong>.</div>
-                <div class="pub-links">
-                  <a href="https://www.sciencedirect.com/science/article/pii/S0743731524000820"><svg class="icon-line" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>PDF</a>
+              <li>
+                <div class="abbr"><a class="badge" href="https://neurips.cc/Conferences/2024">NeurIPS W '24</a></div>
+                <div class="bib-body">
+                  <p class="bib-title"><a href="https://openreview.net/pdf?id=7bgJ7t5kkW">Bringing Functional Encryption to Federated Foundation Models</a></p>
+                  <p class="bib-author">V. Tsouvalas*, <span class="me">S. Mohammadi</span>*, et al.</p>
+                  <p class="bib-periodical"><em>In NeurIPS Workshop</em> '24</p>
+                  <div class="bib-links">
+                    <a href="https://openreview.net/pdf?id=7bgJ7t5kkW">PDF</a>
+                  </div>
                 </div>
               </li>
-            </ul>
+              <li>
+                <div class="abbr"><a class="badge" href="https://2023.fedcsis.org/">FedCSIS '23</a></div>
+                <div class="bib-body">
+                  <p class="bib-title"><a href="https://ieeexplore.ieee.org/abstract/document/10306049">Balancing Privacy and Accuracy in Federated Learning for Speech Emotion Recognition</a></p>
+                  <p class="bib-author"><span class="me">S. Mohammadi</span>, et al.</p>
+                  <p class="bib-periodical"><em>In FedCSIS</em> '23</p>
+                  <span class="bib-award">🏆 Professor Zdzis&#322;aw Pawlak Award</span>
+                  <div class="bib-links">
+                    <a href="https://www.research.unipd.it/bitstream/11577/3506537/2/444.pdf">PDF</a>
+                    <a href="https://github.com/SamaneMohammadi/LDP-FL">Code</a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Unlearning -->
+          <div class="project">
+            <div class="project-head">
+              <p class="project-title">Private machine unlearning in distributed settings</p>
+            </div>
+            <ol class="bib">
+              <li>
+                <div class="abbr"><a class="badge" href="https://cikm2025.org/">CIKM '25</a></div>
+                <div class="bib-body">
+                  <p class="bib-title"><a href="https://dl.acm.org/doi/abs/10.1145/3746252.3761091">EFU: Enforcing Federated Unlearning via Functional Encryption</a></p>
+                  <p class="bib-author"><span class="me">S. Mohammadi</span>*, V. Tsouvalas*, et al.</p>
+                  <p class="bib-periodical"><em>In CIKM</em> '25</p>
+                  <div class="bib-links">
+                    <a href="https://dl.acm.org/doi/pdf/10.1145/3746252.3761091">PDF</a>
+                    <a href="https://github.com/SamaneMohammadi/EFU">Code</a>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Tensions -->
+          <div class="project">
+            <div class="project-head">
+              <p class="project-title">Privacy and fairness tensions in distributed machine learning</p>
+            </div>
+            <ol class="bib">
+              <li>
+                <div class="abbr"><a class="badge" href="https://2025.ijcnn.org/">IJCNN '25</a></div>
+                <div class="bib-body">
+                  <p class="bib-title"><a href="https://ieeexplore.ieee.org/abstract/document/11228075">Empirical Analysis of Asynchronous Federated Learning on Heterogeneous Devices: Efficiency, Fairness, and Privacy Trade-offs</a></p>
+                  <p class="bib-author"><span class="me">S. Mohammadi</span>, et al.</p>
+                  <p class="bib-periodical"><em>In IJCNN</em> '25</p>
+                  <div class="bib-links">
+                    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11228075">PDF</a>
+                    <a href="https://github.com/SamaneMohammadi/FL_on_Edge_Devices">Code</a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="abbr"><a class="badge" href="https://www.sciencedirect.com/journal/journal-of-parallel-and-distributed-computing">JPDC '24</a></div>
+                <div class="bib-body">
+                  <p class="bib-title"><a href="https://www.sciencedirect.com/science/article/pii/S0743731524000820">Balancing Privacy and Performance in Federated Learning: A Systematic Literature Review on Methods and Metrics</a></p>
+                  <p class="bib-author"><span class="me">S. Mohammadi</span>, et al.</p>
+                  <p class="bib-periodical"><em>In Journal of Parallel and Distributed Computing</em> '24</p>
+                  <div class="bib-links">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S0743731524000820">PDF</a>
+                  </div>
+                </div>
+              </li>
+            </ol>
           </div>
 
           <p class="entry-sub" style="margin-top: 24px">
