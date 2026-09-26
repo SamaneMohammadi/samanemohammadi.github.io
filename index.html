@@ -109,21 +109,14 @@
         <!-- RESEARCH -->
         <section class="section" id="research" aria-labelledby="research-title">
           <h2 id="research-title">Research &amp; Publications</h2>
-          <p class="lede">
-            My work sits at the point where privacy, fairness and accountability meet the practical limits of real deployments:
-            encryption that is too expensive to run at scale, devices that are too unequal to contribute equally, and
-            guarantees that are hard to honour once a model has already been trained. The papers below are grouped by the
-            question they set out to answer rather than by date.
-          </p>
-
           <div class="pub-group">
             <p class="pub-group-head">Scalable privacy-preserving techniques in distributed machine learning</p>
-            <p class="pub-group-note">
+            <!-- <p class="pub-group-note">
               Federated learning keeps raw data on the device, but the encryption that protects the model updates themselves
               has traditionally scaled with model size, which makes it impractical at the sizes systems are actually deployed
               at. This work reduces what has to be encrypted, so that strong cryptographic guarantees hold while communication
               and computation costs stay low — including for federated foundation models.
-            </p>
+            </p> -->
             <ul class="pub-list">
               <li class="pub-item">
                 <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/pii/S1574119225000100">EncCluster: Scalable Functional Encryption through Weight Clustering and Probabilistic Filters</a></div>
@@ -152,13 +145,13 @@
           </div>
 
           <div class="pub-group">
-            <p class="pub-group-head">Machine unlearning for the GDPR &ldquo;right to be forgotten&rdquo; in distributed machine learning</p>
-            <p class="pub-group-note">
+            <p class="pub-group-head">Private Machine unlearning in distributed Setting</p>
+            <!-- <p class="pub-group-note">
               The right to be forgotten entitles individuals to have their data removed, but deleting a record is not enough
               once its influence is embedded in a trained model, and retraining from scratch on every request does not scale.
               This data-deletion (machine unlearning) framework lets a participant enforce removal of their own contribution
               using encryption, without relying on the coordinating server or revealing that a request was made.
-            </p>
+            </p> -->
             <ul class="pub-list">
               <li class="pub-item">
                 <div class="pub-title"><a href="https://dl.acm.org/doi/abs/10.1145/3746252.3761091">EFU: Enforcing Federated Unlearning via Functional Encryption</a></div>
@@ -173,12 +166,12 @@
 
           <div class="pub-group">
             <p class="pub-group-head">Privacy and fairness tensions in distributed machine learning</p>
-            <p class="pub-group-note">
+            <!-- <p class="pub-group-note">
               Privacy, fairness and efficiency pull against one another: differential privacy and encryption are paid for in
               accuracy and compute, and devices that differ in capacity and in the data they hold do not contribute equally.
               These papers quantify those tensions, both on a physical testbed of heterogeneous edge devices and across the
               published literature.
-            </p>
+            </p> -->
             <ul class="pub-list">
               <li class="pub-item">
                 <div class="pub-title"><a href="https://ieeexplore.ieee.org/abstract/document/11228075">Empirical Analysis of Asynchronous Federated Learning on Heterogeneous Devices: Efficiency, Fairness, and Privacy Trade-offs</a></div>
