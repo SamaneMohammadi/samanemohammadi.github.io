@@ -28,12 +28,13 @@
         --pub-ongoing: var(--pub-accent);
       }
 
-      .project { margin: 0 0 36px; }
+      .project { margin: 0 0 34px; }
+      .project > .project-head + ol.bib { margin-top: 6px; }
       .project-head {
         display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
         margin: 0 0 6px;
       }
-      .project-title { font-weight: 600; font-size: 1.08rem; margin: 0; }
+      .project-title { font-weight: 700; font-size: 1.12rem; margin: 0; color: var(--accent-strong, #32465e); }
       .project.ongoing .project-title { color: var(--pub-accent); }
       .project-status { background: rgba(31, 95, 139, 0.08); }
       .project-status {
@@ -57,9 +58,8 @@
       ol.bib > li {
         counter-increment: bib;
         display: grid; grid-template-columns: 8rem 1fr; gap: 14px;
-        padding: 14px 0; border-top: 1px solid var(--pub-line);
+        padding: 12px 0;
       }
-      ol.bib > li:last-child { border-bottom: 1px solid var(--pub-line); }
       .abbr { padding-top: 2px; }
       a.badge:hover { filter: brightness(1.2); }
       .badge {
@@ -92,12 +92,18 @@
 
 
       .proj-cat {
-        font-family: "IBM Plex Mono", monospace; font-size: 0.8rem;
-        text-transform: uppercase; letter-spacing: 0.1em; color: var(--pub-muted);
-        font-weight: 500; margin: 8px 0 18px; padding-bottom: 6px;
-        border-bottom: 1px solid var(--pub-line);
+        display: inline-flex; align-items: center; gap: 8px;
+        font-family: "IBM Plex Mono", monospace; font-size: 0.78rem; font-weight: 500;
+        text-transform: uppercase; letter-spacing: 0.12em;
+        color: var(--pub-accent); background: rgba(31, 95, 139, 0.08);
+        padding: 5px 14px; border-radius: 999px; margin: 4px 0 22px;
       }
-      .proj-cat ~ .proj-cat { margin-top: 12px; }
+      .proj-cat:not(.done)::before {
+        content: ""; width: 7px; height: 7px; border-radius: 50%;
+        background: var(--pub-accent); animation: pub-pulse 1.8s ease-in-out infinite;
+      }
+      .proj-cat.done { color: var(--pub-muted); background: rgba(91, 102, 115, 0.1); }
+      .proj-cat ~ .proj-cat { margin-top: 18px; }
       .badge-review {
         background: transparent; color: var(--pub-muted);
         border: 1px dashed var(--pub-muted); padding: 3px 5px;
@@ -223,10 +229,10 @@
               <em>equitable performance across demographic groups</em> under <strong>differential privacy</strong> guarantees.
             </li>
           </ul>
-          <!-- <p class="lede">
+          <p class="lede">
             A common thread across all of it is <strong>making trustworthiness guarantees hold in realistic settings</strong>:
             <em>at scale, across heterogeneous devices, and without trusting a central party</em>.
-          </p> -->
+          </p>
           <p class="lede">
             Recently, as an <strong>associate researcher</strong> at the University of Edinburgh, I started working on the
             <strong>trustworthiness of LLM-based systems</strong>, especially their <strong>fairness</strong> and
@@ -243,7 +249,6 @@
           <div class="project ongoing">
             <div class="project-head">
               <p class="project-title">Bias and fairness in large language models (LLMs)</p>
-              <span class="project-status">Ongoing</span>
             </div>
             <p class="project-where">
               <a href="https://informatics.ed.ac.uk/">School of Informatics, The University of Edinburgh</a> · Edinburgh, United Kingdom
@@ -258,7 +263,6 @@
           <div class="project ongoing">
             <div class="project-head">
               <p class="project-title">Trustworthiness in LLM-based systems for high-stakes decisions</p>
-              <span class="project-status">Ongoing</span>
             </div>
             <p class="project-where">
               <a href="https://informatics.ed.ac.uk/">School of Informatics, The University of Edinburgh</a> · Edinburgh, United Kingdom · In collaboration with Amazon
@@ -270,7 +274,7 @@
             </p>
           </div>
 
-          <p class="proj-cat">Completed</p>
+          <p class="proj-cat done">Completed</p>
 
           <div class="project">
             <div class="project-head">
