@@ -24,14 +24,14 @@
   --line: #9aa5b1;
   --border: #dbe2ea;
   --shadow: 0 8px 20px rgba(30, 40, 50, 0.05);
-  --fs-body: 1.04rem;
+  --fs-body: 1.0rem;
   --fs-meta: 0.9rem;
   --fs-eyebrow: 0.8rem;
   --sidebar-w: 250px;
   --gap: 48px;
 }
 *,*::before,*::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; font-size: 15px; }
+html { scroll-behavior: smooth; font-size: 14px; }
 body {
   margin: 0;
   min-height: 100vh;
