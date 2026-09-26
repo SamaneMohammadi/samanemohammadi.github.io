@@ -120,6 +120,12 @@
         white-space: pre;
       }
 
+
+      .about-threads { margin: 10px 0 14px; padding-left: 1.2em; max-width: 70ch; font-size: 1.07rem; line-height: 1.7; }
+      .about-threads li { margin: 0 0 8px; padding-left: 4px; }
+      #about .lede strong a { font-weight: 700; }
+      .about-threads li::marker { color: var(--pub-accent); }
+
       @media (max-width: 640px) {
         ol.bib > li { grid-template-columns: 1fr; gap: 8px; }
         .abbr { grid-column: 1; }
@@ -197,21 +203,34 @@
         <section class="section" id="about" aria-labelledby="about-title">
           <h2 id="about-title">About</h2>
           <p class="lede">
-            I am in the final year of my PhD in the <a href="https://informatics.ed.ac.uk/">School of Informatics at the University of
-            Edinburgh</a>, supervised by <a href="https://mjuarezm.github.io/">Dr. Marc Juarez</a>.
-            My main research interest is in trustworthy AI/ML.
+            I am a <strong>final-year PhD candidate</strong> in the <strong><a href="https://informatics.ed.ac.uk/">School of Informatics
+            at the University of Edinburgh</a></strong>, advised by <strong><a href="https://mjuarezm.github.io/">Dr. Marc Juarez</a></strong>.
+            My work focuses on <strong>trustworthy AI/ML</strong>, in particular <strong>privacy</strong>, <strong>fairness</strong>
+            and <strong>security</strong> of machine learning systems.
+          </p>
+          <p class="lede">During my PhD, my research has developed along <strong>three threads</strong>:</p>
+          <ul class="about-threads">
+            <li>
+              <strong>Scalable privacy preservation</strong>: protecting distributed learning, where a model is trained
+              collaboratively across many devices <em>rather than on centrally pooled data</em>, in a way that stays practical at scale.
+            </li>
+            <li>
+              <strong>Private machine unlearning</strong>: letting participants remove their data&rsquo;s influence from a
+              distributed model <em>without relying on a central server</em>.
+            </li>
+            <li>
+              <strong>Privacy&ndash;fairness tensions</strong>: designing <strong>group-aware architectures</strong> that give
+              <em>equitable performance across demographic groups</em> under <strong>differential privacy</strong> guarantees.
+            </li>
+          </ul>
+          <p class="lede">
+            A common thread across all of it is <strong>making trustworthiness guarantees hold in realistic settings</strong>:
+            <em>at scale, across heterogeneous devices, and without trusting a central party</em>.
           </p>
           <p class="lede">
-            During my PhD, my work has focused on <strong>scalable privacy-preserving techniques in distributed machine learning</strong>, where a model is trained collaboratively across many devices rather than on centrally pooled data.
-            These devices vary in computational capacity and in the data they hold, so some devices contribute far more to the final model than others.
-            This raises a <strong>fairness</strong> challenge, which is the second area of my research.
-          </p>
-          <p class="lede">
-            Recently, as an associate researcher in the <a href="https://informatics.ed.ac.uk/">School of Informatics at the University of
-            Edinburgh</a>, I started working on the <strong>trustworthiness of LLM-based systems</strong> deployed in high-stakes domains such as hiring pipelines,
-            a project funded by and carried out in collaboration with <strong>Amazon</strong>. Alongside this, I work on <strong>bias and fairness in large
-            language models</strong>: locating the attention heads and feed-forward layers that carry bias, and fine-tuning only those components
-            against a fairness-aware training objective.
+            Recently, as an <strong>associate researcher</strong> at the University of Edinburgh, I started working on the
+            <strong>trustworthiness of LLM-based systems</strong>, especially their <strong>fairness</strong> and
+            <strong>security</strong>, in high-stakes settings such as <strong>hiring</strong>, in collaboration with <strong><a href="https://www.amazon.science/">Amazon</a></strong>.
           </p>
         </section>
 
