@@ -125,11 +125,10 @@
         white-space: pre;
       }
 
-      #about .lede { font-size: 1rem; line-height: 1.6; }
-      .about-threads { margin: 8px 0 16px; padding-left: 1.2em; max-width: 70ch; font-size: 0.94rem; line-height: 1.55; color: var(--muted); }
+      /* About uses the same size, colour and full width as the project text */
+      #about .lede { font-size: inherit; line-height: 1.6; max-width: none; }
+      .about-threads { margin: 8px 0 16px; padding-left: 1.2em; max-width: none; font-size: inherit; line-height: 1.6; }
       .about-threads li { margin: 0 0 8px; padding-left: 4px; }
-      .about-threads strong { color: var(--text); }
-      .about-threads em { color: var(--text); }
       #about .lede strong a { font-weight: 700; }
       .about-threads li::marker { color: var(--pub-accent); }
 
